@@ -3,7 +3,7 @@ language: csharp
 solution: TrisvagoHotels.sln
 dotnet: 3.0.100
 install:
-  - sudo apt-get install -qq dotnet-sdk-3.0.100
+  - sudo apt-get install -qq dotnet-sdk-3.0
   - bash ./tools/travis-install-dependencies.sh
 
 script:
