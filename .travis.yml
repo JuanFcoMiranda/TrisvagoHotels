@@ -1,0 +1,6 @@
+language: csharp
+solution: TrisvagoHotels.sln
+dotnet: 3.0.100
+script:
+ - dotnet restore
+ - dotnet run
