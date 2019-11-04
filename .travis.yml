@@ -1,6 +1,13 @@
+sudo: required
 language: csharp
 solution: TrisvagoHotels.sln
 dotnet: 3.0.100
+install:
+  - sudo apt-get install -qq dotnet-sdk-2.0.0
+  - bash ./tools/travis-install-dependencies.sh
+
 script:
- - dotnet restore
- - dotnet run
+  - git fetch --unshallow || true
+  - bash ./tools/travis-build.sh
+  - dotnet restore
+  - dotnet build
