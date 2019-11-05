@@ -6,5 +6,6 @@ dotnet: 3.0.100
 install:
   - sudo apt-get install -qq dotnet-sdk-3.0
 script:
+  - msbuild /p:Configuration=Release TrisvagoHotels.sln
   - dotnet restore
   - dotnet build
