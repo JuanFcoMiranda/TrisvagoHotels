@@ -16,4 +16,4 @@ install:
 
 script:
   - dotnet build
-  #- bash ./tools/travis-ci-build.sh
+  - bash ./tools/travis-ci-build.sh
