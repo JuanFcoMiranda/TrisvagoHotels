@@ -8,7 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using TrisvagoHotels.Api.Extensions;
 
 namespace TrisvagoHotels.Api.Configuration {
-	public class ApiConfiguration {
+	public static class ApiConfiguration {
 		public static IServiceCollection ConfigureServices(IServiceCollection services, IWebHostEnvironment environment) => services
 				.AddHttpContextAccessor()
 				.AddCustomMvc()

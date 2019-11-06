@@ -5,17 +5,17 @@ using Microsoft.Extensions.Logging;
 using TrisvagoHotels.Host.Filters;
 
 namespace TrisvagoHotels {
-	public class Program {
+	public static class Program {
 		public static void Main(string[] args) {
 			CreateWebHostBuilder(args).Build().Run();
 		}
 
 		public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
 			WebHost.CreateDefaultBuilder(args)
-				//.ConfigureServices(services => {
-				//	services.AddTransient<IStartupFilter, HostStartupFilter>();
-				//	services.AddLogging(logBuilder => logBuilder.SetMinimumLevel(LogLevel.Debug));
-				//})
+				.ConfigureServices(services => {
+					services.AddTransient<IStartupFilter, HostStartupFilter>();
+					services.AddLogging(logBuilder => logBuilder.SetMinimumLevel(LogLevel.Debug));
+				})
 				.UseStartup<Startup>();
 	}
 }

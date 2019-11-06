@@ -26,7 +26,6 @@ namespace Microsoft.Extensions.DependencyInjection {
 		public static IServiceCollection AddOpenApi(this IServiceCollection services) {
 			services.AddSwaggerGen(setup => {
 				setup.DescribeAllParametersInCamelCase();
-				//setup.DescribeStringEnumsInCamelCase();
 				setup.SwaggerDoc("v1", new OpenApiInfo {
 					Title = $"{nameof(TrisvagoHotels)} Api",
 					Version = "v1",

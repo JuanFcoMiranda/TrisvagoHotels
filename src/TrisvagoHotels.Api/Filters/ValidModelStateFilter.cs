@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using TrisvagoHotels.Api.HttpErrors;
 
 namespace TrisvagoHotels.Api.Filters {
-	internal class ValidModelStateFilter : ActionFilterAttribute {
+	internal class ValidModelStateFilterAttribute : ActionFilterAttribute {
 		public override void OnActionExecuting(ActionExecutingContext context) {
 			if (context.ModelState.IsValid) {
 				return;
