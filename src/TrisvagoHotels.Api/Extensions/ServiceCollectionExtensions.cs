@@ -16,7 +16,7 @@ namespace TrisvagoHotels.Api.Extensions {
 		public static IServiceCollection AddCustomMvc(this IServiceCollection services) =>
 			services
 				.AddMvcCore(config => {
-					config.Filters.Add(typeof(ValidModelStateFilter));
+					config.Filters.Add(typeof(ValidModelStateFilterAttribute));
 					config.EnableEndpointRouting = false;
 				})
 				.AddJsonOptions(config => config.JsonSerializerOptions.IgnoreNullValues = true)
