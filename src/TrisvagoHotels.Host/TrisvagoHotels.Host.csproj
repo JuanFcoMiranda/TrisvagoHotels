@@ -25,27 +25,28 @@
         <None Remove="$(SpaRoot)**" />
         <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
         <None Remove="healthchecksdb" />
-        <None Remove="healthchecksdb" />
-        <None Remove="healthchecksdb" />
-        <None Remove="healthchecksdb" />
-        <None Remove="healthchecksdb" />
     </ItemGroup>
     <ItemGroup>
-      <ProjectReference Include="..\TrisvagoHotels.Api\TrisvagoHotels.Api.csproj">
-        <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
-      </ProjectReference>
-      <ProjectReference Include="..\TrisvagoHotels.DataContext\TrisvagoHotels.DataContext.csproj">
-        <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
-      </ProjectReference>
-      <ProjectReference Include="..\TrisvagoHotels.DataContracts\TrisvagoHotels.DataContracts.csproj">
-        <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
-      </ProjectReference>
-      <ProjectReference Include="..\TrisvagoHotels.Providers\TrisvagoHotels.Providers.csproj">
-        <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
-      </ProjectReference>
-      <ProjectReference Include="..\TrisvagoHotels.Uow\TrisvagoHotels.Uow.csproj">
-        <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
-      </ProjectReference>
+        <ProjectReference Include="..\TrisvagoHotels.Api\TrisvagoHotels.Api.csproj">
+            <GlobalPropertiesToRemove>
+            </GlobalPropertiesToRemove>
+        </ProjectReference>
+        <ProjectReference Include="..\TrisvagoHotels.DataContext\TrisvagoHotels.DataContext.csproj">
+            <GlobalPropertiesToRemove>
+            </GlobalPropertiesToRemove>
+        </ProjectReference>
+        <ProjectReference Include="..\TrisvagoHotels.DataContracts\TrisvagoHotels.DataContracts.csproj">
+            <GlobalPropertiesToRemove>
+            </GlobalPropertiesToRemove>
+        </ProjectReference>
+        <ProjectReference Include="..\TrisvagoHotels.Providers\TrisvagoHotels.Providers.csproj">
+            <GlobalPropertiesToRemove>
+            </GlobalPropertiesToRemove>
+        </ProjectReference>
+        <ProjectReference Include="..\TrisvagoHotels.Uow\TrisvagoHotels.Uow.csproj">
+            <GlobalPropertiesToRemove>
+            </GlobalPropertiesToRemove>
+        </ProjectReference>
     </ItemGroup>
     <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
         <!-- Ensure Node.js is installed -->
