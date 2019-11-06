@@ -6,8 +6,14 @@ dotnet: 3.0.100
 addons:
   sonarcloud:
     organization: "zpecter-github"
+    
+before_install:
+  - bash ./tools/travis-ci-install-sonar.sh
+
 install:
   - sudo apt-get install -qq dotnet-sdk-3.0
   - dotnet restore
+
 script:
   - dotnet build
+  - bash ./tools/travis-ci-build.sh
