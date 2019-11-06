@@ -1,7 +1,7 @@
 #!/bin/sh
 echo "Executing MSBuild DLL begin command..."
-dotnet ./tools/sonar/SonarScanner.MSBuild.dll begin /o:"zpecter-github" /k:"Zpecter_TrisvagoHotels" /d:sonar.cs.vstest.reportsPaths="**/TestResults/*.trx" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.verbose=true /d:sonar.login=a2f200798e3b24488e93e93538ba97249d1acb45
+dotnet ./tools/sonar/SonarScanner.MSBuild.dll begin /o:"zpecter-github" /k:"Zpecter_TrisvagoHotels" /d:sonar.cs.vstest.reportsPaths="**/TestResults/*.trx" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.verbose=true /d:sonar.login=${SONAR_TOKEN}
 echo "Running build..."
 dotnet build TrisvagoHotels.sln
 echo "Executing MSBuild DLL end command..."
-dotnet ./tools/sonar/SonarScanner.MSBuild.dll end /d:sonar.login=a2f200798e3b24488e93e93538ba97249d1acb45
+dotnet ./tools/sonar/SonarScanner.MSBuild.dll end /d:sonar.login=${SONAR_TOKEN}
