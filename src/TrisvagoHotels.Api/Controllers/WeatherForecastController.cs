@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using TrisvagoHotels.Model.Entities;
 
 namespace TrisvagoHotels.Api.Controllers {
 	[ApiController]
@@ -19,15 +20,10 @@ namespace TrisvagoHotels.Api.Controllers {
 		}
 
 		[HttpGet]
-		public IEnumerable<WeatherForecast> Get() {
+		public IEnumerable<Hotel> Get() {
 			var rng = new Random();
 			logger.Log(LogLevel.Information, $"Random number: { rng }");
-			return Enumerable.Range(1, 5).Select(index => new WeatherForecast {
-				Date = DateTime.Now.AddDays(index),
-				TemperatureC = rng.Next(-20, 55),
-				Summary = Summaries[rng.Next(Summaries.Length)]
-			})
-			.ToArray();
+			return Enumerable.Range(1, 5).Select(index => new Hotel()).ToArray();
 		}
 	}
 }

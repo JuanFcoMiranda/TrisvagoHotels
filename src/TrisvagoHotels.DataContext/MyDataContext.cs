@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using System.Reflection;
 using Microsoft.EntityFrameworkCore;
+using TrisvagoHotels.Mappings.EntityMappings;
 
 namespace TrisvagoHotels.DataContext {
 	public class MyDataContext : DbContext {
@@ -9,7 +10,7 @@ namespace TrisvagoHotels.DataContext {
 		protected override void OnModelCreating(ModelBuilder modelBuilder) {
 			Assembly[] assemblies = {
                 // Add your assembiles here.
-                //typeof(EmpleadoMapping).Assembly
+                typeof(HotelMapping).Assembly
 			};
 			foreach (var assembly in assemblies.Distinct()) {
 				modelBuilder.ApplyConfigurationsFromAssembly(assembly);

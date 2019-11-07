@@ -10,12 +10,18 @@
         <SystemReflectionTypeExtensionsVersion>4.6.0</SystemReflectionTypeExtensionsVersion>
         <MicrosoftCSharpVersion>4.6.0</MicrosoftCSharpVersion>
     </PropertyGroup>
+    <PropertyGroup Label="User Secrets">
+        <UserSecretsVersion>3.0.0</UserSecretsVersion>
+    </PropertyGroup>
     <PropertyGroup Label="Spa Extensions">
         <MicrosoftAspNetCoreSpaServicesExtensions>3.0.0</MicrosoftAspNetCoreSpaServicesExtensions>
     </PropertyGroup>
     <PropertyGroup Label="Entity Framework">
         <MicrosoftEntityFrameworkCoreVersion>3.0.0</MicrosoftEntityFrameworkCoreVersion>
         <MicrosoftEntityFrameworkCoreSqlServerVersion>3.0.0</MicrosoftEntityFrameworkCoreSqlServerVersion>
+        <MySqlDataVersion>8.0.18</MySqlDataVersion>
+        <MySqlDataEntityFrameworkVersion>8.0.18</MySqlDataEntityFrameworkVersion>
+        <PomeloEntityFrameworkCoreMySql>3.0.0-rc3.final</PomeloEntityFrameworkCoreMySql>
     </PropertyGroup>
     <PropertyGroup Label="Fluent Validation">
         <FluentValidationAspNetCoreVersion>8.5.1</FluentValidationAspNetCoreVersion>

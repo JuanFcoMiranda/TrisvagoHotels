@@ -1,6 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>$(NetStandardTargetVersion)</TargetFramework>
     </PropertyGroup>
+    <ItemGroup>
+      <Compile Remove="WeatherForecast.cs" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Entities\" />
+    </ItemGroup>
 </Project>

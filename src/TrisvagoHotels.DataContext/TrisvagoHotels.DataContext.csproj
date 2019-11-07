@@ -6,4 +6,7 @@
     <ItemGroup>
         <PackageReference Include="Microsoft.EntityFrameworkCore" Version="$(MicrosoftEntityFrameworkCoreVersion)" />
     </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\TrisvagoHotels.Mappings\TrisvagoHotels.Mappings.csproj" />
+    </ItemGroup>
 </Project>
