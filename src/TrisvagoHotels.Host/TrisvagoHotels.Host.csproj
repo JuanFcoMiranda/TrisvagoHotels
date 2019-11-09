@@ -9,17 +9,16 @@
         <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
         <!-- Set this to true if you enable server-side prerendering -->
         <BuildServerSideRenderer>false</BuildServerSideRenderer>
-        <UserSecretsId>2c1de0fa-f35c-4bfa-a3ca-32df42a6da08</UserSecretsId>
+        <!--<UserSecretsId>2c1de0fa-f35c-4bfa-a3ca-32df42a6da08</UserSecretsId>-->
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="$(MicrosoftAspNetCoreSpaServicesExtensions)" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="$(MicrosoftEntityFrameworkCoreSqlServerVersion)" />
-        <!--
         <PackageReference Include="MySql.Data" Version="$(MySqlDataVersion)" />
-        <PackageReference Include="MySql.Data.EntityFramework" Version="$(MySqlDataEntityFrameworkVersion)" />
-        -->
+        <!--<PackageReference Include="MySql.Data.EntityFramework" Version="$(MySqlDataEntityFrameworkVersion)" />-->
         <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="$(PomeloEntityFrameworkCoreMySql)" />
         <PackageReference Include="AspNetCore.HealthChecks.SqlServer" Version="$(AspNetCoreHealthChecksSqlServerVersion)" />
+        <PackageReference Include="AspNetCore.HealthChecks.MySql" Version="$(AspNetCoreHealthChecksMySqlVersion)" />
         <PackageReference Include="AspNetCore.HealthChecks.System" Version="$(AspNetCoreHealthChecksSystemVersion)" />
         <PackageReference Include="AspNetCore.HealthChecks.UI" Version="$(AspNetCoreHealthChecksUIVersion)" />
         <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="$(MicrosoftAspNetCoreHostingVersion)" />

@@ -20,7 +20,6 @@ namespace TrisvagoHotels.Api.Configuration {
 				.UseHttpsRedirection()
 				.UseProblemDetails()
 				.UseHsts()
-				.UseMvc(routes => routes.MapRoute("swagger", "{controller=Values}/{action=Swagger}"))
 				.UseRouting()
 				.UseEndpoints(config => {
 					config.MapHealthChecks("/healthz", new HealthCheckOptions {

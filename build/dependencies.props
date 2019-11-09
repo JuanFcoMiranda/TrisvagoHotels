@@ -10,9 +10,6 @@
         <SystemReflectionTypeExtensionsVersion>4.6.0</SystemReflectionTypeExtensionsVersion>
         <MicrosoftCSharpVersion>4.6.0</MicrosoftCSharpVersion>
     </PropertyGroup>
-    <PropertyGroup Label="User Secrets">
-        <UserSecretsVersion>3.0.0</UserSecretsVersion>
-    </PropertyGroup>
     <PropertyGroup Label="Spa Extensions">
         <MicrosoftAspNetCoreSpaServicesExtensions>3.0.0</MicrosoftAspNetCoreSpaServicesExtensions>
     </PropertyGroup>
@@ -43,6 +40,7 @@
         <AspNetCoreHealthChecksUIVersion>3.0.0</AspNetCoreHealthChecksUIVersion>
         <AspNetCoreHealthChecksUIClientVersion>3.0.0</AspNetCoreHealthChecksUIClientVersion>
         <AspNetCoreHealthChecksSqlServerVersion>3.0.0</AspNetCoreHealthChecksSqlServerVersion>
+        <AspNetCoreHealthChecksMySqlVersion>3.0.0</AspNetCoreHealthChecksMySqlVersion>
         <AspNetCoreHealthChecksRedisVersion>3.0.0</AspNetCoreHealthChecksRedisVersion>
         <AspNetCoreHealthChecksSystemVersion>3.0.0</AspNetCoreHealthChecksSystemVersion>
     </PropertyGroup>

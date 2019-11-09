@@ -39,14 +39,12 @@ namespace Microsoft.Extensions.DependencyInjection {
 		public static IServiceCollection AddEntityFrameworkCore(this IServiceCollection services, IConfiguration configuration) =>
 			services
 				.AddDbContext<MyDataContext>(options => {
-					options.UseSqlServer(configuration.GetConnectionString("DataAccessSqlServerProvider"));
-					//options.UseMySql(configuration.GetConnectionString("DataAccessMySqlProvider"));
+					options.UseMySql(configuration.GetConnectionString("DataAccessMySqlProvider"));
 				});
 
 		public static IServiceCollection AddCustomHealthChecks(this IServiceCollection services, IConfiguration configuration) {
 			return services.AddHealthChecks()
-				//.AddDiskStorageHealthCheck(options => { options.AddDrive(@"C:\", 100); }, name: "My Drive", HealthStatus.Unhealthy, tags: new[] { "Drive space" })
-				.AddSqlServer(configuration.GetConnectionString("DataAccessMySqlProvider"), healthQuery: "SELECT 1;", "DataAccessMySqlProvider", failureStatus: HealthStatus.Degraded, tags: new[] { "DataAccessMySqlProviderdependencies" })
+				.AddMySql(configuration.GetConnectionString("DataAccessMySqlProvider"), "DataAccessMySqlProvider", failureStatus: HealthStatus.Degraded, tags: new[] { "DataAccessMySqlProviderDependencies" })
 				.AddCheck("self", () => HealthCheckResult.Healthy())
 				.Services;
 		}
