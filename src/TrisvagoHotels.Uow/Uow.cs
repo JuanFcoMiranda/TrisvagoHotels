@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Threading.Tasks;
 using TrisvagoHotels.DataContext;
 using TrisvagoHotels.DataContracts.IRepository;
 using TrisvagoHotels.DataContracts.IRepositoryProvider;
 using TrisvagoHotels.DataContracts.IUow;
+using TrisvagoHotels.Model.Entities;
 
 namespace TrisvagoHotels.Uow {
 	public class Uow : IUow, IDisposable {
@@ -20,8 +22,11 @@ namespace TrisvagoHotels.Uow {
 			Context.Database.BeginTransaction();
 		}
 
-		public void Commit() {
-			Context.SaveChanges();
+		public IRepository<Hotel> Hotels => GetStandardRepo<Hotel>();
+		public IRepository<HotelDetail> HotelsDetails => GetStandardRepo<HotelDetail>();
+
+		public async Task CommitAsync() {
+			await Context.SaveChangesAsync();
 			Context.Database.CommitTransaction();
 		}
 

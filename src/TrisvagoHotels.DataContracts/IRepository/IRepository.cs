@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace TrisvagoHotels.DataContracts.IRepository {
 	public interface IRepository<T> where T : class {
-		IEnumerable<T> GetAll();
-		T GetById(int id);
+		IAsyncEnumerable<T> GetAll();
+		ValueTask<T> GetById(int id);
 		void Add(T entity);
 		void Add(ICollection<T> entities);
 		void Update(T entity);

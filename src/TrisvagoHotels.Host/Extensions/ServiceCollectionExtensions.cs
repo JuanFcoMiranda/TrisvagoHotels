@@ -2,13 +2,16 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.OpenApi.Models;
+using TrisvagoHotels.Api.Filters;
 using TrisvagoHotels.Api.HttpErrors;
 using TrisvagoHotels.DataContext;
 using TrisvagoHotels.DataContracts.IRepositoryFactory;
 using TrisvagoHotels.DataContracts.IRepositoryProvider;
+using TrisvagoHotels.DataContracts.IServices;
 using TrisvagoHotels.DataContracts.IUow;
 using TrisvagoHotels.Providers.RepositoryFactory;
 using TrisvagoHotels.Providers.RepositoryProvider;
+using TrisvagoHotels.Services.Hotels;
 using TrisvagoHotels.Uow;
 
 namespace Microsoft.Extensions.DependencyInjection {
@@ -19,12 +22,14 @@ namespace Microsoft.Extensions.DependencyInjection {
 				.AddScoped<IUow, Uow>()
 				.AddScoped<IRepositoryProvider, RepositoryProvider>()
 				.AddScoped<IRepositoryFactory, RepositoryFactory>()
+				.AddScoped<IHotelsServices, HotelsServices>()
 				.AddSingleton<IHttpErrorFactory, DefaultHttpErrorFactory>();
 			return services;
 		}
 
 		public static IServiceCollection AddOpenApi(this IServiceCollection services) {
 			services.AddSwaggerGen(setup => {
+				setup.OperationFilter<FileUploadOperation>();
 				setup.DescribeAllParametersInCamelCase();
 				setup.SwaggerDoc("v1", new OpenApiInfo {
 					Title = $"{nameof(TrisvagoHotels)} Api",

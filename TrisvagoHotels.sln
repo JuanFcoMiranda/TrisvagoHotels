@@ -36,6 +36,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrisvagoHotels.Model", "src
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrisvagoHotels.Mappings", "src\TrisvagoHotels.Mappings\TrisvagoHotels.Mappings.csproj", "{CB0E979A-E6D7-45F4-B4B2-6BF3DF566E64}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrisvagoHotels.Services", "src\TrisvagoHotels.Services\TrisvagoHotels.Services.csproj", "{0808CF04-A358-4B43-8A32-44F4305F7CE0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -78,6 +80,10 @@ Global
 		{CB0E979A-E6D7-45F4-B4B2-6BF3DF566E64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CB0E979A-E6D7-45F4-B4B2-6BF3DF566E64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CB0E979A-E6D7-45F4-B4B2-6BF3DF566E64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0808CF04-A358-4B43-8A32-44F4305F7CE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0808CF04-A358-4B43-8A32-44F4305F7CE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0808CF04-A358-4B43-8A32-44F4305F7CE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0808CF04-A358-4B43-8A32-44F4305F7CE0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -92,6 +98,7 @@ Global
 		{DA7F8CD5-2D02-4455-8F4F-EED0D341E793} = {A75179B3-CEA5-42A4-AF35-151EC2BBA024}
 		{15B04C7E-B2D4-4328-B835-A29AD908C434} = {A75179B3-CEA5-42A4-AF35-151EC2BBA024}
 		{CB0E979A-E6D7-45F4-B4B2-6BF3DF566E64} = {A75179B3-CEA5-42A4-AF35-151EC2BBA024}
+		{0808CF04-A358-4B43-8A32-44F4305F7CE0} = {A75179B3-CEA5-42A4-AF35-151EC2BBA024}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A552802C-7DC3-4931-9E0E-1BC5E41223AE}

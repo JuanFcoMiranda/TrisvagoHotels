@@ -4,7 +4,7 @@
         <NetStandardTargetVersion>netstandard2.1</NetStandardTargetVersion>
         <NetCoreTargetVersion>netcoreapp3.0</NetCoreTargetVersion>
         <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
-        <LangVersion>latest</LangVersion>
+        <LangVersion>8.0</LangVersion>
     </PropertyGroup>
     <PropertyGroup Label="Package Versions">
         <SystemReflectionTypeExtensionsVersion>4.6.0</SystemReflectionTypeExtensionsVersion>

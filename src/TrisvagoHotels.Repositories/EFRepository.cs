@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using TrisvagoHotels.DataContext;
@@ -16,16 +17,12 @@ namespace TrisvagoHotels.Repositories {
 		protected DbSet<T> DBSet { get; set; }
 		protected DbContext Context { get; set; }
 
-		public IEnumerable<T> GetAll() {
-			return DBSet.AsEnumerable();
+		public IAsyncEnumerable<T> GetAll() {
+			return DBSet.AsAsyncEnumerable();
 		}
 
-		public virtual T GetById(int id) {
-			return DBSet.Find(id);
-		}
-
-		public virtual T GetById(string id) {
-			return DBSet.Find(id);
+		public virtual ValueTask<T> GetById(int id) {
+			return DBSet.FindAsync(id);
 		}
 
 		public void Add(T entity) {
@@ -33,7 +30,7 @@ namespace TrisvagoHotels.Repositories {
 			if (dbEntity.State != EntityState.Detached)
 				dbEntity.State = EntityState.Added;
 			else {
-				DBSet.Add(entity);
+				DBSet.AddAsync(entity);
 			}
 		}
 
@@ -51,6 +48,7 @@ namespace TrisvagoHotels.Repositories {
 			if (dbEntity.State == EntityState.Detached)
 				DBSet.Attach(entity);
 			dbEntity.State = EntityState.Modified;
+			DBSet.Update(entity);
 		}
 
 		public void Delete(T entity) {
@@ -63,8 +61,8 @@ namespace TrisvagoHotels.Repositories {
 			}
 		}
 
-		public virtual void Delete(int id) {
-			T entity = GetById(id);
+		public virtual async void Delete(int id) {
+			T entity = await GetById(id);
 			if (entity == null)
 				return;
 			Delete(entity);

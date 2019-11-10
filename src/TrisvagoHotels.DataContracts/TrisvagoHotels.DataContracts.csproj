@@ -1,9 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>$(NetStandardTargetVersion)</TargetFramework>
     </PropertyGroup>
     <ItemGroup>
         <ProjectReference Include="..\TrisvagoHotels.DataContext\TrisvagoHotels.DataContext.csproj" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="IServices\" />
     </ItemGroup>
 </Project>

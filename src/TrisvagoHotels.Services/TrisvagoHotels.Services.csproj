@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>$(NetStandardTargetVersion)</TargetFramework>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <LangVersion>$(LangVersion)</LangVersion>
     </PropertyGroup>
     <ItemGroup>
         <ProjectReference Include="..\TrisvagoHotels.DataContracts\TrisvagoHotels.DataContracts.csproj" />
