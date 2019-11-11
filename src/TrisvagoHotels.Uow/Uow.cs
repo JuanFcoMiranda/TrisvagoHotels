@@ -23,7 +23,6 @@ namespace TrisvagoHotels.Uow {
 		}
 
 		public IRepository<Hotel> Hotels => GetStandardRepo<Hotel>();
-		public IRepository<HotelDetail> HotelsDetails => GetStandardRepo<HotelDetail>();
 
 		public async Task CommitAsync() {
 			await Context.SaveChangesAsync();

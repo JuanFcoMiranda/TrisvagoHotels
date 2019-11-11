@@ -9,6 +9,5 @@ namespace TrisvagoHotels.DataContracts.IUow {
 
 		// Repositories
 		IRepository<Hotel> Hotels { get; }
-		IRepository<HotelDetail> HotelsDetails { get; }
 	}
 }

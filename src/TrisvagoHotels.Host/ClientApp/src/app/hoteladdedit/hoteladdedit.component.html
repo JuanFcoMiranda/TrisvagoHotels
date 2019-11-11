@@ -22,10 +22,28 @@
         </div>
     </div>
     <div class="form-group row">
+        <label class=" control-label col-md-4">Localidad</label>
+        <div class="col-md-8">
+            <input class="form-control" type="text" formControlName="localidad">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label class=" control-label col-md-4">Caracter&iacute;sticas</label>
+        <div class="col-md-8">
+            <input class="form-control" type="text" formControlName="caracteristicas">
+        </div>
+    </div>
+    <div class="form-group row">
         <label class=" control-label col-md-4">Imagen</label>
         <div class="col-md-8">
+            <label class="hoverable" for="fileInput">
+                <img [src]="foto ? foto : ''">
+                <span class="hover-text">Choose file</span>
+                <span class="background"></span>
+            </label>
+            <br />
             <div class="form-group">
-                <input #file type="file" name="image" (change)="fileProgress($event)" />
+                <input #file type="file" name="image" (change)="fileProgress($event)" accept="image/*" />
             </div>
             <div *ngIf="fileUploadProgress">
                 Upload progress: {{ fileUploadProgress }}

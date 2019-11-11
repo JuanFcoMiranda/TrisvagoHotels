@@ -15,6 +15,8 @@ namespace TrisvagoHotels.Mappings.EntityMappings {
 			builder.Property(t => t.Nombre).IsRequired().HasMaxLength(100);
 			builder.Property(t => t.Categoria).HasMaxLength(50);
 			builder.Property(t => t.Descripcion).HasMaxLength(300);
+			builder.Property(t => t.Localidad).HasMaxLength(100);
+			builder.Property(t => t.Caracteristicas).HasMaxLength(3000);
 			builder.Property(t => t.Foto).HasMaxLength(200);
 			builder.Property(t => t.Destacado);
 
@@ -24,6 +26,8 @@ namespace TrisvagoHotels.Mappings.EntityMappings {
 			builder.Property(t => t.Categoria).HasColumnName("Categoria");
 			builder.Property(t => t.Descripcion).HasColumnName("Descripcion");
 			builder.Property(t => t.Foto).HasColumnName("Foto");
+			builder.Property(t => t.Localidad).HasColumnName("Localidad");
+			builder.Property(t => t.Caracteristicas).HasColumnName("Caracteristicas");
 			builder.Property(t => t.Destacado).HasColumnName("Destacado");
 		}
 	}

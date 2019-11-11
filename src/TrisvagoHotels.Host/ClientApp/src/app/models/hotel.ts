@@ -3,4 +3,6 @@ export class Hotel {
     nombre: string;
     categoria: string;
     descripcion: string;
+    localidad: string;
+    caracteristicas: string;
 }

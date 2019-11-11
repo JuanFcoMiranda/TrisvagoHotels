@@ -9,19 +9,17 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
-import { HotelComponent } from './hotel/hotel.component';
 import { HotelAddEditComponent } from './hoteladdedit/hoteladdedit.component';
 import { CounterComponent } from './counter/counter.component';
 
 import { HotelService } from "./services/hotel.service";
-import {NgxFileDropModule} from "ngx-file-drop";
+import { NgxFileDropModule } from "ngx-file-drop";
 
 @NgModule({
     declarations: [
         AppComponent,
         NavMenuComponent,
         HomeComponent,
-        HotelComponent,
         HotelAddEditComponent,
         CounterComponent
     ],
