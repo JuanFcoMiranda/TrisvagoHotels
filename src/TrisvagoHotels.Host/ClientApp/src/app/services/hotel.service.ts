@@ -13,9 +13,7 @@ export class HotelService {
     protected myApiUrl: string;
     protected httpOptions = {
         headers: new HttpHeaders({
-            'Content-Type': 'application/json; charset=utf-8;multipart/form-data',
-            'Content-Disposition' : 'multipart/form-data',
-            'enctype': 'multipart/form-data'
+            'Content-Type': 'application/json; charset=utf-8'
         })
     };
 
@@ -65,9 +63,9 @@ export class HotelService {
     }
 
     uploadImage(hotelId: number, file: File) {
-      const formData: FormData = new FormData();
-      formData.append('file', file, file.name);
-      return this.http.post(this.myAppUrl + this.myApiUrl +  'Upload' + "?hotelId=" + hotelId, formData);
+        const formData: FormData = new FormData();
+        formData.append('file', file, file.name);
+        return this.http.post(this.myAppUrl + this.myApiUrl + 'Upload' + "?hotelId=" + hotelId, formData);
     }
 
     errorHandler(error) {
