@@ -6,14 +6,21 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 
+import { NgxFileDropModule } from "ngx-file-drop";
+import { MatTableModule, MatPaginatorModule, MatProgressSpinnerModule, MatSortModule } from '@angular/material'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from "@angular/material/icon";
+import { MatButtonModule } from "@angular/material/button";
+import { MatDialogModule } from "@angular/material/dialog";
+
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { HotelAddEditComponent } from './hoteladdedit/hoteladdedit.component';
-import { CounterComponent } from './counter/counter.component';
+import { MatConfirmDialogComponent } from "./mat-confirm-dialog/mat-confirm-dialog.component";
 
+import { DialogService } from "./services/dialog.service";
 import { HotelService } from "./services/hotel.service";
-import { NgxFileDropModule } from "ngx-file-drop";
 
 @NgModule({
     declarations: [
@@ -21,23 +28,31 @@ import { NgxFileDropModule } from "ngx-file-drop";
         NavMenuComponent,
         HomeComponent,
         HotelAddEditComponent,
-        CounterComponent
+        MatConfirmDialogComponent
     ],
-    imports: [
-        BrowserModule,
-        HttpClientModule,
-        AppRoutingModule,
-        ReactiveFormsModule,
-        BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
-        HttpClientModule,
-        FormsModule,
-        NgxFileDropModule,
-        RouterModule.forRoot([
-            { path: '', component: HomeComponent, pathMatch: 'full' },
-            { path: 'counter', component: CounterComponent }
-        ])
-    ],
-    providers: [HotelService],
-    bootstrap: [AppComponent]
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
+    MatTableModule,
+    MatPaginatorModule,
+    BrowserAnimationsModule,
+    MatSortModule,
+    MatIconModule,
+    MatProgressSpinnerModule,
+    MatDialogModule,
+    ReactiveFormsModule,
+    BrowserModule.withServerTransition({appId: 'ng-cli-universal'}),
+    HttpClientModule,
+    FormsModule,
+    NgxFileDropModule,
+    RouterModule.forRoot([
+      {path: '', component: HomeComponent, pathMatch: 'full'}
+    ]),
+    MatButtonModule
+  ],
+    providers: [HotelService, DialogService],
+    bootstrap: [AppComponent],
+    entryComponents:[HomeComponent, MatConfirmDialogComponent]
 })
 export class AppModule { }

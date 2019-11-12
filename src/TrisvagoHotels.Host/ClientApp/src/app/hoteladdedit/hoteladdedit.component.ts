@@ -73,6 +73,7 @@ export class HotelAddEditComponent implements OnInit {
 
         if (this.actionType === 'Add') {
             let hotel: Hotel = {
+                destacado: false,
                 nombre: this.form.get(this.formNombre).value,
                 categoria: this.form.get(this.formCategoria).value,
                 descripcion: this.form.get(this.formDescripcion).value,
@@ -92,6 +93,7 @@ export class HotelAddEditComponent implements OnInit {
         if (this.actionType === 'Edit') {
             let hotel: Hotel = {
                 id: this.existingHotel.id,
+                destacado: false,
                 nombre: this.form.get(this.formNombre).value,
                 categoria: this.form.get(this.formCategoria).value,
                 descripcion: this.form.get(this.formDescripcion).value,

@@ -56,6 +56,8 @@
         <None Remove="ClientApp\src\app\blog-post-add-edit\blog-post-add-edit.component.html" />
         <None Remove="ClientApp\src\app\hoteladdedit\hoteladdedit.component.ts" />
         <None Remove="healthchecksdb" />
+        <None Remove="healthchecksdb" />
+        <None Include="**/*" />
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\TrisvagoHotels.Api\TrisvagoHotels.Api.csproj">
@@ -98,6 +100,7 @@
       <TypeScriptCompile Include="ClientApp\src\app\hoteladdedit\hoteladdedit.component.ts" />
     </ItemGroup>
     <ItemGroup>
+      <Folder Include="ClientApp\src\app\mat-confirm-dialog" />
       <Folder Include="Resources" />
       <Folder Include="Resources\" />
     </ItemGroup>
@@ -119,7 +122,7 @@
         <ItemGroup>
             <DistFiles Include="$(SpaRoot)dist\**; $(SpaRoot)dist-server\**" />
             <DistFiles Include="$(SpaRoot)node_modules\**" Condition="'$(BuildServerSideRenderer)' == 'true'" />
-            <ResolvedFileToPublish Include="@(DistFiles-&gt;'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+            <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
                 <RelativePath>%(DistFiles.Identity)</RelativePath>
                 <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
                 <ExcludeFromSingleFile>true</ExcludeFromSingleFile>

@@ -69,13 +69,13 @@ namespace TrisvagoHotels.Api.Controllers {
 
 		// DELETE api/hotels/5
 		[HttpDelete("{id}")]
-		public IActionResult Delete(int id) {
+		public async Task<IActionResult> Delete(int id) {
 			var myhotel = hotelsServices.GetHotel(id);
 			if (myhotel is null) {
 				return NotFound();
 			}
-			hotelsServices.RemoveHotelAsync(id);
-			return Ok();
+			await hotelsServices.RemoveHotelAsync(id);
+			return NoContent();
 		}
 
 		[HttpPost("Upload")]

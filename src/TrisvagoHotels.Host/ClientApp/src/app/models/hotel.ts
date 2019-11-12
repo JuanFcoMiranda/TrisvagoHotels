@@ -5,4 +5,5 @@ export class Hotel {
     descripcion: string;
     localidad: string;
     caracteristicas: string;
+    destacado: boolean;
 }
