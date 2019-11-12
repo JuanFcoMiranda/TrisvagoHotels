@@ -61,6 +61,8 @@ namespace TrisvagoHotels.Api.Controllers {
 			myhotel.Descripcion = hotel.Descripcion;
 			myhotel.Nombre = hotel.Nombre;
 			myhotel.Destacado = hotel.Destacado;
+			myhotel.Localidad = hotel.Localidad;
+			myhotel.Caracteristicas = hotel.Caracteristicas;
 			await hotelsServices.UpdateHotelAsync(myhotel);
 			return CreatedAtAction("Get", new { id = myhotel.Id }, myhotel);
 		}

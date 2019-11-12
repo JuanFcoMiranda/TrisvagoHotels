@@ -44,7 +44,9 @@ export class HotelAddEditComponent implements OnInit {
                 nombre: ['', [Validators.required]],
                 descripcion: ['', []],
                 categoria: ['', []],
-                foto: ['', []]
+                foto: ['', []],
+                localidad: ['', []],
+                caracteristicas: ['', []]
             }
         )
     }
