@@ -1,33 +1,35 @@
 <div class="mat-elevation-z8">
     <table mat-table [dataSource]="dataSource" matSort>
-      <!-- Position Column -->
-      <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef>#</th>
-        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
-      </ng-container>
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef>#</th>
+            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
 
-      <!-- Name Column -->
-      <ng-container matColumnDef="nombre">
-        <th mat-header-cell *matHeaderCellDef>Nombre</th>
-        <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
-      </ng-container>
+        <ng-container matColumnDef="nombre">
+            <th mat-header-cell *matHeaderCellDef>Nombre</th>
+            <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+        </ng-container>
 
-      <!-- Weight Column -->
-      <ng-container matColumnDef="categoria">
-        <th mat-header-cell *matHeaderCellDef>Descripci&oacute;n</th>
-        <td mat-cell *matCellDef="let element"> {{element.categoria}} </td>
-      </ng-container>
+        <ng-container matColumnDef="categoria">
+            <th mat-header-cell *matHeaderCellDef>Descripci&oacute;n</th>
+            <td mat-cell *matCellDef="let element"> {{element.categoria}} </td>
+        </ng-container>
 
-      <ng-container matColumnDef="actions">
-        <mat-header-cell *matHeaderCellDef></mat-header-cell>
-        <mat-cell *matCellDef="let row">
-          <a [routerLink]="['/hotel/edit/', row.id]" class="btn btn-primary btn-sm float-right">Edit</a>&nbsp;
-          <a [routerLink]="" (click)="delete(row.id)" class="btn btn-danger btn-sm float-right">Delete</a>&nbsp;
-          <button mat-icon-button (click)="favorite(row.id, row)" *ngIf="!row.destacado || row.destacado == null"><mat-icon>star_border</mat-icon></button>
-          <button mat-icon-button (click)="unfavorite(row.id, row)" *ngIf="row.destacado"><mat-icon>star</mat-icon></button>
-        </mat-cell>
-      </ng-container>
-      <ng-container matColumnDef="loading">
+        <ng-container matColumnDef="foto">
+            <th mat-header-cell *matHeaderCellDef>Foto</th>
+            <td mat-cell *matCellDef="let element"> <img *ngIf="element.foto != null" [src]="element.foto" alt="" style="height: 50px" /> </td>
+        </ng-container>
+
+        <ng-container matColumnDef="actions">
+            <mat-header-cell *matHeaderCellDef></mat-header-cell>
+            <mat-cell *matCellDef="let row">
+                <a [routerLink]="['/hotel/edit/', row.id]" class="btn btn-primary btn-sm float-right">Edit</a>&nbsp;
+                <a [routerLink]="" (click)="delete(row.id)" class="btn btn-danger btn-sm float-right">Delete</a>&nbsp;
+                <button mat-icon-button (click)="favorite(row.id, row)" *ngIf="!row.destacado || row.destacado == null"><mat-icon>star_border</mat-icon></button>
+                <button mat-icon-button (click)="unfavorite(row.id, row)" *ngIf="row.destacado"><mat-icon>star</mat-icon></button>
+            </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="loading">
             <mat-footer-cell *matFooterCellDef colspan="6">
                 Loading data...
             </mat-footer-cell>

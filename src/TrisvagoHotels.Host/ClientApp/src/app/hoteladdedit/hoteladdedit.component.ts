@@ -21,6 +21,7 @@ export class HotelAddEditComponent implements OnInit {
     formDescripcion: string;
     formLocalidad: string;
     formCaracteristicas: string;
+    formFoto: string;
     hotelId: number;
     errorMessage: any;
     existingHotel: Hotel;
@@ -33,6 +34,7 @@ export class HotelAddEditComponent implements OnInit {
         this.formDescripcion = 'descripcion';
         this.formLocalidad = 'localidad';
         this.formCaracteristicas = 'caracteristicas';
+        this.formFoto = 'foto';
 
         if (this.avRoute.snapshot.params[idParam]) {
             this.hotelId = this.avRoute.snapshot.params[idParam];
@@ -61,7 +63,8 @@ export class HotelAddEditComponent implements OnInit {
                     this.form.controls[this.formCategoria].setValue(data.categoria),
                     this.form.controls[this.formDescripcion].setValue(data.descripcion),
                     this.form.controls[this.formLocalidad].setValue(data.localidad),
-                    this.form.controls[this.formCaracteristicas].setValue(data.caracteristicas)
+                    this.form.controls[this.formCaracteristicas].setValue(data.caracteristicas),
+                    this.form.controls[this.formFoto].setValue(data.foto)
                 ));
         }
     }
@@ -78,7 +81,8 @@ export class HotelAddEditComponent implements OnInit {
                 categoria: this.form.get(this.formCategoria).value,
                 descripcion: this.form.get(this.formDescripcion).value,
                 localidad: this.form.get(this.formLocalidad).value,
-                caracteristicas: this.form.get(this.formCaracteristicas).value
+                caracteristicas: this.form.get(this.formCaracteristicas).value,
+                foto: this.form.get(this.formFoto).value
             };
             this.hotelService.saveHotel(hotel)
                 .subscribe((data) => {
@@ -98,7 +102,8 @@ export class HotelAddEditComponent implements OnInit {
                 categoria: this.form.get(this.formCategoria).value,
                 descripcion: this.form.get(this.formDescripcion).value,
                 localidad: this.form.get(this.formLocalidad).value,
-                caracteristicas: this.form.get(this.formCaracteristicas).value
+                caracteristicas: this.form.get(this.formCaracteristicas).value,
+                foto: this.form.get(this.formFoto).value
             };
             this.hotelService.updateHotel(hotel.id, hotel)
                 .subscribe((data) => {
