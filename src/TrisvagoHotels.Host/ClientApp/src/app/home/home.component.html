@@ -1,4 +1,7 @@
 <div class="mat-elevation-z8">
+    <p>
+        <a [routerLink]="['/add']" class="btn btn-primary float-right mb-3">A&ntilde;adir</a>
+    </p>
     <table mat-table [dataSource]="dataSource" matSort>
         <ng-container matColumnDef="id">
             <th mat-header-cell *matHeaderCellDef>#</th>
