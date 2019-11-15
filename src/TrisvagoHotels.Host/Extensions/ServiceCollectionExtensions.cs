@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.OpenApi.Models;
@@ -49,7 +49,7 @@ namespace Microsoft.Extensions.DependencyInjection {
 
 		public static IServiceCollection AddCustomHealthChecks(this IServiceCollection services, IConfiguration configuration) {
 			return services.AddHealthChecks()
-				.AddMySql(configuration.GetConnectionString("DataAccessMySqlProvider"), "DataAccessMySqlProvider", failureStatus: HealthStatus.Degraded, tags: new[] { "DataAccessMySqlProviderDependencies" })
+				.AddMySql(connectionString: configuration["AppSettings:ConnectionStrings:DataAccessMySqlProvider"], name: "DataAccessMySqlProvider", failureStatus: HealthStatus.Degraded, tags: new[] { "DataAccessMySqlProviderDependencies" })
 				.AddCheck("self", () => HealthCheckResult.Healthy())
 				.Services;
 		}
