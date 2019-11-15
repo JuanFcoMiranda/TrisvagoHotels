@@ -11,6 +11,7 @@
 
 # Health checks
 healthchecksdb*
+healthchecksdb
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
