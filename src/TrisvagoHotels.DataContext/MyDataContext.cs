@@ -5,7 +5,10 @@ using TrisvagoHotels.Mappings.EntityMappings;
 
 namespace TrisvagoHotels.DataContext {
 	public class MyDataContext : DbContext {
-		public MyDataContext(DbContextOptions<MyDataContext> options) : base(options) { }
+		public MyDataContext(DbContextOptions<MyDataContext> options) : base(options) {
+			Database.Migrate();
+			Database.EnsureCreated();
+		}
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder) {
 			Assembly[] assemblies = {
