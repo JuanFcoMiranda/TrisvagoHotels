@@ -29,32 +29,6 @@
         <!-- Don't publish the SPA source files, but do show them in the project files list -->
         <Content Remove="$(SpaRoot)**" />
         <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
-        <None Remove="healthchecksdb" />
-        <None Remove="healthchecksdb" />
-        <None Remove="ClientApp\src\app\app-routing.module.ts" />
-        <None Remove="ClientApp\src\app\app.component.html" />
-        <None Remove="ClientApp\src\app\services\hotel.service.ts" />
-        <None Remove="ClientApp\e2e\src\app.e2e-spec.ts" />
-        <None Remove="ClientApp\e2e\src\app.po.ts" />
-        <None Remove="ClientApp\.editorconfig" />
-        <None Remove="ClientApp\.gitignore" />
-        <None Remove="ClientApp\src\environments\environment.ts" />
-        <None Remove="ClientApp\src\app\nav-menu\nav-menu.component.ts" />
-        <None Remove="ClientApp\src\app\models\hotel.ts" />
-        <None Remove="ClientApp\src\app\home\home.component.ts" />
-        <None Remove="ClientApp\src\app\counter\counter.component.html" />
-        <None Remove="ClientApp\src\app\counter\counter.component.ts" />
-        <None Remove="ClientApp\src\app\services\hotel.service.spec.ts" />
-        <None Remove="ClientApp\src\main.ts" />
-        <None Remove="ClientApp\src\test.ts" />
-        <None Remove="ClientApp\src\polyfills.ts" />
-        <None Remove="ClientApp\src\test.ts" />
-        <None Remove="ClientApp\src\polyfills.ts" />
-        <None Remove="ClientApp\src\app\blog-post-add-edit\blog-post-add-edit.component.spec.ts" />
-        <None Remove="ClientApp\src\app\blog-post-add-edit\blog-post-add-edit.component.ts" />
-        <None Remove="ClientApp\src\app\blog-post-add-edit\blog-post-add-edit.component.scss" />
-        <None Remove="ClientApp\src\app\blog-post-add-edit\blog-post-add-edit.component.html" />
-        <None Remove="ClientApp\src\app\hoteladdedit\hoteladdedit.component.ts" />
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\TrisvagoHotels.Api\TrisvagoHotels.Api.csproj">
@@ -98,6 +72,7 @@
     </ItemGroup>
     <ItemGroup>
         <Folder Include="Resources" />
+        <Folder Include="Properties\" />
     </ItemGroup>
     <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
         <!-- Ensure Node.js is installed -->
