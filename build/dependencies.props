@@ -18,7 +18,7 @@
         <MicrosoftEntityFrameworkCoreSqlServerVersion>3.0.0</MicrosoftEntityFrameworkCoreSqlServerVersion>
         <MySqlDataVersion>8.0.18</MySqlDataVersion>
         <MySqlDataEntityFrameworkVersion>8.0.18</MySqlDataEntityFrameworkVersion>
-        <PomeloEntityFrameworkCoreMySql>3.0.0-rc3.final</PomeloEntityFrameworkCoreMySql>
+        <PomeloEntityFrameworkCoreMySql>3.0.0</PomeloEntityFrameworkCoreMySql>
     </PropertyGroup>
     <PropertyGroup Label="Fluent Validation">
         <FluentValidationAspNetCoreVersion>8.5.1</FluentValidationAspNetCoreVersion>
