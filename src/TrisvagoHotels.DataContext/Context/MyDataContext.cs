@@ -3,7 +3,7 @@ using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 using TrisvagoHotels.Mappings.EntityMappings;
 
-namespace TrisvagoHotels.DataContext {
+namespace TrisvagoHotels.DataContext.Context {
 	public class MyDataContext : DbContext {
 		public MyDataContext(DbContextOptions<MyDataContext> options) : base(options) {
 			Database.Migrate();

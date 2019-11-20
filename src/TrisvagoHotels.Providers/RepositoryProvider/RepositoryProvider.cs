@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using TrisvagoHotels.DataContext;
+using TrisvagoHotels.DataContext.Context;
 using TrisvagoHotels.DataContracts.IRepository;
 using TrisvagoHotels.DataContracts.IRepositoryFactory;
 using TrisvagoHotels.DataContracts.IRepositoryProvider;

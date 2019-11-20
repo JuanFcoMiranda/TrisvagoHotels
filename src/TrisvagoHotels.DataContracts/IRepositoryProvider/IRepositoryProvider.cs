@@ -1,5 +1,5 @@
 ﻿using System;
-using TrisvagoHotels.DataContext;
+using TrisvagoHotels.DataContext.Context;
 using TrisvagoHotels.DataContracts.IRepository;
 
 namespace TrisvagoHotels.DataContracts.IRepositoryProvider {

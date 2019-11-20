@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
-using TrisvagoHotels.DataContext;
+using TrisvagoHotels.DataContext.Context;
 using TrisvagoHotels.DataContracts.IRepository;
 using TrisvagoHotels.DataContracts.IRepositoryProvider;
 using TrisvagoHotels.DataContracts.IUow;

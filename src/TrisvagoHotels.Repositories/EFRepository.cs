@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
-using TrisvagoHotels.DataContext;
+using TrisvagoHotels.DataContext.Context;
 using TrisvagoHotels.DataContracts.IRepository;
 
 namespace TrisvagoHotels.Repositories {

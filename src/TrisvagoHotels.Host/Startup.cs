@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -18,6 +19,7 @@ namespace TrisvagoHotels {
 		public Startup(IConfiguration configuration, IWebHostEnvironment environment) {
 			Configuration = configuration;
 			Environment = environment;
+			//Span<byte> bytes = stackalloc byte[100];
 		}
 
 		// This method gets called by the runtime. Use this method to add services to the container.
