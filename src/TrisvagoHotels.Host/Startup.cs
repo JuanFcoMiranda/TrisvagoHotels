@@ -1,4 +1,3 @@
-using System;
 using System.IO;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -10,7 +9,7 @@ using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using TrisvagoHotels.Api.Configuration;
 
-namespace TrisvagoHotels {
+namespace TrisvagoHotels.Host {
 	public class Startup {
 		public IConfiguration Configuration { get; }
 

@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
-using TrisvagoHotels.Api.Extensions;
 
 namespace TrisvagoHotels.Api.Configuration {
 	public static class ApiConfiguration {

@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using TrisvagoHotels.Api.Filters;
 
-namespace TrisvagoHotels.Api.Extensions {
+namespace Microsoft.Extensions.DependencyInjection {
 	public static class ServiceCollectionExtensions {
 		public static IServiceCollection AddCustomProblemDetails(this IServiceCollection services, IWebHostEnvironment environment) =>
 			services
