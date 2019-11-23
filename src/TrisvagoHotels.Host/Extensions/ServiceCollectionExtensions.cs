@@ -1,5 +1,3 @@
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.OpenApi.Models;
 using TrisvagoHotels.Api.Filters;
 using TrisvagoHotels.Api.HttpErrors;
@@ -38,13 +36,6 @@ namespace Microsoft.Extensions.DependencyInjection {
 				});
 			});
 			return services;
-		}
-
-		public static IServiceCollection AddCustomHealthChecks(this IServiceCollection services, IConfiguration configuration) {
-			return services.AddHealthChecks()
-				.AddMySql(connectionString: configuration["AppSettings:ConnectionStrings:DataAccessMySqlProvider"], name: "DataAccessMySqlProvider", failureStatus: HealthStatus.Degraded, tags: new[] { "DataAccessMySqlProviderDependencies" })
-				.AddCheck("self", () => HealthCheckResult.Healthy())
-				.Services;
 		}
 	}
 }
