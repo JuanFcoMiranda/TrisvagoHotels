@@ -44,7 +44,7 @@
     <MicrosoftExtensionsHostingVersion>3.0.1</MicrosoftExtensionsHostingVersion>
   </PropertyGroup>
   <PropertyGroup Label="Health Checks">
-    <AspNetCoreHealthChecksUIVersion>3.0.3</AspNetCoreHealthChecksUIVersion>
+    <AspNetCoreHealthChecksUIVersion>3.0.4</AspNetCoreHealthChecksUIVersion>
     <AspNetCoreHealthChecksUIClientVersion>3.0.0</AspNetCoreHealthChecksUIClientVersion>
     <AspNetCoreHealthChecksSqlServerVersion>3.0.0</AspNetCoreHealthChecksSqlServerVersion>
     <AspNetCoreHealthChecksMySqlVersion>3.0.0</AspNetCoreHealthChecksMySqlVersion>

@@ -23,22 +23,21 @@ namespace TrisvagoHotels.Host {
 
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services) {
-			ApiConfiguration.ConfigureServices(services, Environment)
-			   .AddEntityFrameworkCore(Configuration)
-			   .AddCustomServices()
-			   .AddCustomHealthChecks(Configuration)
-			   .AddHealthChecksUI()
-			   .AddOpenApi()
-			// In production, the Angular files will be served from this directory
-			.AddSpaStaticFiles(configuration => {
-				configuration.RootPath = "ClientApp/dist";
-			});
+			ApiConfiguration.ConfigureServices(services, Environment, Configuration)
+				//.AddEntityFrameworkCore(Configuration)
+				.AddCustomServices()
+				//.AddCustomHealthChecks(Configuration)
+				//.AddHealthChecksUI()
+				.AddOpenApi()
+				// In production, the Angular files will be served from this directory
+				.AddSpaStaticFiles(configuration => {
+					configuration.RootPath = "ClientApp/dist";
+				});
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
 		public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
-			ApiConfiguration.Configure(
-				app, host => host
+			ApiConfiguration.Configure(app, host => host
 					.UseIf(env.IsDevelopment(), appBuilder => appBuilder.UseDeveloperExceptionPage())
 					.UseSwagger()
 					.UseIf(env.IsDevelopment(), appBuilder => appBuilder.UseSwaggerUI(setup => {

@@ -4,15 +4,19 @@ using Hellang.Middleware.ProblemDetails;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace TrisvagoHotels.Api.Configuration {
 	public static class ApiConfiguration {
-		public static IServiceCollection ConfigureServices(IServiceCollection services, IWebHostEnvironment environment) => services
+		public static IServiceCollection ConfigureServices(IServiceCollection services, IWebHostEnvironment environment, IConfiguration configuration) => services
 				.AddHttpContextAccessor()
 				.AddCustomMvc()
 				.AddCustomProblemDetails(environment)
-				.AddCustomApiBehaviour();
+				.AddCustomApiBehaviour()
+				.AddEntityFrameworkCore(configuration)
+				.AddCustomHealthChecks(configuration)
+				.AddHealthChecksUI();
 
 		public static IApplicationBuilder Configure(IApplicationBuilder app, Func<IApplicationBuilder, IApplicationBuilder> configureHost) {
 			return configureHost(app)
