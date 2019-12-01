@@ -24,7 +24,7 @@ namespace TrisvagoHotels.Services.Hotels {
 		public async Task<Hotel?> GetHotel(int id) => await uow.Hotels.GetById(id);
 
 		public async Task RemoveHotelAsync(int id) {
-			uow.Hotels.Delete(id);
+			await uow.Hotels.Delete(id);
 			await uow.CommitAsync();
 		}
 
