@@ -21,7 +21,7 @@
     <PomeloEntityFrameworkCoreMySql>3.0.0</PomeloEntityFrameworkCoreMySql>
   </PropertyGroup>
   <PropertyGroup Label="Fluent Validation">
-    <FluentValidationAspNetCoreVersion>8.5.1</FluentValidationAspNetCoreVersion>
+    <FluentValidationAspNetCoreVersion>8.6.0</FluentValidationAspNetCoreVersion>
   </PropertyGroup>
   <PropertyGroup Label="Json">
     <NewtonsoftJsonVersion>12.0.2</NewtonsoftJsonVersion>

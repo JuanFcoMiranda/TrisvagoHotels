@@ -29,6 +29,7 @@ namespace TrisvagoHotels.Host {
 				//.AddCustomHealthChecks(Configuration)
 				//.AddHealthChecksUI()
 				.AddOpenApi()
+				.AddMediatr()
 				// In production, the Angular files will be served from this directory
 				.AddSpaStaticFiles(configuration => {
 					configuration.RootPath = "ClientApp/dist";
@@ -44,7 +45,7 @@ namespace TrisvagoHotels.Host {
 						setup.SwaggerEndpoint("/swagger/v1/swagger.json", nameof(TrisvagoHotels));
 					}))
 					.UseHttpsRedirection()
-					.UseStaticFiles(new StaticFileOptions() {
+					.UseStaticFiles(new StaticFileOptions {
 						FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), @"Resources")),
 						RequestPath = new PathString("/Resources")
 					})

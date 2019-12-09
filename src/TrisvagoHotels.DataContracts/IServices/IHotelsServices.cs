@@ -6,7 +6,7 @@ using TrisvagoHotels.Model.Entities;
 
 namespace TrisvagoHotels.DataContracts.IServices {
 	public interface IHotelsServices {
-		IAsyncEnumerable<Hotel> GetAllHotels();
+		Task<IEnumerable<Hotel>> GetAllHotels();
 		Task<Hotel?> GetHotel(int id);
 		Task AddHotelAsync(Hotel hotel);
 		Task UpdateHotelAsync(Hotel hotel);

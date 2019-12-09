@@ -11,7 +11,7 @@ namespace Microsoft.Extensions.DependencyInjection {
 				.AddProblemDetails(configure => {
 					configure.IncludeExceptionDetails = _ => environment.EnvironmentName == "Development";
 				});
-
+		
 		public static IServiceCollection AddCustomMvc(this IServiceCollection services) =>
 			services
 				.AddMvcCore(config => {

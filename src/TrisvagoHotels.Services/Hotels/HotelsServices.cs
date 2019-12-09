@@ -19,7 +19,7 @@ namespace TrisvagoHotels.Services.Hotels {
 			await uow.CommitAsync();
 		}
 
-		public IAsyncEnumerable<Hotel> GetAllHotels() => uow.Hotels.GetAll();
+		public async Task<IEnumerable<Hotel>> GetAllHotels() => await uow.Hotels.GetAll();
 
 		public async Task<Hotel?> GetHotel(int id) => await uow.Hotels.GetById(id);
 

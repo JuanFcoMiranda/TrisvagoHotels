@@ -7,9 +7,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using TrisvagoHotels.DataContext.Context;
 using TrisvagoHotels.DataContracts.IRepository;
+using TrisvagoHotels.Model.Entities;
 
 namespace TrisvagoHotels.Repositories {
-	public class EFRepository<T> : IRepository<T> where T : class {
+	public sealed class EFRepository<T> : IRepository<T> where T : class {
 		public EFRepository(MyDataContext context) {
 			Context = context ?? throw new ArgumentNullException(nameof(context));
 			DBSet = Context.Set<T>();
@@ -25,9 +26,9 @@ namespace TrisvagoHotels.Repositories {
 		
 		public Task<int> CountWhere(Expression<Func<T, bool>> predicate) => DBSet.CountAsync(predicate);
 
-		public IAsyncEnumerable<T> GetAllByCondition(Expression<Func<T, bool>> expression) => DBSet.Where(expression).AsNoTracking().AsAsyncEnumerable();
+		public async Task<IReadOnlyCollection<T>> GetAllByCondition(Expression<Func<T, bool>> expression) => await DBSet.Where(expression).AsNoTracking().ToListAsync();
 
-		IAsyncEnumerable<T> IRepository<T>.GetAll() => DBSet.AsNoTracking().AsAsyncEnumerable();
+		async Task<IReadOnlyList<T>> IRepository<T>.GetAll() => await DBSet.AsNoTracking().ToListAsync();
 
 		public void Add(T entity) {
 			EntityEntry dbEntity = Context.Entry(entity);
@@ -65,7 +66,7 @@ namespace TrisvagoHotels.Repositories {
 			}
 		}
 
-		public virtual async Task Delete(int id) {
+		public async Task Delete(int id) {
 			T entity = await GetById(id);
 			if (entity == null)
 				return; 

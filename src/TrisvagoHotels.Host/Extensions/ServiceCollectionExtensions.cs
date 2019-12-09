@@ -1,6 +1,9 @@
+using MediatR;
 using Microsoft.OpenApi.Models;
 using TrisvagoHotels.Api.Filters;
 using TrisvagoHotels.Api.HttpErrors;
+using TrisvagoHotels.Api.Requests;
+using TrisvagoHotels.Api.Validations;
 using TrisvagoHotels.DataContext.Context;
 using TrisvagoHotels.DataContracts.IRepositoryFactory;
 using TrisvagoHotels.DataContracts.IRepositoryProvider;
@@ -37,5 +40,10 @@ namespace Microsoft.Extensions.DependencyInjection {
 			});
 			return services;
 		}
+		
+		public static IServiceCollection AddMediatr(this IServiceCollection services) =>
+			services
+				.AddMediatR(typeof(GetMyHotelsRequest).Assembly)
+				.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
 	}
 }
