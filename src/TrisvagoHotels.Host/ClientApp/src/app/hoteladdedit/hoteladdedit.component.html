@@ -47,7 +47,7 @@
                 Upload progress: {{ fileUploadProgress }}
             </div>
             <div class="image-preview mb-3" *ngIf="previewUrl">
-                <img [src]="previewUrl" style="height: 50px" />
+                <img alt="Image preview" [src]="previewUrl" style="height: 50px" />
             </div>
 
             <div class="mb-3" *ngIf="uploadedFilePath">

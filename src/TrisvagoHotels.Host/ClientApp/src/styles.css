@@ -55,17 +55,6 @@ mat-radio-group mat-radio-button {
   margin: 5px;
 }
 
-/* notification */
-snack-bar-container.success {
-  background-color: #5cb85c;
-  color: #fff;
-}
-
-snack-bar-container.notification simple-snack-bar {
-  font-size: 18px !important;
-  font-weight: bold;
-}
-
 .hide {
   display: none;
 }

@@ -7,7 +7,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using TrisvagoHotels.DataContext.Context;
 using TrisvagoHotels.DataContracts.IRepository;
-using TrisvagoHotels.Model.Entities;
 
 namespace TrisvagoHotels.Repositories {
 	public sealed class EFRepository<T> : IRepository<T> where T : class {
