@@ -11,14 +11,14 @@
     <MicrosoftCSharpVersion>4.6.0</MicrosoftCSharpVersion>
   </PropertyGroup>
   <PropertyGroup Label="Spa Extensions">
-    <MicrosoftAspNetCoreSpaServicesExtensions>3.1.0</MicrosoftAspNetCoreSpaServicesExtensions>
+    <MicrosoftAspNetCoreSpaServicesExtensions>3.1.1</MicrosoftAspNetCoreSpaServicesExtensions>
   </PropertyGroup>
   <PropertyGroup Label="Entity Framework">
     <MicrosoftEntityFrameworkCoreVersion>3.1.1</MicrosoftEntityFrameworkCoreVersion>
     <MicrosoftEntityFrameworkCoreSqlServerVersion>3.1.1</MicrosoftEntityFrameworkCoreSqlServerVersion>
     <MySqlDataVersion>8.0.19</MySqlDataVersion>
     <MySqlDataEntityFrameworkVersion>8.0.19</MySqlDataEntityFrameworkVersion>
-    <PomeloEntityFrameworkCoreMySql>3.1.0</PomeloEntityFrameworkCoreMySql>
+    <PomeloEntityFrameworkCoreMySql>3.1.1</PomeloEntityFrameworkCoreMySql>
   </PropertyGroup>
   <PropertyGroup Label="Fluent Validation">
     <FluentValidationAspNetCoreVersion>8.6.1</FluentValidationAspNetCoreVersion>
@@ -34,10 +34,10 @@
     <MediatRExtensionsMicrosoftDependencyInjectionVersion>8.0.0</MediatRExtensionsMicrosoftDependencyInjectionVersion>
   </PropertyGroup>
   <PropertyGroup Label="Problem Details">
-    <HellangMiddlewareProblemDetailsVersion>3.1.0</HellangMiddlewareProblemDetailsVersion>
+    <HellangMiddlewareProblemDetailsVersion>4.0.0</HellangMiddlewareProblemDetailsVersion>
   </PropertyGroup>
   <PropertyGroup Label="User Secrets">
-    <MicrosoftExtensionsConfigurationUserSecretsVersion>3.0.1</MicrosoftExtensionsConfigurationUserSecretsVersion>
+    <MicrosoftExtensionsConfigurationUserSecretsVersion>3.1.1</MicrosoftExtensionsConfigurationUserSecretsVersion>
   </PropertyGroup>
   <PropertyGroup Label="Hosting Abstractions">
     <MicrosoftAspNetCoreHostingVersion>2.2.0</MicrosoftAspNetCoreHostingVersion>
