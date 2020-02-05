@@ -15,7 +15,7 @@ namespace TrisvagoHotels.Services.Hotels {
 		}
 
 		public async Task AddHotelAsync(Hotel hotel) {
-			uow.Hotels.Add(hotel);
+			await uow.Hotels.Add(hotel);
 			await uow.CommitAsync();
 		}
 
