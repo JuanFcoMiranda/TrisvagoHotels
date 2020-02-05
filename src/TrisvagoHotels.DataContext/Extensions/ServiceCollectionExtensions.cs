@@ -8,7 +8,7 @@ namespace Microsoft.Extensions.DependencyInjection {
 		public static IServiceCollection AddEntityFrameworkCore(this IServiceCollection services, IConfiguration configuration) =>
 			services
 				.AddDbContext<MyDataContext>(options =>
-					options.UseMySql(configuration["AppSettings:ConnectionStrings:DataAccessMySqlProvider"])),
+					options.UseMySql(configuration["AppSettings:ConnectionStrings:DataAccessMySqlProvider"]),
 				                ServiceLifetime.Transient);
 		
 		public static IServiceCollection AddCustomHealthChecks(this IServiceCollection services, IConfiguration configuration) {
