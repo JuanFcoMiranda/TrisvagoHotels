@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>$(NetCoreTargetVersion)</TargetFramework>
+        <IsPackable>false</IsPackable>
+        <LangVersion>$(LangVersion)</LangVersion>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    </PropertyGroup>
+    <ItemGroup>
+        <None Remove="appsettings.json" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="appsettings.json">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Acheve.TestHost" Version="$(AcheveTestHostPackageVersion)" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="$(MicrosoftNETTestSdkVersion)" />
+        <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="$(ASPNetCoreTestHostVersion)" />
+        <PackageReference Include="FluentAssertions" Version="$(FluentAssertionsVersion)" />
+        <PackageReference Include="Respawn" Version="$(RespawnVersion)" />
+        <PackageReference Include="xunit" Version="$(XUnitPackageVersion)" />
+        <PackageReference Include="xunit.runner.visualstudio" Version="$(XUnitRunnerVisualstudioVersion)" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\..\src\TrisvagoHotels.Api\TrisvagoHotels.Api.csproj" />
+    </ItemGroup>
+</Project>

@@ -19,17 +19,23 @@
         <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="$(MicrosoftAspNetCoreHostingVersion)" />
         <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="$(MicrosoftExtensionsHostingVersion)" />
         <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="$(MicrosoftExtensionsConfigurationUserSecretsVersion)" />
-        <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.9.5" />
+        <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="$(MicrosoftVisualStudioAzureContainersToolsTargetsVersion)" />
         <PackageReference Include="MediatR" Version="$(MediatRVersion)" />
         <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="$(MediatRExtensionsMicrosoftDependencyInjectionVersion)" />
     </ItemGroup>
     <ItemGroup>
         <!-- Don't publish the SPA source files, but do show them in the project files list -->
         <Content Remove="$(SpaRoot)**" />
-        <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+        <!-- remove duplicate .json files from Content -->
+        <Content Remove="appsettings.json;appsettings.Development.json;bundleconfig.json" />
+        <Content Include="appsettings.json" Condition="Exists('appsettings.json')" />
+        <Content Include="appsettings.Development.json" Condition="Exists('appsettings.Development.json')" />
+        <Content Include="bundleconfig.json" Condition="Exists('bundleconfig.json')" />
+        <!-- remove .ts files from None, they should be in TypeScriptCompile instead -->
+        <None Remove="**/*.ts" />
     </ItemGroup>
     <ItemGroup>
-      <None Remove="healthchecksdb" />
+        <None Remove="healthchecksdb" />
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\TrisvagoHotels.Api\TrisvagoHotels.Api.csproj">
