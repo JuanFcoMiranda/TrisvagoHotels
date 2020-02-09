@@ -9,9 +9,7 @@ namespace TrisvagoHotels.FunctionalTests {
 		}
 
 		public void Configure(IApplicationBuilder app) {
-			ApiConfiguration.Configure(app, host => {
-				return host;
-			});
+			ApiConfiguration.Configure(app, host => host);
 		}
 	}
 }
