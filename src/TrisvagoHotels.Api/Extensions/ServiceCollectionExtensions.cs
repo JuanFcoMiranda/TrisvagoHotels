@@ -15,7 +15,7 @@ namespace Microsoft.Extensions.DependencyInjection {
 		public static IServiceCollection AddCustomMvc(this IServiceCollection services) =>
 			services
 				.AddMvcCore(config => {
-					config.Filters.Add(typeof(ValidModelStateFilterAttribute));
+					config.Filters.Add(typeof( ValidModelStateFilterAttribute));
 					config.EnableEndpointRouting = false;
 				})
 				.AddJsonOptions(config => config.JsonSerializerOptions.IgnoreNullValues = true)

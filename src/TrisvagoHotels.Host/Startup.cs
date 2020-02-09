@@ -11,7 +11,7 @@ using TrisvagoHotels.Api.Configuration;
 
 namespace TrisvagoHotels.Host {
 	public class Startup {
-		public IConfiguration Configuration { get; }
+		private IConfiguration Configuration { get; }
 
 		private IWebHostEnvironment Environment { get; }
 

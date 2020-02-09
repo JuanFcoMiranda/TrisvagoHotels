@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using TrisvagoHotels.Api.Commands;
+using TrisvagoHotels.Api.Filters;
 using TrisvagoHotels.Api.Requests;
 using TrisvagoHotels.Model.Entities;
 
@@ -28,7 +29,7 @@ namespace TrisvagoHotels.Api.Controllers {
 		}
 
 		// GET api/hotels/5
-		[HttpGet("{id}")]
+		[HttpGet("{id}"), HotelResultFilter]
 		public async Task<ActionResult<Hotel>> Get(int id) {
 			var hotel = await mediator.Send(new GetHotelByIdRequest(id));
 			if (hotel is null) {
@@ -63,7 +64,7 @@ namespace TrisvagoHotels.Api.Controllers {
 				return NotFound();
 			}
 			await mediator.Send(new DeleteHotelCommand(myhotel));
-			return NoContent();
+			return Ok();
 		}
 
 		[HttpPost("Upload")]
