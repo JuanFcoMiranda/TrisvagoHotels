@@ -9,8 +9,7 @@ namespace TrisvagoHotels.FunctionalTests.Fixtures {
 			Server = new TestServer(
 				new WebHostBuilder()
 				.ConfigureServices(services => {
-					services.AddSingleton<ISpeakerService, SpeakersService>();
-					services.TryAddSingleton<INotificationQueue, NoNotificationQueue>();
+
 				})
 				.UseStartup<TestStartup>()
 			);

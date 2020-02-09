@@ -5,7 +5,7 @@ using TrisvagoHotels.Api.Configuration;
 namespace TrisvagoHotels.FunctionalTests {
 	public class TestStartup {
 		public void ConfigureServices(IServiceCollection services) {
-			ApiConfiguration.ConfigureServices(services);
+			//ApiConfiguration.ConfigureServices(services);
 		}
 
 		public void Configure(IApplicationBuilder app) {

@@ -42,7 +42,7 @@ namespace TrisvagoHotels.Host {
 					}))
 					.UseHttpsRedirection()
 					.UseStaticFiles(new StaticFileOptions {
-						FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), @"Resources")),
+						FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), $"Resources")),
 						RequestPath = new PathString("/Resources")
 					})
 					.UseCustomHealthchecks()

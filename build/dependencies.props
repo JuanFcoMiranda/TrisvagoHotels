@@ -55,9 +55,9 @@
         <MicrosoftVisualStudioAzureContainersToolsTargetsVersion>1.9.10</MicrosoftVisualStudioAzureContainersToolsTargetsVersion>
     </PropertyGroup>
     <PropertyGroup Label="Testing">
-        <MicrosoftNETTestSdkVersion>15.9.0</MicrosoftNETTestSdkVersion>
-        <FluentAssertionsVersion>5.6.0</FluentAssertionsVersion>
-        <ASPNetCoreTestHostVersion>2.2.0</ASPNetCoreTestHostVersion>
+        <MicrosoftNETTestSdkVersion>16.5.0</MicrosoftNETTestSdkVersion>
+        <FluentAssertionsVersion>5.10.2</FluentAssertionsVersion>
+        <ASPNetCoreTestHostVersion>3.1.1</ASPNetCoreTestHostVersion>
         <XUnitPackageVersion>2.4.1</XUnitPackageVersion>
         <XUnitRunnerVisualstudioVersion>2.4.1</XUnitRunnerVisualstudioVersion>
         <AcheveTestHostPackageVersion>2.1.1</AcheveTestHostPackageVersion>

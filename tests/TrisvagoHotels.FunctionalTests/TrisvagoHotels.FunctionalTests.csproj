@@ -3,23 +3,22 @@
     <PropertyGroup>
         <TargetFramework>$(NetCoreTargetVersion)</TargetFramework>
         <IsPackable>false</IsPackable>
-        <LangVersion>$(LangVersion)</LangVersion>
-        <UserSecretsId>2c1de0fa-f35c-4bfa-a3ca-32df42a6da08</UserSecretsId>
-        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="Acheve.TestHost" Version="$(AcheveTestHostPackageVersion)" />
-        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="$(MicrosoftNETTestSdkVersion)" />
-        <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="$(ASPNetCoreTestHostVersion)" />
         <PackageReference Include="FluentAssertions" Version="$(FluentAssertionsVersion)" />
-        <PackageReference Include="Respawn" Version="$(RespawnVersion)" />
+        <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="$(ASPNetCoreTestHostVersion)" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="$(MicrosoftNETTestSdkVersion)" />
         <PackageReference Include="xunit" Version="$(XUnitPackageVersion)" />
         <PackageReference Include="xunit.runner.visualstudio" Version="$(XUnitRunnerVisualstudioVersion)" />
     </ItemGroup>
-    <ItemGroup>
-        <ProjectReference Include="..\..\src\TrisvagoHotels.Api\TrisvagoHotels.Api.csproj" />
+    <ItemGroup Label="CLI Tools Versions">
+        <DotNetCliToolReference Include="dotnet-xunit" Version="$(DotnetXUnitVersion)" />
     </ItemGroup>
     <ItemGroup>
-      <Folder Include="TrisvagoHotels.Api" />
+        <Folder Include="TrisvagoHotels.Api\" />
+        <Folder Include="Fixtures\" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\..\src\TrisvagoHotels.Api\TrisvagoHotels.Api.csproj" />
     </ItemGroup>
 </Project>
