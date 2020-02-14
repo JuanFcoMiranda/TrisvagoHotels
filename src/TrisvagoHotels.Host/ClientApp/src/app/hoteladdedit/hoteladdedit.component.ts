@@ -57,15 +57,15 @@ export class HotelAddEditComponent implements OnInit {
         if (this.hotelId > 0) {
             this.actionType = 'Edit';
             this.hotelService.getHotel(this.hotelId)
-                .subscribe(data => (
-                    this.existingHotel = data,
-                    this.form.controls[this.formNombre].setValue(data.nombre),
-                    this.form.controls[this.formCategoria].setValue(data.categoria),
-                    this.form.controls[this.formDescripcion].setValue(data.descripcion),
-                    this.form.controls[this.formLocalidad].setValue(data.localidad),
-                    this.form.controls[this.formCaracteristicas].setValue(data.caracteristicas),
-                    this.form.controls[this.formFoto].setValue(data.foto)
-                ));
+                .subscribe(data => {
+                    this.existingHotel = data;
+                    this.form.controls[this.formNombre].setValue(data.nombre);
+                    this.form.controls[this.formCategoria].setValue(data.categoria);
+                    this.form.controls[this.formDescripcion].setValue(data.descripcion);
+                    this.form.controls[this.formLocalidad].setValue(data.localidad);
+                    this.form.controls[this.formCaracteristicas].setValue(data.caracteristicas);
+                    this.form.controls[this.formFoto].setValue(data.foto);
+            });
         }
     }
 
