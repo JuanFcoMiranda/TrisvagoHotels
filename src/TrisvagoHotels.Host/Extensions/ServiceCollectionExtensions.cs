@@ -13,6 +13,7 @@ using TrisvagoHotels.Providers.RepositoryFactory;
 using TrisvagoHotels.Providers.RepositoryProvider;
 using TrisvagoHotels.Services.Hotels;
 using TrisvagoHotels.Uow;
+using TrisvagoHotels.Uow.Uow;
 
 namespace Microsoft.Extensions.DependencyInjection {
 	public static class ServiceCollectionExtensions {

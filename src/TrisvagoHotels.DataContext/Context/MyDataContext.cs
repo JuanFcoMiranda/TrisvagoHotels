@@ -6,8 +6,7 @@ using TrisvagoHotels.Mappings.EntityMappings;
 namespace TrisvagoHotels.DataContext.Context {
 	public class MyDataContext : DbContext {
 		public MyDataContext(DbContextOptions<MyDataContext> options) : base(options) {
-			Database.Migrate();
-			Database.EnsureCreated();
+			
 		}
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder) {
@@ -18,6 +17,6 @@ namespace TrisvagoHotels.DataContext.Context {
 			foreach (var assembly in assemblies.Distinct()) {
 				modelBuilder.ApplyConfigurationsFromAssembly(assembly);
 			}
-		}
+		} 
 	}
 }

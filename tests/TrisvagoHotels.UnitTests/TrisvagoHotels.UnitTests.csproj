@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>$(NetCoreTargetVersion)</TargetFramework>
+        <IsPackable>false</IsPackable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="$(MicrosoftEntityFrameworkCoreVersion)" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="$(MicrosoftEntityFrameworkCoreSqliteVersion)" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="$(MicrosoftNETTestSdkVersion)" />
+        <PackageReference Include="xunit" Version="$(XUnitPackageVersion)" />
+        <PackageReference Include="xunit.runner.visualstudio" Version="$(XUnitRunnerVisualstudioVersion)" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\src\TrisvagoHotels.DataContext\TrisvagoHotels.DataContext.csproj" />
+      <ProjectReference Include="..\..\src\TrisvagoHotels.DataContracts\TrisvagoHotels.DataContracts.csproj" />
+      <ProjectReference Include="..\..\src\TrisvagoHotels.Model\TrisvagoHotels.Model.csproj" />
+      <ProjectReference Include="..\..\src\TrisvagoHotels.Providers\TrisvagoHotels.Providers.csproj" />
+      <ProjectReference Include="..\..\src\TrisvagoHotels.Uow\TrisvagoHotels.Uow.csproj" />
+    </ItemGroup>
+
+</Project>

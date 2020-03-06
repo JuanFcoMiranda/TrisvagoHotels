@@ -8,15 +8,17 @@ using Microsoft.EntityFrameworkCore.ChangeTracking;
 using TrisvagoHotels.DataContext.Context;
 using TrisvagoHotels.DataContracts.IRepository;
 
-namespace TrisvagoHotels.Repositories {
-	public sealed class EFRepository<T> : IRepository<T> where T : class {
-		public EFRepository(MyDataContext context) {
+namespace TrisvagoHotels.Repositories.EFRepository {
+	public sealed class Repository<T> : IRepository<T> where T : class {
+		public Repository(MyDataContext context) {
 			Context = context ?? throw new ArgumentNullException(nameof(context));
 			DBSet = Context.Set<T>();
 		}
 
 		private DbSet<T> DBSet { get; set; }
+		
 		private DbContext Context { get; set; }
+		
 		public async ValueTask<T> GetById(int id) => await Context.Set<T>().FindAsync(id);
 		
 		public async Task<T> FirstOrDefault(Expression<Func<T, bool>> predicate) => await DBSet.FirstOrDefaultAsync(predicate);

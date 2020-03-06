@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using TrisvagoHotels.DataContext.Context;
 using TrisvagoHotels.DataContracts.IRepositoryFactory;
-using TrisvagoHotels.Repositories;
+using TrisvagoHotels.Repositories.EFRepository;
 
 namespace TrisvagoHotels.Providers.RepositoryFactory {
 	public class RepositoryFactory : IRepositoryFactory {
@@ -27,7 +27,7 @@ namespace TrisvagoHotels.Providers.RepositoryFactory {
 		}
 
 		private Func<MyDataContext, object> DefaultEntityRepositoryFactory<T>() where T : class {
-			return context => new EFRepository<T>(context);
+			return context => new Repository<T>(context);
 		}
 	}
 }
