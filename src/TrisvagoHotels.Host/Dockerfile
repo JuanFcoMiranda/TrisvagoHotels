@@ -21,11 +21,11 @@ COPY ["src/TrisvagoHotels.Uow/TrisvagoHotels.Uow.csproj", "src/TrisvagoHotels.Uo
 
 RUN dotnet restore "src/TrisvagoHotels.Host/TrisvagoHotels.Host.csproj"
 COPY . .
-WORKDIR "/src/src/DotNet2019.Host"
-RUN dotnet build "DotNet2019.Host.csproj" -c Release -o /app
+WORKDIR "/src/src/TrisvagoHotels.Host"
+RUN dotnet build "TrisvagoHotels.Host.csproj" -c Release -o /app
 
 FROM build AS publish
-RUN dotnet publish "DotNet2019.Host.csproj" -c Release -o /app
+RUN dotnet publish "TrisvagoHotels.Host.csproj" -c Release -o /app
 
 FROM base AS final
 WORKDIR /app
