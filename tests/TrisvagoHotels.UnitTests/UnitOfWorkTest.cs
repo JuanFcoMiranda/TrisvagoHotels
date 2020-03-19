@@ -31,7 +31,7 @@ namespace TrisvagoHotels.UnitTests {
             
             // Assert
             Assert.NotNull(uow);
-            Assert.Equal(1, number);
+            Assert.Equal(0, number);
         }
     }
 }

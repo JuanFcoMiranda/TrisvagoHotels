@@ -1,8 +1,8 @@
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1.102-buster AS base
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.0-buster-slim AS base
 WORKDIR /app
 EXPOSE 80
 
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1.102-buster AS build
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.0-buster-slim AS build
 WORKDIR /src
 
 COPY ["build/dependencies.props", "src/build/dependencies.props"]
