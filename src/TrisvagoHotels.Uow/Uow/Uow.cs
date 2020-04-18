@@ -12,20 +12,14 @@ namespace TrisvagoHotels.Uow.Uow {
 		private IRepositoryProvider RepositoryProvider { get; }
 
 		public Uow(IRepositoryProvider provider, MyDataContext context) {
-			//CreateDbContext();
 			provider.Context = this.context = context;
 			RepositoryProvider = provider;
-		}
-
-		private void CreateDbContext() {
-			context.Database.BeginTransaction();
 		}
 
 		public IRepository<Hotel> Hotels => GetStandardRepo<Hotel>();
 
 		public async Task CommitAsync() {
 			await context.SaveChangesAsync();
-			//context.Database.CommitTransaction();
 		}
 
 		private IRepository<T> GetStandardRepo<T>() where T : class => RepositoryProvider.GetRepositoryForEntityType<T>();
