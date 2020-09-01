@@ -1,4 +1,5 @@
-﻿using Hellang.Middleware.ProblemDetails;
+﻿using System;
+using Hellang.Middleware.ProblemDetails;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -9,18 +10,18 @@ namespace Microsoft.Extensions.DependencyInjection {
 		public static IServiceCollection AddCustomProblemDetails(this IServiceCollection services, IWebHostEnvironment environment) =>
 			services
 				.AddProblemDetails(configure => {
-					configure.IncludeExceptionDetails = _ => environment.EnvironmentName == "Development";
+					configure.IncludeExceptionDetails = (exception, isValid) => environment.EnvironmentName == "Development";
 				});
-		
+
 		public static IServiceCollection AddCustomMvc(this IServiceCollection services) =>
 			services
 				.AddMvcCore(config => {
-					config.Filters.Add(typeof( ValidModelStateFilterAttribute));
+					config.Filters.Add(typeof(ValidModelStateFilterAttribute));
 					config.EnableEndpointRouting = false;
 				})
 				.AddJsonOptions(config => config.JsonSerializerOptions.IgnoreNullValues = true)
 				.AddApiExplorer()
-				.AddApplicationPart(typeof(ServiceCollectionExtensions).Assembly)
+				//.AddApplicationPart(typeof(ServiceCollectionExtensions).Assembly)
 				.Services;
 
 		public static IServiceCollection AddCustomApiBehaviour(this IServiceCollection services) {
