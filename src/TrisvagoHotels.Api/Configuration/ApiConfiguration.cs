@@ -14,8 +14,6 @@ namespace TrisvagoHotels.Api.Configuration {
                 .AddCustomMvc()
                 .AddCustomProblemDetails(environment)
                 .AddCustomApiBehaviour();
-        //.AddHealthChecksUI()
-        //.Services;
 
         public static IApplicationBuilder Configure(IApplicationBuilder app, Func<IApplicationBuilder, IApplicationBuilder> configureHost) {
             return configureHost(app)

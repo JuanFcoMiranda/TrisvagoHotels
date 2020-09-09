@@ -3,6 +3,7 @@
         <a [routerLink]="['/add']" class="btn btn-primary float-right mb-3">A&ntilde;adir</a>
     </p>
     <table mat-table [dataSource]="dataSource" matSort>
+        <caption>Hotels list</caption>
         <ng-container matColumnDef="id">
             <th scope="col" mat-header-cell *matHeaderCellDef>#</th>
             <td mat-cell *matCellDef="let element"> {{element.id}} </td>

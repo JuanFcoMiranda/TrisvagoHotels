@@ -11,12 +11,12 @@
         <MicrosoftCSharpVersion>4.6.0</MicrosoftCSharpVersion>
     </PropertyGroup>
     <PropertyGroup Label="Spa Extensions">
-        <MicrosoftAspNetCoreSpaServicesExtensions>3.1.7</MicrosoftAspNetCoreSpaServicesExtensions>
+        <MicrosoftAspNetCoreSpaServicesExtensions>3.1.8</MicrosoftAspNetCoreSpaServicesExtensions>
     </PropertyGroup>
     <PropertyGroup Label="Entity Framework">
-        <MicrosoftEntityFrameworkCoreVersion>3.1.7</MicrosoftEntityFrameworkCoreVersion>
-        <MicrosoftEntityFrameworkCoreSqlServerVersion>3.1.7</MicrosoftEntityFrameworkCoreSqlServerVersion>
-        <MicrosoftEntityFrameworkCoreSqliteVersion>3.1.7</MicrosoftEntityFrameworkCoreSqliteVersion>
+        <MicrosoftEntityFrameworkCoreVersion>3.1.8</MicrosoftEntityFrameworkCoreVersion>
+        <MicrosoftEntityFrameworkCoreSqlServerVersion>3.1.8</MicrosoftEntityFrameworkCoreSqlServerVersion>
+        <MicrosoftEntityFrameworkCoreSqliteVersion>3.1.8</MicrosoftEntityFrameworkCoreSqliteVersion>
         <MySqlDataVersion>8.0.20</MySqlDataVersion>
         <MySqlDataEntityFrameworkVersion>8.0.20</MySqlDataEntityFrameworkVersion>
         <PomeloEntityFrameworkCoreMySql>3.1.2</PomeloEntityFrameworkCoreMySql>
@@ -24,9 +24,10 @@
     <PropertyGroup Label="Fluent Validation">
         <FluentValidationAspNetCoreVersion>9.2.0</FluentValidationAspNetCoreVersion>
     </PropertyGroup>
-    <!-- <PropertyGroup Label="Json">
-        <NewtonsoftJsonVersion>12.0.2</NewtonsoftJsonVersion>
-    </PropertyGroup>-->
+    <PropertyGroup Label="Json">
+        <!--<NewtonsoftJsonVersion>12.0.3</NewtonsoftJsonVersion>-->
+        <SystemTextJsonVersion>3.1.7</SystemTextJsonVersion>
+    </PropertyGroup>
     <PropertyGroup Label="Swagger">
         <SwashbuckleAspNetCoreVersion>5.5.1</SwashbuckleAspNetCoreVersion>
     </PropertyGroup>
@@ -38,10 +39,10 @@
         <HellangMiddlewareProblemDetailsVersion>5.1.1</HellangMiddlewareProblemDetailsVersion>
     </PropertyGroup>
     <PropertyGroup Label="User Secrets">
-        <MicrosoftExtensionsConfigurationUserSecretsVersion>3.1.7</MicrosoftExtensionsConfigurationUserSecretsVersion>
+        <MicrosoftExtensionsConfigurationUserSecretsVersion>3.1.8</MicrosoftExtensionsConfigurationUserSecretsVersion>
     </PropertyGroup>
     <PropertyGroup Label="Hosting Abstractions">
-        <MicrosoftExtensionsHostingVersion>3.1.7</MicrosoftExtensionsHostingVersion>
+        <MicrosoftExtensionsHostingVersion>3.1.8</MicrosoftExtensionsHostingVersion>
     </PropertyGroup>
     <PropertyGroup Label="Health Checks">
         <AspNetCoreHealthChecksUIVersion>3.1.1</AspNetCoreHealthChecksUIVersion>
