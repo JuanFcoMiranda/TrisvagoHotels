@@ -9,6 +9,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      build_config: Release
     steps:
     - uses: actions/checkout@v2
     - name: Setup .NET Core
@@ -18,7 +20,7 @@ jobs:
     - name: Install dependencies
       run:  dotnet restore
     - name: Build with dotnet
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build --configuration $build_config --no-restore
 #    - name: Test
 #      run: dotnet test --no-restore --verbosity normal
   
