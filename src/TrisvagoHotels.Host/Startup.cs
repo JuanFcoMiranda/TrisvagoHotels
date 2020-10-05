@@ -33,11 +33,7 @@ namespace TrisvagoHotels.Host {
                     .AllowAnyHeader().AllowAnyMethod()))
                 .AddEntityFrameworkCore(Configuration)
                 .AddCustomHealthChecks(Configuration)
-                .AddMediatr()
-                // In production, the Angular files will be served from this directory
-                .AddSpaStaticFiles(configuration => {
-                    configuration.RootPath = "ClientApp/dist";
-                });
+                .AddMediatr();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -59,15 +55,6 @@ namespace TrisvagoHotels.Host {
                     .UseHeaderDiagnostics()
                     .UseHealthChecksUI()
             );
-            if (!env.IsDevelopment()) {
-                app.UseSpaStaticFiles();
-            }
-            app.UseSpa(spa => {
-                spa.Options.SourcePath = "ClientApp";
-                if (env.IsDevelopment()) {
-                    spa.UseAngularCliServer(npmScript: "start");
-                }
-            });
         }
     }
 }

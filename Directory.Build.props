@@ -2,6 +2,6 @@
   <Import Project="build/dependencies.props" />
   
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>preview</LangVersion>
   </PropertyGroup>
 </Project>
