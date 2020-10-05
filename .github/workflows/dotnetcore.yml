@@ -26,13 +26,13 @@ jobs:
   
     - name: Publish site
       working-directory: ./src/TrisvagoHotels.Host
-      run: dotnet publish -c $build_config -o ../../Publish
+      run: dotnet publish -c $build_config --no-restore -o dotnetcoreapiapp
         
     - name: Upload web site
       uses: actions/upload-artifact@v2.1.4
       with:
         name: web_site
-        path: web_publish
+        path: dotnetcoreapiapp
   
   sonarcloud:
     runs-on: ubuntu-latest
