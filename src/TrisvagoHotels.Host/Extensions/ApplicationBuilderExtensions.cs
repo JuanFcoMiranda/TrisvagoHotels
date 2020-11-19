@@ -12,14 +12,14 @@ namespace Microsoft.AspNetCore.Builder {
 
 		public static IApplicationBuilder UseCustomHealthchecks(this IApplicationBuilder app) {
 			app.UseHealthChecks("/health", new HealthCheckOptions {
-				//Predicate = registration => registration.Name.Equals("self"),
-				Predicate = _ => true,
+				Predicate = registration => registration.Name.Equals("self"),
+				//Predicate = _ => true,
 				ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
 			});
 
 			return app.UseHealthChecks("/ready", new HealthCheckOptions {
-				//Predicate = registration => registration.Tags.Contains("dependencies"),
-				Predicate = _ => true,
+				Predicate = registration => registration.Tags.Contains("dependencies"),
+				//Predicate = _ => true,
 				ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
 			});
 		}

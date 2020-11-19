@@ -29,7 +29,7 @@ namespace Microsoft.Extensions.DependencyInjection {
 
         public static IServiceCollection AddOpenApi(this IServiceCollection services) {
             services.AddSwaggerGen(setup => {
-                setup.OperationFilter<FileUploadOperation>();
+                //setup.OperationFilter<FileUploadOperation>();
                 setup.DescribeAllParametersInCamelCase();
                 setup.SwaggerDoc("v1", new OpenApiInfo {
                     Title = $"{nameof(TrisvagoHotels)} Api",

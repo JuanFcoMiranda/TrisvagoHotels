@@ -1,55 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project>
     <PropertyGroup Label="SDK Versions">
-        <NetStandardTargetVersion>netstandard2.1</NetStandardTargetVersion>
-        <NetCoreTargetVersion>netcoreapp3.1</NetCoreTargetVersion>
+        <NetStandardTargetVersion>net5.0</NetStandardTargetVersion>
+        <NetCoreTargetVersion>net5.0</NetCoreTargetVersion>
         <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
-        <LangVersion>8.0</LangVersion>
+        <LangVersion>preview</LangVersion>
     </PropertyGroup>
     <PropertyGroup Label="Package Versions">
         <SystemReflectionTypeExtensionsVersion>4.6.0</SystemReflectionTypeExtensionsVersion>
         <MicrosoftCSharpVersion>4.6.0</MicrosoftCSharpVersion>
     </PropertyGroup>
     <PropertyGroup Label="Spa Extensions">
-        <MicrosoftAspNetCoreSpaServicesExtensions>3.1.8</MicrosoftAspNetCoreSpaServicesExtensions>
+        <MicrosoftAspNetCoreSpaServicesExtensions>5.0.0</MicrosoftAspNetCoreSpaServicesExtensions>
     </PropertyGroup>
     <PropertyGroup Label="Entity Framework">
-        <MicrosoftEntityFrameworkCoreVersion>3.1.8</MicrosoftEntityFrameworkCoreVersion>
-        <MicrosoftEntityFrameworkCoreSqlServerVersion>3.1.8</MicrosoftEntityFrameworkCoreSqlServerVersion>
-        <MicrosoftEntityFrameworkCoreSqliteVersion>3.1.8</MicrosoftEntityFrameworkCoreSqliteVersion>
-        <MySqlDataVersion>8.0.21</MySqlDataVersion>
-        <MySqlDataEntityFrameworkVersion>8.0.21</MySqlDataEntityFrameworkVersion>
-        <PomeloEntityFrameworkCoreMySql>3.2.2</PomeloEntityFrameworkCoreMySql>
+        <MicrosoftEntityFrameworkCoreVersion>5.0.0</MicrosoftEntityFrameworkCoreVersion>
+        <MicrosoftEntityFrameworkCoreSqlServerVersion>5.0.0</MicrosoftEntityFrameworkCoreSqlServerVersion>
+        <MicrosoftEntityFrameworkCoreSqliteVersion>5.0.0</MicrosoftEntityFrameworkCoreSqliteVersion>
+        <MySqlDataVersion>8.0.22</MySqlDataVersion>
+        <MySqlDataEntityFrameworkVersion>8.0.22</MySqlDataEntityFrameworkVersion>
+        <PomeloEntityFrameworkCoreMySql>5.0.0-alpha.1</PomeloEntityFrameworkCoreMySql>
     </PropertyGroup>
     <PropertyGroup Label="Fluent Validation">
-        <FluentValidationAspNetCoreVersion>9.2.0</FluentValidationAspNetCoreVersion>
+        <FluentValidationAspNetCoreVersion>9.3.0</FluentValidationAspNetCoreVersion>
     </PropertyGroup>
     <PropertyGroup Label="Json">
         <!--<NewtonsoftJsonVersion>12.0.3</NewtonsoftJsonVersion>-->
-        <SystemTextJsonVersion>3.1.7</SystemTextJsonVersion>
+        <SystemTextJsonVersion>5.0.0</SystemTextJsonVersion>
     </PropertyGroup>
     <PropertyGroup Label="Swagger">
         <SwashbuckleAspNetCoreVersion>5.6.3</SwashbuckleAspNetCoreVersion>
     </PropertyGroup>
     <PropertyGroup Label="Mediatr">
-        <MediatRVersion>8.1.0</MediatRVersion>
-        <MediatRExtensionsMicrosoftDependencyInjectionVersion>8.1.0</MediatRExtensionsMicrosoftDependencyInjectionVersion>
+        <MediatRVersion>9.0.0</MediatRVersion>
+        <MediatRExtensionsMicrosoftDependencyInjectionVersion>9.0.0</MediatRExtensionsMicrosoftDependencyInjectionVersion>
     </PropertyGroup>
     <PropertyGroup Label="Problem Details">
         <HellangMiddlewareProblemDetailsVersion>5.1.1</HellangMiddlewareProblemDetailsVersion>
     </PropertyGroup>
     <PropertyGroup Label="User Secrets">
-        <MicrosoftExtensionsConfigurationUserSecretsVersion>3.1.8</MicrosoftExtensionsConfigurationUserSecretsVersion>
+        <MicrosoftExtensionsConfigurationUserSecretsVersion>5.0.0</MicrosoftExtensionsConfigurationUserSecretsVersion>
     </PropertyGroup>
     <PropertyGroup Label="Hosting Abstractions">
-        <MicrosoftExtensionsHostingVersion>3.1.8</MicrosoftExtensionsHostingVersion>
+        <MicrosoftExtensionsHostingVersion>5.0.0</MicrosoftExtensionsHostingVersion>
     </PropertyGroup>
     <PropertyGroup Label="Health Checks">
         <AspNetCoreHealthChecksUIVersion>3.1.3</AspNetCoreHealthChecksUIVersion>
         <AspNetCoreHealthChecksUIClientVersion>3.1.2</AspNetCoreHealthChecksUIClientVersion>
         <AspNetCoreHealthChecksSystemVersion>3.1.2</AspNetCoreHealthChecksSystemVersion>
         <AspNetCoreHealthChecksSqlServerVersion>3.1.1</AspNetCoreHealthChecksSqlServerVersion>
-        <AspNetCoreHealthChecksMySqlVersion>3.1.1</AspNetCoreHealthChecksMySqlVersion>
+        <AspNetCoreHealthChecksSQLiteVersion>3.1.2</AspNetCoreHealthChecksSQLiteVersion>
+        <AspNetCoreHealthChecksMySqlVersion>3.2.0</AspNetCoreHealthChecksMySqlVersion>
         <AspNetCoreHealthChecksRedisVersion>3.0.0</AspNetCoreHealthChecksRedisVersion>
     </PropertyGroup>
     <PropertyGroup Label="Containers">

@@ -4,9 +4,6 @@
         <TargetFramework>$(NetStandardTargetVersion)</TargetFramework>
     </PropertyGroup>
     <ItemGroup>
-      <Compile Remove="WeatherForecast.cs" />
-    </ItemGroup>
-    <ItemGroup>
-      <Folder Include="Entities\" />
+        <Folder Include="Entities\" />
     </ItemGroup>
 </Project>

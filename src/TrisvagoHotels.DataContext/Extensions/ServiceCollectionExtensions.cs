@@ -8,14 +8,13 @@ namespace Microsoft.Extensions.DependencyInjection {
 		public static IServiceCollection AddEntityFrameworkCore(this IServiceCollection services, IConfiguration configuration) =>
 			services
 				.AddDbContext<MyDataContext>(options =>
-					options.UseMySql(configuration["AppSettings:ConnectionStrings:DataAccessMySqlProvider"]),
-				                ServiceLifetime.Transient);
+					options.UseMySql(configuration["AppSettings:ConnectionStrings:DataAccessMySqlProvider"]), ServiceLifetime.Transient);
 		
-		public static IServiceCollection AddCustomHealthChecks(this IServiceCollection services, IConfiguration configuration) {
-			return services.AddHealthChecks()
-				.AddMySql(connectionString: configuration["AppSettings:ConnectionStrings:DataAccessMySqlProvider"], name: "DataAccessMySqlProvider", failureStatus: HealthStatus.Degraded, tags: new[] { "DataAccessMySqlProviderDependencies" })
+		public static IServiceCollection AddCustomHealthChecks(this IServiceCollection services, IConfiguration configuration) =>
+			services.AddHealthChecks()
+				.AddMySql(configuration["AppSettings:ConnectionStrings:DataAccessMySqlProvider"], name: "DataAccessMySqlProvider", 
+					failureStatus: HealthStatus.Degraded, tags: new[] { "DataAccessMySqlProviderDependencies" })
 				.AddCheck("self", () => HealthCheckResult.Healthy())
 				.Services;
-		}
 	}
-} 
+}
