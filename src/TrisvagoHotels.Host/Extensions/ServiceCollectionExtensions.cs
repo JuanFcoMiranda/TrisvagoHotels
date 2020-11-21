@@ -1,6 +1,5 @@
 using MediatR;
 using Microsoft.OpenApi.Models;
-using TrisvagoHotels.Api.Filters;
 using TrisvagoHotels.Api.HttpErrors;
 using TrisvagoHotels.Api.Requests;
 using TrisvagoHotels.Api.Validations;
@@ -29,7 +28,6 @@ namespace Microsoft.Extensions.DependencyInjection {
 
         public static IServiceCollection AddOpenApi(this IServiceCollection services) {
             services.AddSwaggerGen(setup => {
-                //setup.OperationFilter<FileUploadOperation>();
                 setup.DescribeAllParametersInCamelCase();
                 setup.SwaggerDoc("v1", new OpenApiInfo {
                     Title = $"{nameof(TrisvagoHotels)} Api",

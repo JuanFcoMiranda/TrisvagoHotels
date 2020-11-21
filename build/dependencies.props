@@ -48,10 +48,14 @@
         <AspNetCoreHealthChecksUIVersion>3.1.3</AspNetCoreHealthChecksUIVersion>
         <AspNetCoreHealthChecksUIClientVersion>3.1.2</AspNetCoreHealthChecksUIClientVersion>
         <AspNetCoreHealthChecksSystemVersion>3.1.2</AspNetCoreHealthChecksSystemVersion>
+        <AspNetCoreHealthChecksRedisVersion>3.0.0</AspNetCoreHealthChecksRedisVersion>
+    </PropertyGroup>
+    <PropertyGroup Label="Health Checks Storage">
+        <AspNetCoreHealthChecksUIInMemoryStorageVersion>3.1.2</AspNetCoreHealthChecksUIInMemoryStorageVersion>
         <AspNetCoreHealthChecksSqlServerVersion>3.1.1</AspNetCoreHealthChecksSqlServerVersion>
         <AspNetCoreHealthChecksSQLiteVersion>3.1.2</AspNetCoreHealthChecksSQLiteVersion>
         <AspNetCoreHealthChecksMySqlVersion>3.2.0</AspNetCoreHealthChecksMySqlVersion>
-        <AspNetCoreHealthChecksRedisVersion>3.0.0</AspNetCoreHealthChecksRedisVersion>
+        <AspNetCoreHealthChecksUIPostgreSQLStorageVersion>3.1.2</AspNetCoreHealthChecksUIPostgreSQLStorageVersion>
     </PropertyGroup>
     <PropertyGroup Label="Containers">
         <MicrosoftVisualStudioAzureContainersToolsTargetsVersion>1.10.8</MicrosoftVisualStudioAzureContainersToolsTargetsVersion>
