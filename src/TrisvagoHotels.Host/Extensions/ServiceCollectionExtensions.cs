@@ -15,7 +15,7 @@ using TrisvagoHotels.Uow.Uow;
 
 namespace Microsoft.Extensions.DependencyInjection {
     public static class ServiceCollectionExtensions {
-        public static IServiceCollection AddCustomServices(this IServiceCollection services) {
+        public static IServiceCollection AddCustomServices(this IServiceCollection services) =>
             services
                 .AddScoped<MyDataContext, MyDataContext>()
                 .AddScoped<IUow, Uow>()
@@ -23,10 +23,8 @@ namespace Microsoft.Extensions.DependencyInjection {
                 .AddScoped<IRepositoryFactory, RepositoryFactory>()
                 .AddScoped<IHotelsServices, HotelsServices>()
                 .AddSingleton<IHttpErrorFactory, DefaultHttpErrorFactory>();
-            return services;
-        }
 
-        public static IServiceCollection AddOpenApi(this IServiceCollection services) {
+        public static IServiceCollection AddOpenApi(this IServiceCollection services) =>
             services.AddSwaggerGen(setup => {
                 setup.DescribeAllParametersInCamelCase();
                 setup.SwaggerDoc("v1", new OpenApiInfo {
@@ -36,8 +34,6 @@ namespace Microsoft.Extensions.DependencyInjection {
                     TermsOfService = null
                 });
             });
-            return services;
-        }
 
         public static IServiceCollection AddMediatr(this IServiceCollection services) =>
             services

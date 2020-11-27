@@ -19,7 +19,7 @@
         <MicrosoftEntityFrameworkCoreSqliteVersion>5.0.0</MicrosoftEntityFrameworkCoreSqliteVersion>
         <MySqlDataVersion>8.0.22</MySqlDataVersion>
         <MySqlDataEntityFrameworkVersion>8.0.22</MySqlDataEntityFrameworkVersion>
-        <PomeloEntityFrameworkCoreMySql>5.0.0-alpha.1</PomeloEntityFrameworkCoreMySql>
+        <PomeloEntityFrameworkCoreMySql>5.0.0-alpha.2</PomeloEntityFrameworkCoreMySql>
     </PropertyGroup>
     <PropertyGroup Label="Fluent Validation">
         <FluentValidationAspNetCoreVersion>9.3.0</FluentValidationAspNetCoreVersion>
@@ -52,7 +52,7 @@
     </PropertyGroup>
     <PropertyGroup Label="Health Checks Storage">
         <AspNetCoreHealthChecksUIInMemoryStorageVersion>3.1.2</AspNetCoreHealthChecksUIInMemoryStorageVersion>
-        <AspNetCoreHealthChecksSqlServerVersion>3.1.1</AspNetCoreHealthChecksSqlServerVersion>
+        <AspNetCoreHealthChecksSqlServerVersion>3.2.0</AspNetCoreHealthChecksSqlServerVersion>
         <AspNetCoreHealthChecksSQLiteVersion>3.1.2</AspNetCoreHealthChecksSQLiteVersion>
         <AspNetCoreHealthChecksMySqlVersion>3.2.0</AspNetCoreHealthChecksMySqlVersion>
         <AspNetCoreHealthChecksUIPostgreSQLStorageVersion>3.1.2</AspNetCoreHealthChecksUIPostgreSQLStorageVersion>

@@ -11,6 +11,8 @@
         <UserSecretsId>2c1de0fa-f35c-4bfa-a3ca-32df42a6da08</UserSecretsId>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
         <DockerfileContext>..\..</DockerfileContext>
+        <Company>Trisvago</Company>
+        <Product>TrisvagoHotels</Product>
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="$(MicrosoftAspNetCoreSpaServicesExtensions)" />
