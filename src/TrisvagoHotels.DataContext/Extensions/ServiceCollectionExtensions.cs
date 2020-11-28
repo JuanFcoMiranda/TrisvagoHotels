@@ -8,7 +8,7 @@ namespace Microsoft.Extensions.DependencyInjection {
 	public static class ServiceCollectionExtensions {
 		public static IServiceCollection AddEntityFrameworkCore(this IServiceCollection services, IConfiguration configuration) =>
 			services
-				.AddDbContext<MyDataContext>(options =>
+				.AddDbContextPool<MyDataContext>(options =>
 					options.UseMySql(configuration["AppSettings:ConnectionStrings:DataAccessMySqlProvider"], 
 							// new MySqlServerVersion(new Version(8, 0, 22)), // use MariaDbServerVersion for MariaDB
 							MySqlServerVersion.LatestSupportedServerVersion,
@@ -16,8 +16,7 @@ namespace Microsoft.Extensions.DependencyInjection {
 								.CharSetBehavior(CharSetBehavior.NeverAppend))
 						// Everything from this point on is optional but helps with debugging.
 						.EnableSensitiveDataLogging()
-						.EnableDetailedErrors(),
-					ServiceLifetime.Transient);
+						.EnableDetailedErrors());
 		
 		public static IServiceCollection AddCustomHealthChecks(this IServiceCollection services, IConfiguration configuration) =>
 			services.AddHealthChecks()
