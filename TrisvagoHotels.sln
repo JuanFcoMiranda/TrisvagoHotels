@@ -16,31 +16,31 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		global.json = global.json
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrisvagoHotels.Host", "src\TrisvagoHotels.Host\TrisvagoHotels.Host.csproj", "{CC5E4227-262C-4953-86D2-6348CD7ED156}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrisvagoHotels.Host", "src\TrisvagoHotels.Host\TrisvagoHotels.Host.csproj", "{CC5E4227-262C-4953-86D2-6348CD7ED156}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{055D7ECA-9D30-47E8-94C5-45E5344C7B03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrisvagoHotels.Api", "src\TrisvagoHotels.Api\TrisvagoHotels.Api.csproj", "{62CA1202-FB78-44BF-BD3A-841F0F6CF5D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrisvagoHotels.Api", "src\TrisvagoHotels.Api\TrisvagoHotels.Api.csproj", "{62CA1202-FB78-44BF-BD3A-841F0F6CF5D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrisvagoHotels.DataContext", "src\TrisvagoHotels.DataContext\TrisvagoHotels.DataContext.csproj", "{E22AB162-A594-4363-AD88-6E9A36ACB425}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrisvagoHotels.DataContext", "src\TrisvagoHotels.DataContext\TrisvagoHotels.DataContext.csproj", "{E22AB162-A594-4363-AD88-6E9A36ACB425}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrisvagoHotels.DataContracts", "src\TrisvagoHotels.DataContracts\TrisvagoHotels.DataContracts.csproj", "{CA470CC3-3E27-4920-A093-F23FEB0E8D92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrisvagoHotels.DataContracts", "src\TrisvagoHotels.DataContracts\TrisvagoHotels.DataContracts.csproj", "{CA470CC3-3E27-4920-A093-F23FEB0E8D92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrisvagoHotels.Providers", "src\TrisvagoHotels.Providers\TrisvagoHotels.Providers.csproj", "{F3F34132-E342-4462-B2FF-E15B4DA7D606}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrisvagoHotels.Providers", "src\TrisvagoHotels.Providers\TrisvagoHotels.Providers.csproj", "{F3F34132-E342-4462-B2FF-E15B4DA7D606}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrisvagoHotels.Repositories", "src\TrisvagoHotels.Repositories\TrisvagoHotels.Repositories.csproj", "{9D3BD2E3-F704-4802-9C51-5E8BC6696C7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrisvagoHotels.Repositories", "src\TrisvagoHotels.Repositories\TrisvagoHotels.Repositories.csproj", "{9D3BD2E3-F704-4802-9C51-5E8BC6696C7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrisvagoHotels.Uow", "src\TrisvagoHotels.Uow\TrisvagoHotels.Uow.csproj", "{DA7F8CD5-2D02-4455-8F4F-EED0D341E793}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrisvagoHotels.Uow", "src\TrisvagoHotels.Uow\TrisvagoHotels.Uow.csproj", "{DA7F8CD5-2D02-4455-8F4F-EED0D341E793}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrisvagoHotels.Model", "src\TrisvagoHotels.Model\TrisvagoHotels.Model.csproj", "{15B04C7E-B2D4-4328-B835-A29AD908C434}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrisvagoHotels.Model", "src\TrisvagoHotels.Model\TrisvagoHotels.Model.csproj", "{15B04C7E-B2D4-4328-B835-A29AD908C434}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrisvagoHotels.Mappings", "src\TrisvagoHotels.Mappings\TrisvagoHotels.Mappings.csproj", "{CB0E979A-E6D7-45F4-B4B2-6BF3DF566E64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrisvagoHotels.Mappings", "src\TrisvagoHotels.Mappings\TrisvagoHotels.Mappings.csproj", "{CB0E979A-E6D7-45F4-B4B2-6BF3DF566E64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrisvagoHotels.Services", "src\TrisvagoHotels.Services\TrisvagoHotels.Services.csproj", "{0808CF04-A358-4B43-8A32-44F4305F7CE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrisvagoHotels.Services", "src\TrisvagoHotels.Services\TrisvagoHotels.Services.csproj", "{0808CF04-A358-4B43-8A32-44F4305F7CE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrisvagoHotels.FunctionalTests", "tests\TrisvagoHotels.FunctionalTests\TrisvagoHotels.FunctionalTests.csproj", "{5D116B7B-124A-4EB7-B67D-788E7959B578}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrisvagoHotels.FunctionalTests", "tests\TrisvagoHotels.FunctionalTests\TrisvagoHotels.FunctionalTests.csproj", "{5D116B7B-124A-4EB7-B67D-788E7959B578}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrisvagoHotels.UnitTests", "tests\TrisvagoHotels.UnitTests\TrisvagoHotels.UnitTests.csproj", "{CFDEB0A0-8A9F-4A4C-9E31-7A89451574B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TrisvagoHotels.UnitTests", "tests\TrisvagoHotels.UnitTests\TrisvagoHotels.UnitTests.csproj", "{CFDEB0A0-8A9F-4A4C-9E31-7A89451574B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -90,6 +90,8 @@ Global
 		{0808CF04-A358-4B43-8A32-44F4305F7CE0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5D116B7B-124A-4EB7-B67D-788E7959B578}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5D116B7B-124A-4EB7-B67D-788E7959B578}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D116B7B-124A-4EB7-B67D-788E7959B578}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D116B7B-124A-4EB7-B67D-788E7959B578}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CFDEB0A0-8A9F-4A4C-9E31-7A89451574B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CFDEB0A0-8A9F-4A4C-9E31-7A89451574B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CFDEB0A0-8A9F-4A4C-9E31-7A89451574B9}.Release|Any CPU.ActiveCfg = Release|Any CPU

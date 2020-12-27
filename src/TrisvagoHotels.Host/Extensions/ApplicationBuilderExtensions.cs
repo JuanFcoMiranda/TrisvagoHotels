@@ -6,20 +6,17 @@ using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 
 namespace Microsoft.AspNetCore.Builder {
 	public static class ApplicationBuilderExtensions {
-		public static IApplicationBuilder UseIf(this IApplicationBuilder app, bool condition, Func<IApplicationBuilder, IApplicationBuilder> action) {
-			return condition ? action(app) : app;
-		}
+		public static IApplicationBuilder UseIf(this IApplicationBuilder app, bool condition, Func<IApplicationBuilder, IApplicationBuilder> action) =>
+			condition ? action(app) : app;
 
 		public static IApplicationBuilder UseCustomHealthchecks(this IApplicationBuilder app) {
 			app.UseHealthChecks("/health", new HealthCheckOptions {
 				Predicate = registration => registration.Name.Equals("self"),
-				//Predicate = _ => true,
 				ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
 			});
 
 			return app.UseHealthChecks("/ready", new HealthCheckOptions {
 				Predicate = registration => registration.Tags.Contains("dependencies"),
-				//Predicate = _ => true,
 				ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
 			});
 		}
