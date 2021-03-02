@@ -17,6 +17,6 @@ namespace TrisvagoHotels.DataContext.Context {
 			foreach (var assembly in assemblies.Distinct()) {
 				modelBuilder.ApplyConfigurationsFromAssembly(assembly);
 			}
-		} 
+		}
 	}
 }

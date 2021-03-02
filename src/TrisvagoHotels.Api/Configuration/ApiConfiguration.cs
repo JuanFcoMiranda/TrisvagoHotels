@@ -9,14 +9,14 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace TrisvagoHotels.Api.Configuration {
     public static class ApiConfiguration {
-        public static IServiceCollection ConfigureServices(IServiceCollection services, IWebHostEnvironment environment, IConfiguration configuration) => services
+        public static IServiceCollection ConfigureServices(IServiceCollection services, IWebHostEnvironment environment) => services
                 .AddHttpContextAccessor()
                 .AddCustomMvc()
                 .AddCustomProblemDetails(environment)
                 .AddCustomApiBehaviour();
 
-        public static IApplicationBuilder Configure(IApplicationBuilder app, Func<IApplicationBuilder, IApplicationBuilder> configureHost) {
-            return configureHost(app)
+        public static IApplicationBuilder Configure(IApplicationBuilder app, Func<IApplicationBuilder, IApplicationBuilder> configureHost) =>
+            configureHost(app)
                 .UseHttpsRedirection()
                 .UseProblemDetails()
                 .UseHsts()
@@ -29,6 +29,5 @@ namespace TrisvagoHotels.Api.Configuration {
                     config.MapControllerRoute(name: "default", pattern: "{controller}/{action=Index}/{id?}");
                     config.MapHealthChecksUI();
                 });
-        }
     }
 }

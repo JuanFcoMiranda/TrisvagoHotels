@@ -4,6 +4,9 @@
         <TargetFramework>$(NetStandardTargetVersion)</TargetFramework>
     </PropertyGroup>
     <ItemGroup>
+        <PackageReference Include="AspNetCore.HashIds" Version="$(AspNetCoreHashIdsVersion)"/>
+    </ItemGroup>
+    <ItemGroup>
         <Folder Include="Entities\" />
     </ItemGroup>
 </Project>

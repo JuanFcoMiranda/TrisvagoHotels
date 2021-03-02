@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using System.Threading.Tasks;
+using AspNetCore.Hashids.Mvc;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -29,8 +30,8 @@ namespace TrisvagoHotels.Api.Controllers {
         }
 
         // GET api/hotels/5
-        [HttpGet("{id}"), HotelResultFilter]
-        public async Task<ActionResult<Hotel>> Get(int id) {
+        [HttpGet("{id:hashids}"), HotelResultFilter]
+        public async Task<ActionResult<Hotel>> Get([FromRoute][ModelBinder(typeof(HashidsModelBinder))]int id) {
             var hotel = await mediator.Send(new GetHotelByIdRequest(id));
             if (hotel is null) {
                 return NotFound();
@@ -85,7 +86,7 @@ namespace TrisvagoHotels.Api.Controllers {
             }
 
             var hotel = await mediator.Send(new GetHotelByIdRequest(hotelId));
-            if (!(hotel is null)) {
+            if (hotel is not null) {
                 hotel.Foto = dbPath;
             }
             return Ok();

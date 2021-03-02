@@ -15,8 +15,7 @@
         <Product>TrisvagoHotels</Product>
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="$(MicrosoftAspNetCoreSpaServicesExtensions)" />
-        <PackageReference Include="AspNetCore.HealthChecks.UI" Version="$(AspNetCoreHealthChecksUIVersion)" />
+        <!--<PackageReference Include="AspNetCore.HealthChecks.UI" Version="$(AspNetCoreHealthChecksUIVersion)" />-->
         <PackageReference Include="AspNetCore.HealthChecks.UI.SQLite.Storage" Version="$(AspNetCoreHealthChecksSQLiteVersion)" />
         <PackageReference Include="AspNetCore.HealthChecks.UI.InMemory.Storage" Version="$(AspNetCoreHealthChecksUIInMemoryStorageVersion)" />
         <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="$(MicrosoftExtensionsHostingVersion)" />
@@ -24,6 +23,7 @@
         <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="$(MicrosoftVisualStudioAzureContainersToolsTargetsVersion)" />
         <PackageReference Include="MediatR" Version="$(MediatRVersion)" />
         <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="$(MediatRExtensionsMicrosoftDependencyInjectionVersion)" />
+        <PackageReference Include="AspNetCore.HashIds" Version="$(AspNetCoreHashIdsVersion)" />
     </ItemGroup>
     <ItemGroup>
         <None Remove="healthchecksdb" />

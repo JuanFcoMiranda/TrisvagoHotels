@@ -1,5 +1,9 @@
-﻿namespace TrisvagoHotels.Model.Entities {
+﻿using System.Text.Json.Serialization;
+using AspNetCore.Hashids.Json;
+
+namespace TrisvagoHotels.Model.Entities {
 	public class Hotel {
+		[JsonConverter(typeof(HashidsJsonConverter))]
 		public int Id { get; set; }
 		public string Nombre { get; set; }
 		public string Categoria { get; set; }

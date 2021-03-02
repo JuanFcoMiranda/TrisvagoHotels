@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using TrisvagoHotels.Api.Configuration;
+using TrisvagoHotels.Host.Filters;
 
 namespace TrisvagoHotels.Host {
     public class Startup {
@@ -18,7 +19,7 @@ namespace TrisvagoHotels.Host {
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services) =>
-            ApiConfiguration.ConfigureServices(services, Environment, Configuration)
+            ApiConfiguration.ConfigureServices(services, Environment)
                 .AddCustomServices()
                 .AddOpenApi()
                 .AddCors(options => options.AddPolicy("CorsApi",
@@ -30,6 +31,11 @@ namespace TrisvagoHotels.Host {
                 .AddEntityFrameworkCore(Configuration)
                 .AddMediatr()
                 .AddCustomHealthChecks(Configuration)
+                .AddHashids(setup => {
+                    setup.Salt = "your_salt";
+                    setup.MinHashLength = 16;
+                })
+                .AddSwaggerGen(c => c.OperationFilter<HashIdsOperationFilter>())
         ;
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

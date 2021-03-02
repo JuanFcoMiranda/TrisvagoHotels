@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
-    <PropertyGroup>
-        <TargetFramework>$(NetStandardTargetVersion)</TargetFramework>
-    </PropertyGroup>
-    <ItemGroup>
-        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="$(MicrosoftEntityFrameworkCoreVersion)" />
-        <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="$(PomeloEntityFrameworkCoreMySql)" />
-        <PackageReference Include="AspNetCore.HealthChecks.SqlServer" Version="$(AspNetCoreHealthChecksSqlServerVersion)" />
-        <PackageReference Include="AspNetCore.HealthChecks.MySql" Version="$(AspNetCoreHealthChecksMySqlVersion)" />
-        <PackageReference Include="AspNetCore.HealthChecks.System" Version="$(AspNetCoreHealthChecksSystemVersion)" />
-    </ItemGroup>
-    <ItemGroup>
-      <ProjectReference Include="..\TrisvagoHotels.Mappings\TrisvagoHotels.Mappings.csproj" />
-    </ItemGroup>
-    <ItemGroup>
-      <Folder Include="Context\" />
-    </ItemGroup>
+	<PropertyGroup>
+		<TargetFramework>$(NetStandardTargetVersion)</TargetFramework>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="$(MicrosoftEntityFrameworkCoreVersion)" />
+		<PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" Version="$(MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion)" />
+		<PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="$(PomeloEntityFrameworkCoreMySql)" />
+		<PackageReference Include="AspNetCore.HealthChecks.SqlServer" Version="$(AspNetCoreHealthChecksSqlServerVersion)" />
+		<PackageReference Include="AspNetCore.HealthChecks.MySql" Version="$(AspNetCoreHealthChecksMySqlVersion)" />
+		<PackageReference Include="AspNetCore.HealthChecks.System" Version="$(AspNetCoreHealthChecksSystemVersion)" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\TrisvagoHotels.Mappings\TrisvagoHotels.Mappings.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+		<Folder Include="Context\" />
+	</ItemGroup>
 </Project>

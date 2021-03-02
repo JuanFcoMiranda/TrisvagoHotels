@@ -1,26 +1,24 @@
 #See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
+FROM mcr.microsoft.com/dotnet/aspnet:5.0.1-buster-slim AS base
 WORKDIR /app
 EXPOSE 80
 
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
+FROM mcr.microsoft.com/dotnet/aspnet:5.0.1-buster-slim AS build
 WORKDIR /src
 
-COPY ["build/dependencies.props", "src/build/dependencies.props"]
-COPY ["Directory.Build.props", "src/"]
+#COPY ["build/dependencies.props", "src/build/dependencies.props"]
+#COPY ["Directory.Build.props", "src/"]
 
-COPY *.csproj ./
-
-#COPY ["src/TrisvagoHotels.Host/TrisvagoHotels.Host.csproj", "src/TrisvagoHotels.Host/"]
-#COPY ["src/TrisvagoHotels.Api/TrisvagoHotels.Api.csproj", "src/TrisvagoHotels.Api/"] 
-#COPY ["src/TrisvagoHotels.Model/TrisvagoHotels.Model.csproj", " src/TrisvagoHotels.Model/"]
-#COPY ["src/TrisvagoHotels.DataContracts/TrisvagoHotels.DataContracts.csproj", " src/TrisvagoHotels.DataContracts/"]
-#COPY ["src/TrisvagoHotels.DataContext/TrisvagoHotels.DataContext.csproj", " src/TrisvagoHotels.DataContext/"]
-#COPY ["src/TrisvagoHotels.Mappings/TrisvagoHotels.Mappings.csproj", " src/TrisvagoHotels.Mappings/"]
-#COPY ["src/TrisvagoHotels.Providers/TrisvagoHotels.Providers.csproj", "src/TrisvagoHotels.Providers/"]
-#COPY ["src/TrisvagoHotels.Repositories/TrisvagoHotels.Repositories.csproj", "src/TrisvagoHotels.Repositories/"]
-#COPY ["src/TrisvagoHotels.Uow/TrisvagoHotels.Uow.csproj", "src/TrisvagoHotels.Uow/"]
-#COPY ["src/TrisvagoHotels.Services/TrisvagoHotels.Services.csproj", "src/TrisvagoHotels.Services/"]
+COPY ["TrisvagoHotels.Host.csproj", "src/TrisvagoHotels.Host/"]
+COPY ["TrisvagoHotels.Api.csproj", "src/TrisvagoHotels.Api/"] 
+COPY ["src/TrisvagoHotels.Model.csproj", "src/TrisvagoHotels.Model/"]
+COPY ["src/TrisvagoHotels.DataContracts.csproj", "src/TrisvagoHotels.DataContracts/"]
+COPY ["src/TrisvagoHotels.DataContext.csproj", "src/TrisvagoHotels.DataContext/"]
+COPY ["src/TrisvagoHotels.Mappings.csproj", "src/TrisvagoHotels.Mappings/"]
+COPY ["src/TrisvagoHotels.Providers.csproj", "src/TrisvagoHotels.Providers/"]
+COPY ["src/TrisvagoHotels.Repositories.csproj", "src/TrisvagoHotels.Repositories/"]
+COPY ["src/TrisvagoHotels.Uow.csproj", "src/TrisvagoHotels.Uow/"]
+COPY ["src/TrisvagoHotels.Services.csproj", "src/TrisvagoHotels.Services/"]
 
 RUN dotnet restore "src/TrisvagoHotels.Host/TrisvagoHotels.Host.csproj"
 

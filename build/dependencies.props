@@ -1,75 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project>
-    <PropertyGroup Label="SDK Versions">
-        <NetStandardTargetVersion>net5.0</NetStandardTargetVersion>
-        <NetCoreTargetVersion>net5.0</NetCoreTargetVersion>
-        <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
-        <LangVersion>preview</LangVersion>
-    </PropertyGroup>
-    <PropertyGroup Label="Package Versions">
-        <SystemReflectionTypeExtensionsVersion>4.6.0</SystemReflectionTypeExtensionsVersion>
-        <MicrosoftCSharpVersion>4.6.0</MicrosoftCSharpVersion>
-    </PropertyGroup>
-    <PropertyGroup Label="Spa Extensions">
-        <MicrosoftAspNetCoreSpaServicesExtensions>5.0.0</MicrosoftAspNetCoreSpaServicesExtensions>
-    </PropertyGroup>
-    <PropertyGroup Label="Entity Framework">
-        <MicrosoftEntityFrameworkCoreVersion>5.0.0</MicrosoftEntityFrameworkCoreVersion>
-        <MicrosoftEntityFrameworkCoreSqlServerVersion>5.0.0</MicrosoftEntityFrameworkCoreSqlServerVersion>
-        <MicrosoftEntityFrameworkCoreSqliteVersion>5.0.0</MicrosoftEntityFrameworkCoreSqliteVersion>
-        <MySqlDataVersion>8.0.22</MySqlDataVersion>
-        <MySqlDataEntityFrameworkVersion>8.0.22</MySqlDataEntityFrameworkVersion>
-        <PomeloEntityFrameworkCoreMySql>5.0.0-alpha.2</PomeloEntityFrameworkCoreMySql>
-    </PropertyGroup>
-    <PropertyGroup Label="Fluent Validation">
-        <FluentValidationAspNetCoreVersion>9.3.0</FluentValidationAspNetCoreVersion>
-    </PropertyGroup>
-    <PropertyGroup Label="Json">
-        <!--<NewtonsoftJsonVersion>12.0.3</NewtonsoftJsonVersion>-->
-        <SystemTextJsonVersion>5.0.0</SystemTextJsonVersion>
-    </PropertyGroup>
-    <PropertyGroup Label="Swagger">
-        <SwashbuckleAspNetCoreVersion>5.6.3</SwashbuckleAspNetCoreVersion>
-    </PropertyGroup>
-    <PropertyGroup Label="Mediatr">
-        <MediatRVersion>9.0.0</MediatRVersion>
-        <MediatRExtensionsMicrosoftDependencyInjectionVersion>9.0.0</MediatRExtensionsMicrosoftDependencyInjectionVersion>
-    </PropertyGroup>
-    <PropertyGroup Label="Problem Details">
-        <HellangMiddlewareProblemDetailsVersion>5.1.1</HellangMiddlewareProblemDetailsVersion>
-    </PropertyGroup>
-    <PropertyGroup Label="User Secrets">
-        <MicrosoftExtensionsConfigurationUserSecretsVersion>5.0.0</MicrosoftExtensionsConfigurationUserSecretsVersion>
-    </PropertyGroup>
-    <PropertyGroup Label="Hosting Abstractions">
-        <MicrosoftExtensionsHostingVersion>5.0.0</MicrosoftExtensionsHostingVersion>
-    </PropertyGroup>
-    <PropertyGroup Label="Health Checks">
-        <AspNetCoreHealthChecksUIVersion>3.1.3</AspNetCoreHealthChecksUIVersion>
-        <AspNetCoreHealthChecksUIClientVersion>3.1.2</AspNetCoreHealthChecksUIClientVersion>
-        <AspNetCoreHealthChecksSystemVersion>3.1.2</AspNetCoreHealthChecksSystemVersion>
-        <AspNetCoreHealthChecksRedisVersion>3.0.0</AspNetCoreHealthChecksRedisVersion>
-    </PropertyGroup>
-    <PropertyGroup Label="Health Checks Storage">
-        <AspNetCoreHealthChecksUIInMemoryStorageVersion>3.1.2</AspNetCoreHealthChecksUIInMemoryStorageVersion>
-        <AspNetCoreHealthChecksSqlServerVersion>3.2.0</AspNetCoreHealthChecksSqlServerVersion>
-        <AspNetCoreHealthChecksSQLiteVersion>3.1.2</AspNetCoreHealthChecksSQLiteVersion>
-        <AspNetCoreHealthChecksMySqlVersion>3.2.0</AspNetCoreHealthChecksMySqlVersion>
-        <AspNetCoreHealthChecksUIPostgreSQLStorageVersion>3.1.2</AspNetCoreHealthChecksUIPostgreSQLStorageVersion>
-    </PropertyGroup>
-    <PropertyGroup Label="Containers">
-        <MicrosoftVisualStudioAzureContainersToolsTargetsVersion>1.10.8</MicrosoftVisualStudioAzureContainersToolsTargetsVersion>
-    </PropertyGroup>
-    <PropertyGroup Label="Testing">
-        <MicrosoftNETTestSdkVersion>16.6.1</MicrosoftNETTestSdkVersion>
-        <FluentAssertionsVersion>5.10.3</FluentAssertionsVersion>
-        <ASPNetCoreTestHostVersion>3.1.3</ASPNetCoreTestHostVersion>
-        <XUnitPackageVersion>2.4.1</XUnitPackageVersion>
-        <XUnitRunnerVisualstudioVersion>2.4.1</XUnitRunnerVisualstudioVersion>
-        <AcheveTestHostPackageVersion>2.1.1</AcheveTestHostPackageVersion>
-    </PropertyGroup>
-    <PropertyGroup Label="CLI Tools Versions">
-        <EntityFrameworkVersion>2.2.2</EntityFrameworkVersion>
-        <DotnetXUnitVersion>2.3.1</DotnetXUnitVersion>
-    </PropertyGroup>
+	<PropertyGroup Label="SDK Versions">
+		<NetStandardTargetVersion>net5.0</NetStandardTargetVersion>
+		<NetCoreTargetVersion>net5.0</NetCoreTargetVersion>
+		<AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+		<LangVersion>preview</LangVersion>
+	</PropertyGroup>
+	<!--<PropertyGroup Label="Spa Extensions">
+        <MicrosoftAspNetCoreSpaServicesExtensions>5.0.101</MicrosoftAspNetCoreSpaServicesExtensions>
+    </PropertyGroup>-->
+	<PropertyGroup Label="Entity Framework">
+		<MicrosoftEntityFrameworkCoreVersion>5.0.3</MicrosoftEntityFrameworkCoreVersion>
+		<MicrosoftEntityFrameworkCoreSqlServerVersion>5.0.1</MicrosoftEntityFrameworkCoreSqlServerVersion>
+		<MicrosoftEntityFrameworkCoreSqliteVersion>5.0.1</MicrosoftEntityFrameworkCoreSqliteVersion>
+		<MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>5.0.3</MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>
+		<MySqlDataVersion>8.0.23</MySqlDataVersion>
+		<MySqlDataEntityFrameworkVersion>8.0.22</MySqlDataEntityFrameworkVersion>
+		<PomeloEntityFrameworkCoreMySql>5.0.0-alpha.2</PomeloEntityFrameworkCoreMySql>
+	</PropertyGroup>
+	<PropertyGroup Label="Fluent Validation">
+		<FluentValidationAspNetCoreVersion>9.5.1</FluentValidationAspNetCoreVersion>
+	</PropertyGroup>
+	<PropertyGroup Label="Json">
+		<SystemTextJsonVersion>5.0.1</SystemTextJsonVersion>
+	</PropertyGroup>
+	<PropertyGroup Label="Swagger">
+		<SwashbuckleAspNetCoreVersion>6.0.7</SwashbuckleAspNetCoreVersion>
+	</PropertyGroup>
+	<PropertyGroup Label="Mediatr">
+		<MediatRVersion>9.0.0</MediatRVersion>
+		<MediatRExtensionsMicrosoftDependencyInjectionVersion>9.0.0</MediatRExtensionsMicrosoftDependencyInjectionVersion>
+	</PropertyGroup>
+	<PropertyGroup Label="Problem Details">
+		<HellangMiddlewareProblemDetailsVersion>5.1.1</HellangMiddlewareProblemDetailsVersion>
+	</PropertyGroup>
+	<PropertyGroup Label="User Secrets">
+		<MicrosoftExtensionsConfigurationUserSecretsVersion>5.0.0</MicrosoftExtensionsConfigurationUserSecretsVersion>
+	</PropertyGroup>
+	<PropertyGroup Label="Hosting Abstractions">
+		<MicrosoftExtensionsHostingVersion>5.0.0</MicrosoftExtensionsHostingVersion>
+	</PropertyGroup>
+	<PropertyGroup Label="Health Checks">
+		<AspNetCoreHealthChecksUIVersion>5.0.1</AspNetCoreHealthChecksUIVersion>
+		<AspNetCoreHealthChecksUIClientVersion>5.0.1</AspNetCoreHealthChecksUIClientVersion>
+		<AspNetCoreHealthChecksSystemVersion>5.0.1</AspNetCoreHealthChecksSystemVersion>
+		<AspNetCoreHealthChecksRedisVersion>3.0.0</AspNetCoreHealthChecksRedisVersion>
+	</PropertyGroup>
+	<PropertyGroup Label="Health Checks Storage">
+		<AspNetCoreHealthChecksUIInMemoryStorageVersion>5.0.1</AspNetCoreHealthChecksUIInMemoryStorageVersion>
+		<AspNetCoreHealthChecksSqlServerVersion>5.0.2</AspNetCoreHealthChecksSqlServerVersion>
+		<AspNetCoreHealthChecksSQLiteVersion>5.0.1</AspNetCoreHealthChecksSQLiteVersion>
+		<AspNetCoreHealthChecksMySqlVersion>5.0.1</AspNetCoreHealthChecksMySqlVersion>
+		<AspNetCoreHealthChecksUIPostgreSQLStorageVersion>5.0.1</AspNetCoreHealthChecksUIPostgreSQLStorageVersion>
+	</PropertyGroup>
+	<PropertyGroup Label="HashIds">
+		<AspNetCoreHashIdsVersion>1.1.1</AspNetCoreHashIdsVersion>
+	</PropertyGroup>
+	<PropertyGroup Label="Containers">
+		<MicrosoftVisualStudioAzureContainersToolsTargetsVersion>1.10.8</MicrosoftVisualStudioAzureContainersToolsTargetsVersion>
+	</PropertyGroup>
+	<PropertyGroup Label="Testing">
+		<MicrosoftNETTestSdkVersion>16.6.1</MicrosoftNETTestSdkVersion>
+		<FluentAssertionsVersion>5.10.3</FluentAssertionsVersion>
+		<ASPNetCoreTestHostVersion>3.1.3</ASPNetCoreTestHostVersion>
+		<XUnitPackageVersion>2.4.1</XUnitPackageVersion>
+		<XUnitRunnerVisualstudioVersion>2.4.1</XUnitRunnerVisualstudioVersion>
+		<AcheveTestHostPackageVersion>2.1.1</AcheveTestHostPackageVersion>
+	</PropertyGroup>
+	<PropertyGroup Label="CLI Tools Versions">
+		<EntityFrameworkVersion>2.2.2</EntityFrameworkVersion>
+		<DotnetXUnitVersion>2.3.1</DotnetXUnitVersion>
+	</PropertyGroup>
 </Project>
