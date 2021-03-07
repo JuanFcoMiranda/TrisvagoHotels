@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using Microsoft.Extensions.DependencyInjection;
 using TrisvagoHotels.DataContracts.IUow;
 using TrisvagoHotels.Model.Entities;
 using TrisvagoHotels.UnitTests.Fixtures;
@@ -10,7 +11,7 @@ namespace TrisvagoHotels.UnitTests {
         private readonly IUow uow;
 
         public UnitOfWorkTest(DependencySetupFixture fixture) {
-            uow = fixture.ServiceProvider.GetService(typeof(IUow)) as IUow;
+            uow = fixture.ServiceProvider.GetService<IUow>();
         }
 
         [Fact]
