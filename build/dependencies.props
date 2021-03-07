@@ -25,7 +25,7 @@
 		<SystemTextJsonVersion>5.0.1</SystemTextJsonVersion>
 	</PropertyGroup>
 	<PropertyGroup Label="Swagger">
-		<SwashbuckleAspNetCoreVersion>6.0.7</SwashbuckleAspNetCoreVersion>
+		<SwashbuckleAspNetCoreVersion>6.1.0</SwashbuckleAspNetCoreVersion>
 	</PropertyGroup>
 	<PropertyGroup Label="Mediatr">
 		<MediatRVersion>9.0.0</MediatRVersion>

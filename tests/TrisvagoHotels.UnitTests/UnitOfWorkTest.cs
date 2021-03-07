@@ -7,11 +7,9 @@ using Xunit;
 namespace TrisvagoHotels.UnitTests {
     [Collection(Collections.UOW)]
     public class UnitOfWorkTest {
-        private DependencySetupFixture fixture;
         private readonly IUow uow;
 
         public UnitOfWorkTest(DependencySetupFixture fixture) {
-            this.fixture = fixture;
             uow = fixture.ServiceProvider.GetService(typeof(IUow)) as IUow;
         }
 
@@ -31,7 +29,7 @@ namespace TrisvagoHotels.UnitTests {
             
             // Assert
             Assert.NotNull(uow);
-            Assert.Equal(0, number);
+            Assert.Equal(1, number);
         }
     }
 }
