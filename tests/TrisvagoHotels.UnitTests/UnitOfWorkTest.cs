@@ -4,6 +4,7 @@ using TrisvagoHotels.DataContracts.IUow;
 using TrisvagoHotels.Model.Entities;
 using TrisvagoHotels.UnitTests.Fixtures;
 using Xunit;
+using FluentAssertions;
 
 namespace TrisvagoHotels.UnitTests {
     [Collection(Collections.UOW)]
@@ -29,8 +30,8 @@ namespace TrisvagoHotels.UnitTests {
             var number = await uow.Hotels.CountAll();
             
             // Assert
-            Assert.NotNull(uow);
-            Assert.Equal(1, number);
+            uow.Should().NotBeNull();
+            number.Should().Be(1);
         }
     }
 }

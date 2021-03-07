@@ -11,6 +11,7 @@
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="$(MicrosoftNETTestSdkVersion)" />
         <PackageReference Include="xunit" Version="$(XUnitPackageVersion)" />
         <PackageReference Include="xunit.runner.visualstudio" Version="$(XUnitRunnerVisualstudioVersion)" />
+        <PackageReference Include="FluentAssertions" Version="$(FluentAssertionsVersion)"/>
     </ItemGroup>
 
     <ItemGroup>
