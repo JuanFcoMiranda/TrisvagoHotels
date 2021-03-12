@@ -10,19 +10,16 @@
         <MicrosoftAspNetCoreSpaServicesExtensions>5.0.101</MicrosoftAspNetCoreSpaServicesExtensions>
     </PropertyGroup>-->
 	<PropertyGroup Label="Entity Framework">
-		<MicrosoftEntityFrameworkCoreVersion>5.0.3</MicrosoftEntityFrameworkCoreVersion>
-		<MicrosoftEntityFrameworkCoreSqlServerVersion>5.0.1</MicrosoftEntityFrameworkCoreSqlServerVersion>
-		<MicrosoftEntityFrameworkCoreSqliteVersion>5.0.1</MicrosoftEntityFrameworkCoreSqliteVersion>
-		<MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>5.0.3</MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>
+		<MicrosoftEntityFrameworkCoreVersion>5.0.4</MicrosoftEntityFrameworkCoreVersion>
+		<MicrosoftEntityFrameworkCoreSqlServerVersion>5.0.4</MicrosoftEntityFrameworkCoreSqlServerVersion>
+		<MicrosoftEntityFrameworkCoreSqliteVersion>5.0.4</MicrosoftEntityFrameworkCoreSqliteVersion>
+		<MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>5.0.4</MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>
 		<MySqlDataVersion>8.0.23</MySqlDataVersion>
 		<MySqlDataEntityFrameworkVersion>8.0.22</MySqlDataEntityFrameworkVersion>
-		<PomeloEntityFrameworkCoreMySql>5.0.0-alpha.2</PomeloEntityFrameworkCoreMySql>
+		<PomeloEntityFrameworkCoreMySqlVersion>5.0.0-alpha.2</PomeloEntityFrameworkCoreMySqlVersion>
 	</PropertyGroup>
 	<PropertyGroup Label="Fluent Validation">
-		<FluentValidationAspNetCoreVersion>9.5.1</FluentValidationAspNetCoreVersion>
-	</PropertyGroup>
-	<PropertyGroup Label="Json">
-		<SystemTextJsonVersion>5.0.1</SystemTextJsonVersion>
+		<FluentValidationAspNetCoreVersion>10.0.0-preview2</FluentValidationAspNetCoreVersion>
 	</PropertyGroup>
 	<PropertyGroup Label="Swagger">
 		<SwashbuckleAspNetCoreVersion>6.1.0</SwashbuckleAspNetCoreVersion>
@@ -34,9 +31,6 @@
 	<PropertyGroup Label="Problem Details">
 		<HellangMiddlewareProblemDetailsVersion>5.1.1</HellangMiddlewareProblemDetailsVersion>
 	</PropertyGroup>
-	<PropertyGroup Label="User Secrets">
-		<MicrosoftExtensionsConfigurationUserSecretsVersion>5.0.0</MicrosoftExtensionsConfigurationUserSecretsVersion>
-	</PropertyGroup>
 	<PropertyGroup Label="Hosting Abstractions">
 		<MicrosoftExtensionsHostingVersion>5.0.0</MicrosoftExtensionsHostingVersion>
 	</PropertyGroup>
@@ -44,7 +38,7 @@
 		<AspNetCoreHealthChecksUIVersion>5.0.1</AspNetCoreHealthChecksUIVersion>
 		<AspNetCoreHealthChecksUIClientVersion>5.0.1</AspNetCoreHealthChecksUIClientVersion>
 		<AspNetCoreHealthChecksSystemVersion>5.0.1</AspNetCoreHealthChecksSystemVersion>
-		<AspNetCoreHealthChecksRedisVersion>3.0.0</AspNetCoreHealthChecksRedisVersion>
+		<AspNetCoreHealthChecksRedisVersion>5.0.2</AspNetCoreHealthChecksRedisVersion>
 	</PropertyGroup>
 	<PropertyGroup Label="Health Checks Storage">
 		<AspNetCoreHealthChecksUIInMemoryStorageVersion>5.0.1</AspNetCoreHealthChecksUIInMemoryStorageVersion>
@@ -60,12 +54,12 @@
 		<MicrosoftVisualStudioAzureContainersToolsTargetsVersion>1.10.8</MicrosoftVisualStudioAzureContainersToolsTargetsVersion>
 	</PropertyGroup>
 	<PropertyGroup Label="Testing">
-		<MicrosoftNETTestSdkVersion>16.6.1</MicrosoftNETTestSdkVersion>
+		<MicrosoftNETTestSdkVersion>16.9.1</MicrosoftNETTestSdkVersion>
 		<FluentAssertionsVersion>5.10.3</FluentAssertionsVersion>
-		<ASPNetCoreTestHostVersion>3.1.3</ASPNetCoreTestHostVersion>
-		<XUnitPackageVersion>2.4.1</XUnitPackageVersion>
-		<XUnitRunnerVisualstudioVersion>2.4.1</XUnitRunnerVisualstudioVersion>
-		<AcheveTestHostPackageVersion>2.1.1</AcheveTestHostPackageVersion>
+		<MicrosoftASPNetCoreTestHostVersion>5.0.4</MicrosoftASPNetCoreTestHostVersion>
+		<XUnitVersion>2.4.1</XUnitVersion>
+		<XUnitRunnerVisualStudioVersion>2.4.3</XUnitRunnerVisualStudioVersion>
+		<AcheveTestHostVersion>3.0.0</AcheveTestHostVersion>
 	</PropertyGroup>
 	<PropertyGroup Label="CLI Tools Versions">
 		<EntityFrameworkVersion>2.2.2</EntityFrameworkVersion>

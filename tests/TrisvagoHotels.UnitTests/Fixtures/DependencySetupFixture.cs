@@ -7,7 +7,7 @@ namespace TrisvagoHotels.UnitTests.Fixtures {
 
             var context = new DatabaseFixture();
             
-            serviceCollection.AddSingleton(p => context.Uow);
+            serviceCollection.AddScoped(p => context.Uow);
             ServiceProvider = serviceCollection.BuildServiceProvider();
         }
 

@@ -6,10 +6,10 @@
     </PropertyGroup>
     <ItemGroup>
         <PackageReference Include="FluentAssertions" Version="$(FluentAssertionsVersion)" />
-        <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="$(ASPNetCoreTestHostVersion)" />
+        <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="$(MicrosoftASPNetCoreTestHostVersion)" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="$(MicrosoftNETTestSdkVersion)" />
-        <PackageReference Include="xunit" Version="$(XUnitPackageVersion)" />
-        <PackageReference Include="xunit.runner.visualstudio" Version="$(XUnitRunnerVisualstudioVersion)" />
+        <PackageReference Include="xunit" Version="$(XUnitVersion)" />
+        <PackageReference Include="xunit.runner.visualstudio" Version="$(XUnitRunnerVisualStudioVersion)" />
     </ItemGroup>
     <ItemGroup Label="CLI Tools Versions">
         <DotNetCliToolReference Include="dotnet-xunit" Version="$(DotnetXUnitVersion)" />

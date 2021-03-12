@@ -9,8 +9,8 @@
         <PackageReference Include="Microsoft.EntityFrameworkCore" Version="$(MicrosoftEntityFrameworkCoreVersion)" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="$(MicrosoftEntityFrameworkCoreSqliteVersion)" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="$(MicrosoftNETTestSdkVersion)" />
-        <PackageReference Include="xunit" Version="$(XUnitPackageVersion)" />
-        <PackageReference Include="xunit.runner.visualstudio" Version="$(XUnitRunnerVisualstudioVersion)" />
+        <PackageReference Include="xunit" Version="$(XUnitVersion)" />
+        <PackageReference Include="xunit.runner.visualstudio" Version="$(XUnitRunnerVisualStudioVersion)" />
         <PackageReference Include="FluentAssertions" Version="$(FluentAssertionsVersion)"/>
     </ItemGroup>
 
