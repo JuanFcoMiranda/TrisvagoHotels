@@ -24,14 +24,18 @@ namespace TrisvagoHotels.UnitTests {
             };
 
             // Act
+            var previousCount = await uow.Hotels.CountAll();
+
             await uow.Hotels.Add(hotel);
             await uow.CommitAsync();
 
-            var number = await uow.Hotels.CountAll();
+            var finalCount = await uow.Hotels.CountAll();
             
             // Assert
             uow.Should().NotBeNull();
-            number.Should().Be(1);
+            
+            previousCount.Should().Be(0);
+            finalCount.Should().Be(1);
         }
     }
 }
