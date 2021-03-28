@@ -4,7 +4,6 @@ using Hellang.Middleware.ProblemDetails;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace TrisvagoHotels.Api.Configuration {
@@ -26,7 +25,7 @@ namespace TrisvagoHotels.Api.Configuration {
                         Predicate = _ => true,
                         ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
                     });
-                    config.MapControllerRoute(name: "default", pattern: "{controller}/{action=Index}/{id?}");
+                    config.MapControllers();
                     config.MapHealthChecksUI();
                 });
     }

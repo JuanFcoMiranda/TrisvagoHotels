@@ -28,6 +28,14 @@
 		<MediatRVersion>9.0.0</MediatRVersion>
 		<MediatRExtensionsMicrosoftDependencyInjectionVersion>9.0.0</MediatRExtensionsMicrosoftDependencyInjectionVersion>
 	</PropertyGroup>
+  <PropertyGroup Label="Open Telemetry">
+    <OpenTelemetryVersion>1.1.0-beta1</OpenTelemetryVersion>
+    <OpenTelemetryExtensionsHostingVersion>1.0.0-rc3</OpenTelemetryExtensionsHostingVersion>
+    <OpenTelemetryInstrumentationAspNetCoreVersion>1.0.0-rc3</OpenTelemetryInstrumentationAspNetCoreVersion>
+    <OpenTelemetryExporterZipkinVersion>1.1.0-beta1</OpenTelemetryExporterZipkinVersion>
+    <OpenTelemetryInstrumentationHttpVersion>1.0.0-rc3</OpenTelemetryInstrumentationHttpVersion>
+    <OpenTelemetryExporterJaegerVersion>1.1.0-beta1</OpenTelemetryExporterJaegerVersion>
+  </PropertyGroup>
 	<PropertyGroup Label="Problem Details">
 		<HellangMiddlewareProblemDetailsVersion>5.1.1</HellangMiddlewareProblemDetailsVersion>
 	</PropertyGroup>

@@ -1,8 +1,12 @@
+using System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using OpenTelemetry.Exporter;
+using OpenTelemetry.Resources;
+using OpenTelemetry.Trace;
 using TrisvagoHotels.Api.Configuration;
 using TrisvagoHotels.Host.Filters;
 
@@ -30,6 +34,12 @@ namespace TrisvagoHotels.Host {
                         .AllowAnyHeader().AllowAnyMethod()))
                 .AddEntityFrameworkCore(Configuration)
                 .AddMediatr()
+                .AddOpenTelemetryTracing(builder => builder
+                    .AddAspNetCoreInstrumentation()
+                    .AddHttpClientInstrumentation()
+                    .AddJaegerExporter()
+                    .AddZipkinExporter()
+                )
                 .AddCustomHealthChecks(Configuration)
                 .AddHashids(setup => {
                     setup.Salt = "your_salt";

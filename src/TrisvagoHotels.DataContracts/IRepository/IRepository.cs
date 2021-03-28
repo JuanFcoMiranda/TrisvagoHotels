@@ -14,9 +14,9 @@ namespace TrisvagoHotels.DataContracts.IRepository {
 		Task<IReadOnlyCollection<T>> GetAllByCondition(Expression<Func<T, bool>> expression);
 		Task Add(T entity);
 		Task Add(ICollection<T> entities);
-		void Update(T entity);
-		void Delete(T entity);
+        Task Update(T entity);
+		Task Delete(T entity);
 		Task Delete(int id);
-		void Delete(ICollection<T> entities);
+        Task Delete(ICollection<T> entities);
 	}
 }
