@@ -1,76 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project>
-	<PropertyGroup Label="SDK Versions">
-		<NetStandardTargetVersion>net5.0</NetStandardTargetVersion>
-		<NetCoreTargetVersion>net5.0</NetCoreTargetVersion>
-		<AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
-		<LangVersion>preview</LangVersion>
-	</PropertyGroup>
-	<!--<PropertyGroup Label="Spa Extensions">
+    <PropertyGroup Label="SDK Versions">
+        <NetStandardTargetVersion>net5.0</NetStandardTargetVersion>
+        <NetCoreTargetVersion>net5.0</NetCoreTargetVersion>
+        <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+        <LangVersion>preview</LangVersion>
+    </PropertyGroup>
+    <!--<PropertyGroup Label="Spa Extensions">
         <MicrosoftAspNetCoreSpaServicesExtensions>5.0.101</MicrosoftAspNetCoreSpaServicesExtensions>
     </PropertyGroup>-->
-	<PropertyGroup Label="Entity Framework">
-		<MicrosoftEntityFrameworkCoreVersion>5.0.4</MicrosoftEntityFrameworkCoreVersion>
-		<MicrosoftEntityFrameworkCoreSqlServerVersion>5.0.4</MicrosoftEntityFrameworkCoreSqlServerVersion>
-		<MicrosoftEntityFrameworkCoreSqliteVersion>5.0.4</MicrosoftEntityFrameworkCoreSqliteVersion>
-		<MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>5.0.4</MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>
-		<MySqlDataVersion>8.0.23</MySqlDataVersion>
-		<MySqlDataEntityFrameworkVersion>8.0.22</MySqlDataEntityFrameworkVersion>
-		<PomeloEntityFrameworkCoreMySqlVersion>5.0.0-alpha.2</PomeloEntityFrameworkCoreMySqlVersion>
-	</PropertyGroup>
-	<PropertyGroup Label="Fluent Validation">
-		<FluentValidationAspNetCoreVersion>10.0.0-preview2</FluentValidationAspNetCoreVersion>
-	</PropertyGroup>
-	<PropertyGroup Label="Swagger">
-		<SwashbuckleAspNetCoreVersion>6.1.0</SwashbuckleAspNetCoreVersion>
-	</PropertyGroup>
-	<PropertyGroup Label="Mediatr">
-		<MediatRVersion>9.0.0</MediatRVersion>
-		<MediatRExtensionsMicrosoftDependencyInjectionVersion>9.0.0</MediatRExtensionsMicrosoftDependencyInjectionVersion>
-	</PropertyGroup>
-  <PropertyGroup Label="Open Telemetry">
-    <OpenTelemetryVersion>1.1.0-beta1</OpenTelemetryVersion>
-    <OpenTelemetryExtensionsHostingVersion>1.0.0-rc3</OpenTelemetryExtensionsHostingVersion>
-    <OpenTelemetryInstrumentationAspNetCoreVersion>1.0.0-rc3</OpenTelemetryInstrumentationAspNetCoreVersion>
-    <OpenTelemetryExporterZipkinVersion>1.1.0-beta1</OpenTelemetryExporterZipkinVersion>
-    <OpenTelemetryInstrumentationHttpVersion>1.0.0-rc3</OpenTelemetryInstrumentationHttpVersion>
-    <OpenTelemetryExporterJaegerVersion>1.1.0-beta1</OpenTelemetryExporterJaegerVersion>
-  </PropertyGroup>
-	<PropertyGroup Label="Problem Details">
-		<HellangMiddlewareProblemDetailsVersion>5.1.1</HellangMiddlewareProblemDetailsVersion>
-	</PropertyGroup>
-	<PropertyGroup Label="Hosting Abstractions">
-		<MicrosoftExtensionsHostingVersion>5.0.0</MicrosoftExtensionsHostingVersion>
-	</PropertyGroup>
-	<PropertyGroup Label="Health Checks">
-		<AspNetCoreHealthChecksUIVersion>5.0.1</AspNetCoreHealthChecksUIVersion>
-		<AspNetCoreHealthChecksUIClientVersion>5.0.1</AspNetCoreHealthChecksUIClientVersion>
-		<AspNetCoreHealthChecksSystemVersion>5.0.1</AspNetCoreHealthChecksSystemVersion>
-		<AspNetCoreHealthChecksRedisVersion>5.0.2</AspNetCoreHealthChecksRedisVersion>
-	</PropertyGroup>
-	<PropertyGroup Label="Health Checks Storage">
-		<AspNetCoreHealthChecksUIInMemoryStorageVersion>5.0.1</AspNetCoreHealthChecksUIInMemoryStorageVersion>
-		<AspNetCoreHealthChecksSqlServerVersion>5.0.2</AspNetCoreHealthChecksSqlServerVersion>
-		<AspNetCoreHealthChecksSQLiteVersion>5.0.1</AspNetCoreHealthChecksSQLiteVersion>
-		<AspNetCoreHealthChecksMySqlVersion>5.0.1</AspNetCoreHealthChecksMySqlVersion>
-		<AspNetCoreHealthChecksUIPostgreSQLStorageVersion>5.0.1</AspNetCoreHealthChecksUIPostgreSQLStorageVersion>
-	</PropertyGroup>
-	<PropertyGroup Label="HashIds">
-		<AspNetCoreHashIdsVersion>1.1.1</AspNetCoreHashIdsVersion>
-	</PropertyGroup>
-	<PropertyGroup Label="Containers">
-		<MicrosoftVisualStudioAzureContainersToolsTargetsVersion>1.10.8</MicrosoftVisualStudioAzureContainersToolsTargetsVersion>
-	</PropertyGroup>
-	<PropertyGroup Label="Testing">
-		<MicrosoftNETTestSdkVersion>16.9.1</MicrosoftNETTestSdkVersion>
-		<FluentAssertionsVersion>5.10.3</FluentAssertionsVersion>
-		<MicrosoftASPNetCoreTestHostVersion>5.0.4</MicrosoftASPNetCoreTestHostVersion>
-		<XUnitVersion>2.4.1</XUnitVersion>
-		<XUnitRunnerVisualStudioVersion>2.4.3</XUnitRunnerVisualStudioVersion>
-		<AcheveTestHostVersion>3.0.0</AcheveTestHostVersion>
-	</PropertyGroup>
-	<PropertyGroup Label="CLI Tools Versions">
-		<EntityFrameworkVersion>2.2.2</EntityFrameworkVersion>
-		<DotnetXUnitVersion>2.3.1</DotnetXUnitVersion>
-	</PropertyGroup>
+    <PropertyGroup Label="Entity Framework">
+        <MicrosoftEntityFrameworkCoreVersion>5.0.5</MicrosoftEntityFrameworkCoreVersion>
+        <MicrosoftEntityFrameworkCoreSqlServerVersion>5.0.5</MicrosoftEntityFrameworkCoreSqlServerVersion>
+        <MicrosoftEntityFrameworkCoreSqliteVersion>5.0.5</MicrosoftEntityFrameworkCoreSqliteVersion>
+        <MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>5.0.5</MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>
+        <!--<MySqlDataVersion>8.0.24</MySqlDataVersion>-->
+        <MySQLEntityFrameworkCoreVersion>5.0.3</MySQLEntityFrameworkCoreVersion>
+        <PomeloEntityFrameworkCoreMySqlVersion>5.0.0</PomeloEntityFrameworkCoreMySqlVersion>
+    </PropertyGroup>
+    <PropertyGroup Label="Fluent Validation">
+        <FluentValidationAspNetCoreVersion>10.1.0</FluentValidationAspNetCoreVersion>
+    </PropertyGroup>
+    <PropertyGroup Label="Swagger">
+        <SwashbuckleAspNetCoreVersion>6.1.4</SwashbuckleAspNetCoreVersion>
+    </PropertyGroup>
+    <PropertyGroup Label="Mediatr">
+        <MediatRVersion>9.0.0</MediatRVersion>
+        <MediatRExtensionsMicrosoftDependencyInjectionVersion>9.0.0</MediatRExtensionsMicrosoftDependencyInjectionVersion>
+    </PropertyGroup>
+    <PropertyGroup Label="Open Telemetry">
+        <OpenTelemetryVersion>1.1.0-beta2</OpenTelemetryVersion>
+        <OpenTelemetryExtensionsHostingVersion>1.0.0-rc4</OpenTelemetryExtensionsHostingVersion>
+        <OpenTelemetryInstrumentationAspNetCoreVersion>1.0.0-rc4</OpenTelemetryInstrumentationAspNetCoreVersion>
+        <OpenTelemetryInstrumentationHttpVersion>1.0.0-rc4</OpenTelemetryInstrumentationHttpVersion>
+        <OpenTelemetryExporterZipkinVersion>1.1.0-beta2</OpenTelemetryExporterZipkinVersion>
+        <OpenTelemetryExporterJaegerVersion>1.1.0-beta2</OpenTelemetryExporterJaegerVersion>
+    </PropertyGroup>
+    <PropertyGroup Label="Problem Details">
+        <HellangMiddlewareProblemDetailsVersion>5.4.0</HellangMiddlewareProblemDetailsVersion>
+    </PropertyGroup>
+    <PropertyGroup Label="Hosting Abstractions">
+        <MicrosoftExtensionsHostingAbstractionsVersion>5.0.0</MicrosoftExtensionsHostingAbstractionsVersion>
+    </PropertyGroup>
+    <PropertyGroup Label="Health Checks">
+        <AspNetCoreHealthChecksUIVersion>5.0.1</AspNetCoreHealthChecksUIVersion>
+        <AspNetCoreHealthChecksUIClientVersion>5.0.1</AspNetCoreHealthChecksUIClientVersion>
+        <AspNetCoreHealthChecksSystemVersion>5.0.1</AspNetCoreHealthChecksSystemVersion>
+        <AspNetCoreHealthChecksRedisVersion>5.0.2</AspNetCoreHealthChecksRedisVersion>
+    </PropertyGroup>
+    <PropertyGroup Label="Health Checks Storage">
+        <AspNetCoreHealthChecksUIInMemoryStorageVersion>5.0.1</AspNetCoreHealthChecksUIInMemoryStorageVersion>
+        <AspNetCoreHealthChecksSqlServerVersion>5.0.2</AspNetCoreHealthChecksSqlServerVersion>
+        <AspNetCoreHealthChecksSQLiteVersion>5.0.1</AspNetCoreHealthChecksSQLiteVersion>
+        <AspNetCoreHealthChecksMySqlVersion>5.0.1</AspNetCoreHealthChecksMySqlVersion>
+        <AspNetCoreHealthChecksUIPostgreSQLStorageVersion>5.0.1</AspNetCoreHealthChecksUIPostgreSQLStorageVersion>
+    </PropertyGroup>
+    <PropertyGroup Label="HashIds">
+        <AspNetCoreHashIdsVersion>1.1.1</AspNetCoreHashIdsVersion>
+    </PropertyGroup>
+    <PropertyGroup Label="Containers">
+        <MicrosoftVisualStudioAzureContainersToolsTargetsVersion>1.10.8</MicrosoftVisualStudioAzureContainersToolsTargetsVersion>
+    </PropertyGroup>
+    <PropertyGroup Label="Testing">
+        <MicrosoftNETTestSdkVersion>16.10.0-release-20210429-01</MicrosoftNETTestSdkVersion>
+        <FluentAssertionsVersion>5.10.3</FluentAssertionsVersion>
+        <MicrosoftASPNetCoreTestHostVersion>5.0.5</MicrosoftASPNetCoreTestHostVersion>
+        <XUnitVersion>2.4.1</XUnitVersion>
+        <XUnitRunnerVisualStudioVersion>2.4.3</XUnitRunnerVisualStudioVersion>
+        <AcheveTestHostVersion>3.0.0</AcheveTestHostVersion>
+    </PropertyGroup>
 </Project>

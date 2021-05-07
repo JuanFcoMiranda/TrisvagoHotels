@@ -29,7 +29,7 @@ namespace TrisvagoHotels.Services.Hotels {
 		}
 
 		public async Task UpdateHotelAsync(Hotel hotel) {
-			uow.Hotels.Update(hotel);
+			await uow.Hotels.Update(hotel);
 			await uow.CommitAsync();
 		}
 	}

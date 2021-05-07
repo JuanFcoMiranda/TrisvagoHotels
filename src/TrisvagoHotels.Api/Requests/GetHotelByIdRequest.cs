@@ -6,7 +6,7 @@ namespace TrisvagoHotels.Api.Requests {
         public int Id { get; }
         
         public GetHotelByIdRequest(int id) {
-            this.Id = id;
+            Id = id;
         }
     }
 }
