@@ -6,16 +6,12 @@
         <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
         <LangVersion>preview</LangVersion>
     </PropertyGroup>
-    <!--<PropertyGroup Label="Spa Extensions">
-        <MicrosoftAspNetCoreSpaServicesExtensions>5.0.101</MicrosoftAspNetCoreSpaServicesExtensions>
-    </PropertyGroup>-->
     <PropertyGroup Label="Entity Framework">
         <MicrosoftEntityFrameworkCoreVersion>5.0.5</MicrosoftEntityFrameworkCoreVersion>
         <MicrosoftEntityFrameworkCoreSqlServerVersion>5.0.5</MicrosoftEntityFrameworkCoreSqlServerVersion>
         <MicrosoftEntityFrameworkCoreSqliteVersion>5.0.5</MicrosoftEntityFrameworkCoreSqliteVersion>
         <MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>5.0.5</MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>
-        <!--<MySqlDataVersion>8.0.24</MySqlDataVersion>-->
-        <MySQLEntityFrameworkCoreVersion>5.0.3</MySQLEntityFrameworkCoreVersion>
+        <MySQLEntityFrameworkCoreVersion>5.0.3.1</MySQLEntityFrameworkCoreVersion>
         <PomeloEntityFrameworkCoreMySqlVersion>5.0.0</PomeloEntityFrameworkCoreMySqlVersion>
     </PropertyGroup>
     <PropertyGroup Label="Fluent Validation">

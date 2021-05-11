@@ -9,14 +9,6 @@ namespace Microsoft.Extensions.DependencyInjection {
             services
                 .AddDbContextPool<MyDataContext>(options =>
                     options.UseMySQL(configuration["AppSettings:ConnectionStrings:DataAccessMySqlProvider"]));
-                    /*options.UseMySql(configuration["AppSettings:ConnectionStrings:DataAccessMySqlProvider"],
-                            // new MySqlServerVersion(new Version(8, 0, 22)), // use MariaDbServerVersion for MariaDB
-                            ServerVersion.AutoDetect(configuration["AppSettings:ConnectionStrings:DataAccessMySqlProvider"])
-                            //mySqlOptions => mySqlOptions.CharSetBehavior(CharSetBehavior.NeverAppend)
-                            )
-                        // Everything from this point on is optional but helps with debugging.
-                        .EnableSensitiveDataLogging()
-                        .EnableDetailedErrors());*/
 
         public static IServiceCollection AddCustomHealthChecks(this IServiceCollection services, IConfiguration configuration) =>
             services.AddHealthChecks()
