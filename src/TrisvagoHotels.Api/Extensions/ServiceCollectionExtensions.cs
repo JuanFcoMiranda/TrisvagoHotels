@@ -1,7 +1,9 @@
-﻿using Hellang.Middleware.ProblemDetails;
+﻿using System.Text.Json.Serialization;
+using Hellang.Middleware.ProblemDetails;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using TrisvagoHotels.Api.Converters;
 using TrisvagoHotels.Api.Filters;
 
 namespace Microsoft.Extensions.DependencyInjection {
@@ -18,7 +20,11 @@ namespace Microsoft.Extensions.DependencyInjection {
                     config.Filters.Add(typeof(ValidModelStateFilterAttribute));
                     config.EnableEndpointRouting = false;
                 })
-                .AddJsonOptions(config => config.JsonSerializerOptions.IgnoreNullValues = true)
+                .AddJsonOptions(config => {
+                    config.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault;
+                    //config.JsonSerializerOptions.IgnoreNullValues = true;
+                    config.JsonSerializerOptions.Converters.Add(new DateTimeConverter());
+                })
                 .AddApiExplorer()
                 .AddApplicationPart(typeof(ServiceCollectionExtensions).Assembly)
                 .Services;
