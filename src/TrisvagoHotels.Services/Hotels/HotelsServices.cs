@@ -8,14 +8,17 @@ using TrisvagoHotels.Model.Entities;
 
 namespace TrisvagoHotels.Services.Hotels;
 
-public class HotelsServices : IHotelsServices {
+public class HotelsServices : IHotelsServices
+{
     private readonly IUow uow;
 
-    public HotelsServices(IUow uow) {
+    public HotelsServices(IUow uow)
+    {
         this.uow = uow;
     }
 
-    public async Task AddHotelAsync(Hotel hotel) {
+    public async Task AddHotelAsync(Hotel hotel)
+    {
         await uow.Hotels.Add(hotel);
         await uow.CommitAsync();
     }
@@ -24,13 +27,15 @@ public class HotelsServices : IHotelsServices {
 
     public async Task<Hotel?> GetHotel(int id) => await uow.Hotels.GetById(id);
 
-    public async Task RemoveHotelAsync(int id) {
+    public async Task RemoveHotelAsync(int id)
+    {
         await uow.Hotels.Delete(id);
         await uow.CommitAsync();
     }
 
-    public async Task UpdateHotelAsync(Hotel hotel) {
-        uow.Hotels.Update(hotel);
+    public async Task UpdateHotelAsync(Hotel hotel)
+    {
+        await uow.Hotels.Update(hotel);
         await uow.CommitAsync();
     }
 }

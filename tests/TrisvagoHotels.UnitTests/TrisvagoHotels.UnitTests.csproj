@@ -6,12 +6,13 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="JetBrains.DotMemoryUnit" Version="3.1.20200127.214830" />
         <PackageReference Include="Microsoft.EntityFrameworkCore" Version="$(MicrosoftEntityFrameworkCoreVersion)" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="$(MicrosoftEntityFrameworkCoreSqliteVersion)" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="$(MicrosoftNETTestSdkVersion)" />
         <PackageReference Include="xunit" Version="$(XUnitVersion)" />
         <PackageReference Include="xunit.runner.visualstudio" Version="$(XUnitRunnerVisualStudioVersion)" />
-        <PackageReference Include="FluentAssertions" Version="$(FluentAssertionsVersion)"/>
+        <PackageReference Include="FluentAssertions" Version="$(FluentAssertionsVersion)" />
     </ItemGroup>
 
     <ItemGroup>

@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
+
 	<PropertyGroup>
 		<TargetFramework>$(DefaultTargetFramework)</TargetFramework>
 	</PropertyGroup>
-	<ItemGroup>
+	
+  <ItemGroup>
 		<PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="$(AspNetCoreHealthChecksUIClientVersion)" />
 		<PackageReference Include="AspNetCore.HealthChecks.UI" Version="$(AspNetCoreHealthChecksUIVersion)" />
 		<PackageReference Include="FluentValidation.AspNetCore" Version="$(FluentValidationAspNetCoreVersion)" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="$(SwashbuckleAspNetCoreVersion)" />
 		<PackageReference Include="MediatR" Version="$(MediatRVersion)" />
 	</ItemGroup>
-	<ItemGroup>
+	
+  <ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="$(MicrosoftExtensionsHostingVersion)" />
 	</ItemGroup>
-	<ItemGroup>
+	
+  <ItemGroup>
 		<Folder Include="Extensions\" />
 		<Folder Include="Filters\" />
 		<Folder Include="Controllers\" />
 	</ItemGroup>
-	<ItemGroup>
+	
+  <ItemGroup>
 		<ProjectReference Include="..\TrisvagoHotels.Model\TrisvagoHotels.Model.csproj" />
 		<ProjectReference Include="..\TrisvagoHotels.DataContracts\TrisvagoHotels.DataContracts.csproj" />
 	</ItemGroup>
+  
 </Project>

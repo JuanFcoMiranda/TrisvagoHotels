@@ -8,7 +8,8 @@ using TrisvagoHotels.Api.Extensions;
 
 namespace TrisvagoHotels.Api.Configuration;
 
-public static class ApiConfiguration {
+public static class ApiConfiguration
+{
     public static IServiceCollection ConfigureServices(IServiceCollection services, IWebHostEnvironment environment) => services
         .AddHttpContextAccessor()
         .AddCustomMvc()
@@ -19,12 +20,15 @@ public static class ApiConfiguration {
             .UseHttpsRedirection()
             .UseHsts()
             .UseRouting()
-            .UseEndpoints(config => {
-                config.MapHealthChecks("/healthz", new HealthCheckOptions {
+            .UseEndpoints(config =>
+            {
+                config.MapHealthChecks("/healthz", new HealthCheckOptions
+                {
                     Predicate = _ => true,
                     ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+
                 });
-                config.MapControllerRoute(name: "default", pattern: "{controller}/{action=Index}/{id?}");
+                config.MapControllers();
                 config.MapHealthChecksUI();
             });
 }

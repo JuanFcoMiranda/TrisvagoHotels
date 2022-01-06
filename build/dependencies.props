@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project>
-
+  
   <PropertyGroup Label="SDK Versions">
     <DefaultTargetFramework>net6.0</DefaultTargetFramework>
     <!--<AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>-->
@@ -70,4 +70,5 @@
     <DotnetXUnitVersion>2.4.0-beta.1.build3958</DotnetXUnitVersion>
     <!--<AcheveTestHostVersion>3.0.0</AcheveTestHostVersion>-->
   </PropertyGroup>
+
 </Project>

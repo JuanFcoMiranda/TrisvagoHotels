@@ -11,9 +11,9 @@
         <PackageReference Include="xunit" Version="$(XUnitVersion)" />
         <PackageReference Include="xunit.runner.visualstudio" Version="$(XUnitRunnerVisualStudioVersion)" />
     </ItemGroup>
-    <ItemGroup Label="CLI Tools Versions">
+    <!--<ItemGroup Label="CLI Tools Versions">
         <DotNetCliToolReference Include="dotnet-xunit" Version="$(DotnetXUnitVersion)" />
-    </ItemGroup>
+    </ItemGroup>-->
     <ItemGroup>
         <Folder Include="TrisvagoHotels.Api\" />
         <Folder Include="Fixtures\" />

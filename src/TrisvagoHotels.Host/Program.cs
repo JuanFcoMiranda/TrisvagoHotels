@@ -3,7 +3,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using TrisvagoHotels.Api.Configuration;
-using TrisvagoHotels.DataContext.Extensions;
 using TrisvagoHotels.Host.Extensions;
 using TrisvagoHotels.Host.Filters;
 
