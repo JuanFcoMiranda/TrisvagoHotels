@@ -3,34 +3,34 @@ using System.Collections.Generic;
 using System.Net;
 using Microsoft.AspNetCore.Hosting;
 
-namespace TrisvagoHotels.Api.HttpErrors {
-	public class DefaultHttpErrorFactory : IHttpErrorFactory {
-		private readonly IWebHostEnvironment env;
-		private readonly IDictionary<Type, Func<Exception, HttpError>> factory;
+namespace TrisvagoHotels.Api.HttpErrors;
 
-		public DefaultHttpErrorFactory(IWebHostEnvironment env) {
-			this.env = env;
+public class DefaultHttpErrorFactory : IHttpErrorFactory {
+    private readonly IWebHostEnvironment env;
+    private readonly IDictionary<Type, Func<Exception, HttpError>> factory;
 
-			factory = new Dictionary<Type, Func<Exception, HttpError>> {
-				{typeof(Exception), InternalServerError}
-			};
-		}
+    public DefaultHttpErrorFactory(IWebHostEnvironment env) {
+        this.env = env;
 
-		public HttpError CreateFrom(Exception exception) {
-			if (factory.TryGetValue(exception.GetType(), out Func<Exception, HttpError> func)) {
-				return func(exception);
-			}
+        factory = new Dictionary<Type, Func<Exception, HttpError>> {
+            {typeof(Exception), InternalServerError}
+        };
+    }
 
-			return factory[typeof(Exception)](exception);
-		}
+    public HttpError CreateFrom(Exception exception) {
+        if (factory.TryGetValue(exception.GetType(), out Func<Exception, HttpError> func)) {
+            return func(exception);
+        }
 
-		private HttpError InternalServerError(Exception exception) {
-			return HttpError.Create(
-				env,
-				status: HttpStatusCode.InternalServerError,
-				code: string.Empty,
-				userMessage: new[] { "Internal Server Error" },
-				developerMessage: $"{exception.Message}\r\n{exception.StackTrace}");
-		}
-	}
+        return factory[typeof(Exception)](exception);
+    }
+
+    private HttpError InternalServerError(Exception exception) {
+        return HttpError.Create(
+            env,
+            status: HttpStatusCode.InternalServerError,
+            code: string.Empty,
+            userMessage: new[] { "Internal Server Error" },
+            developerMessage: $"{exception.Message}\r\n{exception.StackTrace}");
+    }
 }

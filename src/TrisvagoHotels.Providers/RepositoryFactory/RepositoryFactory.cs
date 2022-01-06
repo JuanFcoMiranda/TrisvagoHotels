@@ -4,30 +4,30 @@ using TrisvagoHotels.DataContext.Context;
 using TrisvagoHotels.DataContracts.IRepositoryFactory;
 using TrisvagoHotels.Repositories.EFRepository;
 
-namespace TrisvagoHotels.Providers.RepositoryFactory {
-	public class RepositoryFactory : IRepositoryFactory {
-		private readonly IDictionary<Type, Func<MyDataContext, object>> repositoryFactory;
+namespace TrisvagoHotels.Providers.RepositoryFactory;
 
-		private IDictionary<Type, Func<MyDataContext, object>> GetFactories() {
-			return new Dictionary<Type, Func<MyDataContext, object>> {
-			};
-		}
+public class RepositoryFactory : IRepositoryFactory {
+    private readonly IDictionary<Type, Func<MyDataContext, object>> repositoryFactory;
 
-		public RepositoryFactory() {
-			repositoryFactory = GetFactories();
-		}
+    private IDictionary<Type, Func<MyDataContext, object>> GetFactories() {
+        return new Dictionary<Type, Func<MyDataContext, object>> {
+        };
+    }
 
-		public Func<MyDataContext, object> GetRepositoryFactoryForEntityType<T>() where T : class {
-			return GetRepositoryFactory<T>() ?? DefaultEntityRepositoryFactory<T>();
-		}
+    public RepositoryFactory() {
+        repositoryFactory = GetFactories();
+    }
 
-		public Func<MyDataContext, object> GetRepositoryFactory<T>() {
-			repositoryFactory.TryGetValue(typeof(T), out var factory);
-			return factory;
-		}
+    public Func<MyDataContext, object> GetRepositoryFactoryForEntityType<T>() where T : class {
+        return GetRepositoryFactory<T>() ?? DefaultEntityRepositoryFactory<T>();
+    }
 
-		private Func<MyDataContext, object> DefaultEntityRepositoryFactory<T>() where T : class {
-			return context => new Repository<T>(context);
-		}
-	}
+    public Func<MyDataContext, object> GetRepositoryFactory<T>() {
+        repositoryFactory.TryGetValue(typeof(T), out var factory);
+        return factory;
+    }
+
+    private Func<MyDataContext, object> DefaultEntityRepositoryFactory<T>() where T : class {
+        return context => new Repository<T>(context);
+    }
 }

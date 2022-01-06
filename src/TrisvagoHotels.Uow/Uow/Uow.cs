@@ -6,33 +6,33 @@ using TrisvagoHotels.DataContracts.IRepositoryProvider;
 using TrisvagoHotels.DataContracts.IUow;
 using TrisvagoHotels.Model.Entities;
 
-namespace TrisvagoHotels.Uow.Uow {
-	public class Uow : IUow, IDisposable {
-		private readonly MyDataContext context;
-		private IRepositoryProvider RepositoryProvider { get; }
+namespace TrisvagoHotels.Uow.Uow;
 
-		public Uow(IRepositoryProvider provider, MyDataContext context) {
-			provider.Context = this.context = context;
-			RepositoryProvider = provider;
-		}
+public class Uow : IUow, IDisposable {
+    private readonly MyDataContext context;
+    private IRepositoryProvider RepositoryProvider { get; }
 
-		public IRepository<Hotel> Hotels => GetStandardRepo<Hotel>();
+    public Uow(IRepositoryProvider provider, MyDataContext context) {
+        provider.Context = this.context = context;
+        RepositoryProvider = provider;
+    }
 
-		public async Task CommitAsync() {
-			await context.SaveChangesAsync();
-		}
+    public IRepository<Hotel> Hotels => GetStandardRepo<Hotel>();
 
-		private IRepository<T> GetStandardRepo<T>() where T : class => RepositoryProvider.GetRepositoryForEntityType<T>();
+    public async Task CommitAsync() {
+        await context.SaveChangesAsync();
+    }
 
-		public void Dispose() {
-			Dispose(true);
-			GC.SuppressFinalize(this);
-		}
+    private IRepository<T> GetStandardRepo<T>() where T : class => RepositoryProvider.GetRepositoryForEntityType<T>();
 
-		protected virtual void Dispose(bool disposing) {
-			if (disposing) {
-				context?.Dispose();
-			}
-		}
-	}
+    public void Dispose() {
+        Dispose(true);
+        GC.SuppressFinalize(this);
+    }
+
+    protected virtual void Dispose(bool disposing) {
+        if (disposing) {
+            context?.Dispose();
+        }
+    }
 }

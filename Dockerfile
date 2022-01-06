@@ -24,7 +24,7 @@ RUN dotnet restore "src/TrisvagoHotels.Host/TrisvagoHotels.Host.csproj"
 
 COPY . .
 WORKDIR "/src/src/TrisvagoHotels.Host"
-RUN dotnet build "TrisvagoHotels.Host.csproj" -c Release -o /app --no-restore
+RUN dotnet build "TrisvagoHotels.Host.csproj" -c Release -o /app
 
 FROM build AS publish
 RUN dotnet publish "TrisvagoHotels.Host.csproj" -c Release -o /app --no-restore

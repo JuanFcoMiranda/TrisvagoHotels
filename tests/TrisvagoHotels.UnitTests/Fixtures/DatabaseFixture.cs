@@ -4,21 +4,21 @@ using TrisvagoHotels.DataContracts.IUow;
 using TrisvagoHotels.Providers.RepositoryFactory;
 using TrisvagoHotels.Providers.RepositoryProvider;
 
-namespace TrisvagoHotels.UnitTests.Fixtures {
-    public class DatabaseFixture {
-        public DatabaseFixture() {
-            var options = new DbContextOptionsBuilder<MyDataContext>().UseSqlite("DataSource=trisvagohotels.db").Options;
+namespace TrisvagoHotels.UnitTests.Fixtures;
 
-            var repositoryFactory = new RepositoryFactory();
-            var provider = new RepositoryProvider(repositoryFactory);
-            var context = new MyDataContext(options);
+public class DatabaseFixture {
+    public DatabaseFixture() {
+        var options = new DbContextOptionsBuilder<MyDataContext>().UseSqlite("DataSource=trisvagohotels.db").Options;
+
+        var repositoryFactory = new RepositoryFactory();
+        var provider = new RepositoryProvider(repositoryFactory);
+        var context = new MyDataContext(options);
             
-            context.Database.EnsureDeleted();
-            context.Database.EnsureCreated();
+        context.Database.EnsureDeleted();
+        context.Database.EnsureCreated();
 
-            Uow = new Uow.Uow.Uow(provider, context);
-        }
-
-        public IUow Uow { get; }
+        Uow = new Uow.Uow.Uow(provider, context);
     }
+
+    public IUow Uow { get; }
 }

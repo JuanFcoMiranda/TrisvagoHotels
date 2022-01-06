@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  trisvagohotels.host:
+    image: ${DOCKER_REGISTRY-}trisvagohotels
+    build:
+      context: .
+      dockerfile: ../TrisvagoHotels.Host/Dockerfile

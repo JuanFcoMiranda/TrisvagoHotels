@@ -6,32 +6,32 @@ using TrisvagoHotels.UnitTests.Fixtures;
 using Xunit;
 using FluentAssertions;
 
-namespace TrisvagoHotels.UnitTests {
-    [Collection(Collections.UOW)]
-    public class UnitOfWorkTest {
-        private readonly IUow uow;
+namespace TrisvagoHotels.UnitTests;
 
-        public UnitOfWorkTest(DependencySetupFixture fixture) {
-            uow = fixture.ServiceProvider.GetService<IUow>();
-        }
+[Collection(Collections.UOW)]
+public class UnitOfWorkTest {
+    private readonly IUow uow;
 
-        [Fact]
-        public async Task Test1() {
-            // Arrange
-            var hotel = new Hotel {
-                Nombre = "Prueba",
-                Id = 0
-            };
+    public UnitOfWorkTest(DependencySetupFixture fixture) {
+        uow = fixture.ServiceProvider.GetService<IUow>();
+    }
 
-            // Act
-            await uow.Hotels.Add(hotel);
-            await uow.CommitAsync();
+    [Fact]
+    public async Task Test1() {
+        // Arrange
+        var hotel = new Hotel {
+            Nombre = "Prueba",
+            Id = 0
+        };
 
-            var number = await uow.Hotels.CountAll();
+        // Act
+        await uow.Hotels.Add(hotel);
+        await uow.CommitAsync();
+
+        var number = await uow.Hotels.CountAll();
             
-            // Assert
-            uow.Should().NotBeNull();
-            number.Should().Be(1);
-        }
+        // Assert
+        uow.Should().NotBeNull();
+        number.Should().Be(1);
     }
 }

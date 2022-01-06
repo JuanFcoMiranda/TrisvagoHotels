@@ -2,14 +2,14 @@
 using Microsoft.Extensions.DependencyInjection;
 using TrisvagoHotels.Api.Configuration;
 
-namespace TrisvagoHotels.FunctionalTests {
-	public class TestStartup {
-		public void ConfigureServices(IServiceCollection services) {
-			//ApiConfiguration.ConfigureServices(services);
-		}
+namespace TrisvagoHotels.FunctionalTests;
 
-		public void Configure(IApplicationBuilder app) {
-			ApiConfiguration.Configure(app, host => host);
-		}
-	}
+public class TestStartup {
+    public void ConfigureServices(IServiceCollection services) {
+        //ApiConfiguration.ConfigureServices(services);
+    }
+
+    public void Configure(IApplicationBuilder app) {
+        ApiConfiguration.Configure(app, host => host);
+    }
 }

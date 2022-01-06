@@ -2,12 +2,12 @@
 using TrisvagoHotels.DataContracts.IRepository;
 using TrisvagoHotels.Model.Entities;
 
-namespace TrisvagoHotels.DataContracts.IUow {
-	public interface IUow {
-		// Save pending changes to the data store.
-		Task CommitAsync();
+namespace TrisvagoHotels.DataContracts.IUow;
 
-		// Repositories
-		IRepository<Hotel> Hotels { get; }
-	}
+public interface IUow {
+    // Save pending changes to the data store.
+    Task CommitAsync();
+
+    // Repositories
+    IRepository<Hotel> Hotels { get; }
 }

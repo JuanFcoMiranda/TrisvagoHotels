@@ -2,49 +2,49 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace TrisvagoHotels.Api.HttpErrors {
-	public class HttpError {
-		public int Status { get; set; }
-		public string Code { get; set; }
-		public string[] UserMessage { get; set; }
-		public string DeveloperMessage { get; set; }
-		public string[] ValidationErrors { get; set; }
+namespace TrisvagoHotels.Api.HttpErrors;
 
-		public static HttpError CreateHttpValidationError(
-			HttpStatusCode status,
-			string[] userMessage,
-			string[] validationErrors) {
-			var httpError = CreateDefaultHttpError(status, userMessage);
+public class HttpError {
+    public int Status { get; set; }
+    public string Code { get; set; }
+    public string[] UserMessage { get; set; }
+    public string DeveloperMessage { get; set; }
+    public string[] ValidationErrors { get; set; }
 
-			httpError.ValidationErrors = validationErrors;
+    public static HttpError CreateHttpValidationError(
+        HttpStatusCode status,
+        string[] userMessage,
+        string[] validationErrors) {
+        var httpError = CreateDefaultHttpError(status, userMessage);
 
-			return httpError;
-		}
+        httpError.ValidationErrors = validationErrors;
 
-		public static HttpError Create(
-			IWebHostEnvironment environment,
-			HttpStatusCode status,
-			string code,
-			string[] userMessage,
-			string developerMessage) {
-			var httpError = CreateDefaultHttpError(status, userMessage);
+        return httpError;
+    }
 
-			httpError.Code = code;
+    public static HttpError Create(
+        IWebHostEnvironment environment,
+        HttpStatusCode status,
+        string code,
+        string[] userMessage,
+        string developerMessage) {
+        var httpError = CreateDefaultHttpError(status, userMessage);
 
-			if (environment.IsDevelopment()) {
-				httpError.DeveloperMessage = developerMessage;
-			}
+        httpError.Code = code;
 
-			return httpError;
-		}
+        if (environment.IsDevelopment()) {
+            httpError.DeveloperMessage = developerMessage;
+        }
 
-		private static HttpError CreateDefaultHttpError(HttpStatusCode status, string[] userMessage) {
-			var httpError = new HttpError {
-				Status = (int)status,
-				UserMessage = userMessage
-			};
+        return httpError;
+    }
 
-			return httpError;
-		}
-	}
+    private static HttpError CreateDefaultHttpError(HttpStatusCode status, string[] userMessage) {
+        var httpError = new HttpError {
+            Status = (int)status,
+            UserMessage = userMessage
+        };
+
+        return httpError;
+    }
 }

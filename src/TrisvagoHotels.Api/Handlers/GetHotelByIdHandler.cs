@@ -5,14 +5,14 @@ using TrisvagoHotels.Api.Requests;
 using TrisvagoHotels.DataContracts.IServices;
 using TrisvagoHotels.Model.Entities;
 
-namespace TrisvagoHotels.Api.Handlers {
-    public class GetHotelByIdHandler : IRequestHandler<GetHotelByIdRequest, Hotel> {
-        private readonly IHotelsServices hotelsServices;
+namespace TrisvagoHotels.Api.Handlers;
 
-        public GetHotelByIdHandler(IHotelsServices hotelsServices) {
-            this.hotelsServices = hotelsServices;
-        }
+public class GetHotelByIdHandler : IRequestHandler<GetHotelByIdRequest, Hotel> {
+    private readonly IHotelsServices hotelsServices;
 
-        public Task<Hotel> Handle(GetHotelByIdRequest request, CancellationToken cancellationToken) => hotelsServices.GetHotel(request.Id);
+    public GetHotelByIdHandler(IHotelsServices hotelsServices) {
+        this.hotelsServices = hotelsServices;
     }
+
+    public Task<Hotel> Handle(GetHotelByIdRequest request, CancellationToken cancellationToken) => hotelsServices.GetHotel(request.Id);
 }

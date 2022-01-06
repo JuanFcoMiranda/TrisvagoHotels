@@ -1,7 +1,5 @@
 <Project>
-  <Import Project="build/dependencies.props" />
-  
-  <PropertyGroup>
-    <LangVersion>preview</LangVersion>
-  </PropertyGroup>
+  <ImportGroup Condition=" '$(MSBuildProjectExtension)' == '.csproj' ">
+    <Import Project="build/dependencies.props" />
+  </ImportGroup>
 </Project>

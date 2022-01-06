@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFramework>$(NetStandardTargetVersion)</TargetFramework>
+		<TargetFramework>$(DefaultTargetFramework)</TargetFramework>
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="$(MicrosoftEntityFrameworkCoreVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" Version="$(MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion)" />
-		<PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="$(PomeloEntityFrameworkCoreMySqlVersion)" />
+		<!--<PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="$(PomeloEntityFrameworkCoreMySqlVersion)" />-->
+		<PackageReference Include="MySql.EntityFrameworkCore" Version="$(MySqlEntityFrameworkCoreVersion)" />
 		<PackageReference Include="AspNetCore.HealthChecks.SqlServer" Version="$(AspNetCoreHealthChecksSqlServerVersion)" />
 		<PackageReference Include="AspNetCore.HealthChecks.MySql" Version="$(AspNetCoreHealthChecksMySqlVersion)" />
 		<PackageReference Include="AspNetCore.HealthChecks.System" Version="$(AspNetCoreHealthChecksSystemVersion)" />

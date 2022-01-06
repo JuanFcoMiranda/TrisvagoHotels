@@ -1,4 +1,4 @@
-﻿namespace TrisvagoHotels.Host {
-	public abstract class TrisvagoHotels {
-	}
+﻿namespace TrisvagoHotels.Host;
+
+public abstract class TrisvagoHotels {
 }

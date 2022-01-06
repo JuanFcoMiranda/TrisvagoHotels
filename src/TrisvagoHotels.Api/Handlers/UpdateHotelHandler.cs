@@ -5,16 +5,18 @@ using TrisvagoHotels.Api.Commands;
 using TrisvagoHotels.DataContracts.IServices;
 using TrisvagoHotels.Model.Entities;
 
-namespace TrisvagoHotels.Api.Handlers {
-    public class UpdateHotelHandler : IRequestHandler<UpdateHotelCommand, Hotel> {
-        private readonly IHotelsServices hotelsServices;
+namespace TrisvagoHotels.Api.Handlers;
 
-        public UpdateHotelHandler(IHotelsServices hotelsServices) {
-            this.hotelsServices = hotelsServices;
-        }
+public class UpdateHotelHandler : IRequestHandler<UpdateHotelCommand, Hotel> {
+    private readonly IHotelsServices hotelsServices;
+
+    public UpdateHotelHandler(IHotelsServices hotelsServices) {
+        this.hotelsServices = hotelsServices;
+    }
         
-        public async Task<Hotel> Handle(UpdateHotelCommand request, CancellationToken cancellationToken) {
-            var myhotel = await hotelsServices.GetHotel(request.Id);
+    public async Task<Hotel> Handle(UpdateHotelCommand request, CancellationToken cancellationToken) {
+        var myhotel = await hotelsServices.GetHotel(request.Id);
+        if (myhotel != null) {
             myhotel.Categoria = request.Categoria;
             myhotel.Descripcion = request.Descripcion;
             myhotel.Nombre = request.Nombre;
@@ -22,7 +24,8 @@ namespace TrisvagoHotels.Api.Handlers {
             myhotel.Localidad = request.Localidad;
             myhotel.Caracteristicas = request.Caracteristicas;
             await hotelsServices.UpdateHotelAsync(myhotel);
-            return await Task.FromResult(myhotel);
+            return myhotel;
         }
+        return null;
     }
 }

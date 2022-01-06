@@ -4,25 +4,25 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using TrisvagoHotels.Api.HttpErrors;
 
-namespace TrisvagoHotels.Api.Filters {
-	internal class ValidModelStateFilterAttribute : ActionFilterAttribute {
-		public override void OnActionExecuting(ActionExecutingContext context) {
-			if (context.ModelState.IsValid) {
-				return;
-			}
+namespace TrisvagoHotels.Api.Filters;
 
-			var validationErrors = context.ModelState
-				.Keys
-				.SelectMany(k => context.ModelState[k].Errors)
-				.Select(e => e.ErrorMessage)
-				.ToArray();
+internal class ValidModelStateFilterAttribute : ActionFilterAttribute {
+    public override void OnActionExecuting(ActionExecutingContext context) {
+        if (context.ModelState.IsValid) {
+            return;
+        }
 
-			var error = HttpError.CreateHttpValidationError(
-				status: HttpStatusCode.BadRequest,
-				userMessage: new[] { "There are validation errors" },
-				validationErrors: validationErrors);
+        var validationErrors = context.ModelState
+            .Keys
+            .SelectMany(k => context.ModelState[k].Errors)
+            .Select(e => e.ErrorMessage)
+            .ToArray();
 
-			context.Result = new BadRequestObjectResult(error);
-		}
-	}
+        var error = HttpError.CreateHttpValidationError(
+            status: HttpStatusCode.BadRequest,
+            userMessage: new[] { "There are validation errors" },
+            validationErrors: validationErrors);
+
+        context.Result = new BadRequestObjectResult(error);
+    }
 }

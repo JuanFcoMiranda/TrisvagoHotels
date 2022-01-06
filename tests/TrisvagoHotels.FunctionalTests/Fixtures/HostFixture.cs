@@ -1,18 +1,18 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
 
-namespace TrisvagoHotels.FunctionalTests.Fixtures {
-	public class HostFixture {
-		public TestServer Server { get; }
+namespace TrisvagoHotels.FunctionalTests.Fixtures;
 
-		public HostFixture() {
-			Server = new TestServer(
-				new WebHostBuilder()
-				.ConfigureServices(services => {
+public class HostFixture {
+    public TestServer Server { get; }
 
-				})
-				.UseStartup<TestStartup>()
-			);
-		}
-	}
+    public HostFixture() {
+        Server = new TestServer(
+            new WebHostBuilder()
+                .ConfigureServices(services => {
+
+                })
+                .UseStartup<TestStartup>()
+        );
+    }
 }
