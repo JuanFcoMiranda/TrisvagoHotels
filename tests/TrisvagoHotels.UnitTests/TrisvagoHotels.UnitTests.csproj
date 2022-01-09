@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <TargetFramework>$(DefaultTargetFramework)</TargetFramework>
@@ -16,9 +16,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\src\TrisvagoHotels.DataContext\TrisvagoHotels.DataContext.csproj" />
       <ProjectReference Include="..\..\src\TrisvagoHotels.DataContracts\TrisvagoHotels.DataContracts.csproj" />
-      <ProjectReference Include="..\..\src\TrisvagoHotels.Model\TrisvagoHotels.Model.csproj" />
       <ProjectReference Include="..\..\src\TrisvagoHotels.Providers\TrisvagoHotels.Providers.csproj" />
       <ProjectReference Include="..\..\src\TrisvagoHotels.Uow\TrisvagoHotels.Uow.csproj" />
     </ItemGroup>

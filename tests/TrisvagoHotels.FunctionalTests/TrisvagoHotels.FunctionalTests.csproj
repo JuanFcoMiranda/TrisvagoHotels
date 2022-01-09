@@ -16,7 +16,6 @@
     </ItemGroup>-->
     <ItemGroup>
         <Folder Include="TrisvagoHotels.Api\" />
-        <Folder Include="Fixtures\" />
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\..\src\TrisvagoHotels.Api\TrisvagoHotels.Api.csproj" />

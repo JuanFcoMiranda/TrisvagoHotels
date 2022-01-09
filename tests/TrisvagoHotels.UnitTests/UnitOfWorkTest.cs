@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 using TrisvagoHotels.DataContracts.IUow;
@@ -9,7 +10,7 @@ using FluentAssertions;
 namespace TrisvagoHotels.UnitTests;
 
 [Collection(Collections.UOW)]
-public class UnitOfWorkTest
+public class UnitOfWorkTest : IDisposable
 {
     private readonly IUow uow;
 
@@ -45,8 +46,7 @@ public class UnitOfWorkTest
         // Arrange
         var hotel = new Hotel
         {
-            Nombre = "Prueba",
-            Id = 0
+            Nombre = "Prueba"
         };
 
         // Act
@@ -70,8 +70,7 @@ public class UnitOfWorkTest
         // Arrange
         var hotel = new Hotel
         {
-            Nombre = "Prueba",
-            Id = 0
+            Nombre = "Prueba"
         };
 
         // Act
@@ -93,5 +92,19 @@ public class UnitOfWorkTest
         initialCount.Should().Be(0);
         intermediateCount.Should().Be(1);
         finalCount.Should().Be(0);
+    }
+
+    public async void Dispose()
+    {
+        if (uow != null)
+        {
+            var hotels = await uow.Hotels.GetAll();
+            foreach (var hotel in hotels)
+            {
+                await uow.Hotels.Delete(hotel);
+            }
+
+            await uow.CommitAsync();
+        }
     }
 }
