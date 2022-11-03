@@ -26,7 +26,7 @@ public sealed class Repository<T> : IRepository<T> where T : class
 
     public async Task<T> FirstOrDefault(Expression<Func<T, bool>> predicate) => await DBSet.FirstOrDefaultAsync(predicate);
 
-    public async Task<IEnumerable<T>> GetAll(Expression<Func<T, bool>> filter = null,
+    public async Task<ICollection<T>> GetAll(Expression<Func<T, bool>> filter = null,
                                             Func<IQueryable<T>, IOrderedQueryable<T>> orderBy = null,
                                             string includeProperties = "")
     {
@@ -107,19 +107,20 @@ public sealed class Repository<T> : IRepository<T> where T : class
 
     public async Task Delete(ICollection<T> entities)
     {
-        foreach (var obj in entities)
-        {
-            EntityEntry dbEntity = Context.Entry(obj);
-            if (dbEntity.State != EntityState.Deleted)
-            {
-                dbEntity.State = EntityState.Deleted;
-            }
-            else
-            {
-                DBSet.Attach(obj);
-            }
-        }
         await Task.Run(() => {
+            //foreach (var obj in entities)
+            //{
+            //    var dbEntity = Context.Entry(obj);
+            //    if (dbEntity.State != EntityState.Deleted)
+            //    {
+            //        dbEntity.State = EntityState.Deleted;
+            //    }
+            //    else
+            //    {
+            //        DBSet.Attach(obj);
+            //    }
+            //}
+
             DBSet.RemoveRange(entities);
         });
     }

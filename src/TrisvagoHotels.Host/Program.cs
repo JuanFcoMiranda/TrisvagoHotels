@@ -59,3 +59,5 @@ ApiConfiguration.Configure(app, host => host
 );
 
 await app.RunAsync();
+
+public partial class Program {}

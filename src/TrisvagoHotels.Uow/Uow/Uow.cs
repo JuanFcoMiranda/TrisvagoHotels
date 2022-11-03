@@ -17,10 +17,20 @@ public class Uow : IUow, IDisposable {
         RepositoryProvider = provider;
     }
 
+    public async Task EnsureDeleted()
+    {
+        await context.Database.EnsureDeletedAsync();
+    }
+
     public IRepository<Hotel> Hotels => GetStandardRepo<Hotel>();
 
     public async Task CommitAsync() {
         await context.SaveChangesAsync();
+    }
+
+    public async Task EnsureCreated()
+    {
+        await context.Database.EnsureCreatedAsync();
     }
 
     private IRepository<T> GetStandardRepo<T>() where T : class => RepositoryProvider.GetRepositoryForEntityType<T>();

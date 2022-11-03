@@ -13,8 +13,8 @@
     <MicrosoftEntityFrameworkCoreSqlServerVersion>6.0.1</MicrosoftEntityFrameworkCoreSqlServerVersion>
     <MicrosoftEntityFrameworkCoreSqliteVersion>6.0.1</MicrosoftEntityFrameworkCoreSqliteVersion>
     <MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>6.0.1</MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>
-    <MySqlEntityFrameworkCoreVersion>6.0.0-preview3.1</MySqlEntityFrameworkCoreVersion>
-    <PomeloEntityFrameworkCoreMySqlVersion>6.0.0</PomeloEntityFrameworkCoreMySqlVersion>
+    <MySqlEntityFrameworkCoreVersion>6.0.0</MySqlEntityFrameworkCoreVersion>
+    <PomeloEntityFrameworkCoreMySqlVersion>6.0.1</PomeloEntityFrameworkCoreMySqlVersion>
   </PropertyGroup>
 
   <PropertyGroup Label="Fluent Validation">
@@ -26,8 +26,8 @@
   </PropertyGroup>
 
   <PropertyGroup Label="Mediatr">
-    <MediatRVersion>9.0.0</MediatRVersion>
-    <MediatRExtensionsMicrosoftDependencyInjectionVersion>9.0.0</MediatRExtensionsMicrosoftDependencyInjectionVersion>
+    <MediatRVersion>10.0.1</MediatRVersion>
+    <MediatRExtensionsMicrosoftDependencyInjectionVersion>10.0.1</MediatRExtensionsMicrosoftDependencyInjectionVersion>
   </PropertyGroup>
 
   <!--<PropertyGroup Label="Problem Details">

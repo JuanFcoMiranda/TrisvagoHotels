@@ -8,7 +8,8 @@ namespace TrisvagoHotels.UnitTests.Fixtures;
 
 public class DatabaseFixture {
     public DatabaseFixture() {
-        var options = new DbContextOptionsBuilder<MyDataContext>().UseSqlite("DataSource=trisvagohotels.db").Options;
+        var options = new DbContextOptionsBuilder<MyDataContext>()
+            .UseSqlite("DataSource=trisvagohotels.db").Options;
 
         var repositoryFactory = new RepositoryFactory();
         var provider = new RepositoryProvider(repositoryFactory);
