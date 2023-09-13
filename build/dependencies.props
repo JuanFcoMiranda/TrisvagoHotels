@@ -2,19 +2,19 @@
 <Project>
   
   <PropertyGroup Label="SDK Versions">
-    <DefaultTargetFramework>net6.0</DefaultTargetFramework>
+    <DefaultTargetFramework>net7.0</DefaultTargetFramework>
     <!--<AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>-->
     <LangVersion>preview</LangVersion>
     <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
   </PropertyGroup>
 
   <PropertyGroup Label="Entity Framework">
-    <MicrosoftEntityFrameworkCoreVersion>6.0.1</MicrosoftEntityFrameworkCoreVersion>
-    <MicrosoftEntityFrameworkCoreSqlServerVersion>6.0.1</MicrosoftEntityFrameworkCoreSqlServerVersion>
-    <MicrosoftEntityFrameworkCoreSqliteVersion>6.0.1</MicrosoftEntityFrameworkCoreSqliteVersion>
-    <MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>6.0.1</MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>
-    <MySqlEntityFrameworkCoreVersion>6.0.0</MySqlEntityFrameworkCoreVersion>
-    <PomeloEntityFrameworkCoreMySqlVersion>6.0.1</PomeloEntityFrameworkCoreMySqlVersion>
+    <MicrosoftEntityFrameworkCoreVersion>7.0.11</MicrosoftEntityFrameworkCoreVersion>
+    <MicrosoftEntityFrameworkCoreSqlServerVersion>7.0.11</MicrosoftEntityFrameworkCoreSqlServerVersion>
+    <MicrosoftEntityFrameworkCoreSqliteVersion>7.0.11</MicrosoftEntityFrameworkCoreSqliteVersion>
+    <MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>7.0.11</MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>
+    <MySqlEntityFrameworkCoreVersion>7.0.0</MySqlEntityFrameworkCoreVersion>
+    <PomeloEntityFrameworkCoreMySqlVersion>7.0.1</PomeloEntityFrameworkCoreMySqlVersion>
   </PropertyGroup>
 
   <PropertyGroup Label="Fluent Validation">
