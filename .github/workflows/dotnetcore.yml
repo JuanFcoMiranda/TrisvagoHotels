@@ -13,6 +13,9 @@ jobs:
       build_config: Release
     steps:
     - uses: actions/checkout@v4
+      with:
+        # Disabling shallow clones is recommended for improving the relevancy of reporting
+        fetch-depth: 0
 
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v4
@@ -37,7 +40,12 @@ jobs:
       with:
         name: web_site
         path: ./src/Publish
-  
+
+    - name: SonarQube Scan
+      uses: sonarsource/sonarcloud-github-action@<action version> # Ex: v4.0.0, See the latest version at https://github.com/marketplace/actions/sonarcloud-scan
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
 #  sonarcloud:
 #    runs-on: ubuntu-latest
 #    steps:
