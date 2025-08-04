@@ -12,15 +12,19 @@ jobs:
     env:
       build_config: Release
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
+
     - name: Setup .NET Core
-      uses: actions/setup-dotnet@v1
+      uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 6.0.400
+    
     - name: Install dependencies
       run:  dotnet restore
+    
     - name: Build with dotnet
       run: dotnet build --configuration $build_config --no-restore
+    
     - name: Test
       run: dotnet test --no-restore --verbosity normal
   
@@ -29,7 +33,7 @@ jobs:
       run: dotnet publish -c $build_config --no-restore -o ../Publish
         
     - name: Upload web site
-      uses: actions/upload-artifact@v2.1.4
+      uses: actions/upload-artifact@v4
       with:
         name: web_site
         path: ./src/Publish
@@ -52,7 +56,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
       - name: Download site
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: web_site
           path: web_site
