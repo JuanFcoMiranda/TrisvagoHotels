@@ -15,8 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     env:
       build_config: Release
+    
     steps:
     - uses: actions/checkout@v4
+      name: Checkout
       with:
         # Disabling shallow clones is recommended for improving the relevancy of reporting
         fetch-depth: 0
@@ -26,30 +28,30 @@ jobs:
       with:
         dotnet-version: ${{ env.DOTNET_VERSION }}
     
-    - name: Install dependencies
+    - name: Install Dependencies
       run:  dotnet restore
 
-    - name: Sonarqube Begin
+    - name: SonarQube Begin
       run: | 
           dotnet tool install --global dotnet-sonarscanner
           dotnet sonarscanner begin /o:${{ secrets.SONAR_ORGANIZATION }} /k:${{ secrets.SONAR_PROJECT_KEY }} /d:sonar.login=${{ secrets.SONAR_TOKEN }}
     
-    - name: Build with dotnet
+    - name: Build With DotNet
       run: dotnet build --configuration $build_config --no-restore
     
     - name: Test
       run: dotnet test --no-restore --verbosity normal
 
-    - name: Sonarqube end
+    - name: SonarQube End
       run: dotnet sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   
-    - name: Publish site
+    - name: Publish Site
       working-directory: ./src/TrisvagoHotels.Host
       run: dotnet publish -c $build_config --no-restore -o ../Publish
         
-    - name: Upload web site
+    - name: Upload Web Site
       uses: actions/upload-artifact@v4
       with:
         name: web_site
@@ -70,7 +72,7 @@ jobs:
       needs: build
       runs-on: ubuntu-latest
       steps:
-      - name: Download site
+      - name: Download Site
         uses: actions/download-artifact@v4
         with:
           name: web_site
