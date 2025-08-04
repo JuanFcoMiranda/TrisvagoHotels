@@ -42,9 +42,13 @@ jobs:
         path: ./src/Publish
 
     - name: SonarQube Scan
-      uses: sonarsource/sonarcloud-github-action@v5
+      uses: sonarsource/sonarqube-scan-action@v5
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      with:
+        args: >
+          -Dsonar.organization=my-organization
+          -Dsonar.projectKey=my-projectkey
 
 #  sonarcloud:
 #    runs-on: ubuntu-latest
