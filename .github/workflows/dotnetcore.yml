@@ -55,22 +55,11 @@ jobs:
       working-directory: ./src/TrisvagoHotels.Host
       run: dotnet publish -c $build_config --no-restore -o ../Publish
         
-    - name: Upload Web Site
+    - name: Upload Artifact
       uses: actions/upload-artifact@v4
       with:
         name: web_site
         path: ./src/Publish
-
-#    - name: SonarQube Scan
-#      uses: sonarsource/sonarqube-scan-action@v5
-#      env:
-#        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-#      with:
-        #scannerVersion: ${{ env.SCANNER_VERSION }}
-#        args: >
-#          -Dsonar.organization='${{ secrets.SONAR_ORGANIZATION }}'
-#          -Dsonar.projectKey='${{ secrets.SONAR_PROJECT_KEY }}'
 
   deploy:
       needs: build
