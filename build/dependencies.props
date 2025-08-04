@@ -22,7 +22,7 @@
   </PropertyGroup>
 
   <PropertyGroup Label="Swagger">
-    <SwashbuckleAspNetCoreVersion>6.2.3</SwashbuckleAspNetCoreVersion>
+    <SwashbuckleAspNetCoreVersion>9.0.3</SwashbuckleAspNetCoreVersion>
   </PropertyGroup>
 
   <PropertyGroup Label="Mediatr">
