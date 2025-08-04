@@ -35,7 +35,7 @@
 	</PropertyGroup>-->
 
   <PropertyGroup Label="Hosting Abstractions">
-    <MicrosoftExtensionsHostingVersion>6.0.0</MicrosoftExtensionsHostingVersion>
+    <MicrosoftExtensionsHostingVersion>8.0.0</MicrosoftExtensionsHostingVersion>
   </PropertyGroup>
 
   <PropertyGroup Label="Health Checks">
@@ -62,7 +62,7 @@
   </PropertyGroup>
 
   <PropertyGroup Label="Testing">
-    <MicrosoftNETTestSdkVersion>17.1.0-preview-20211130-02</MicrosoftNETTestSdkVersion>
+    <MicrosoftNETTestSdkVersion>17.1.0</MicrosoftNETTestSdkVersion>
     <FluentAssertionsVersion>6.3.0</FluentAssertionsVersion>
     <MicrosoftASPNetCoreTestHostVersion>6.0.1</MicrosoftASPNetCoreTestHostVersion>
     <XUnitVersion>2.4.2-pre.12</XUnitVersion>
