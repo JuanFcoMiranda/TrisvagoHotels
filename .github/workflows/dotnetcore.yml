@@ -7,6 +7,7 @@ on:
     branches: [ master ]
 
 env:
+  DOTNET_VERSION: 8.x
   SCANNER_VERSION: 10.3.0.120579
 
 jobs:
@@ -23,7 +24,7 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: 8.0.412
+        dotnet-version: ${{ env.DOTNET_VERSION }}
     
     - name: Install dependencies
       run:  dotnet restore
