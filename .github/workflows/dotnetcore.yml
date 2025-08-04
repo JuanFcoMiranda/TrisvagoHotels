@@ -34,13 +34,17 @@ jobs:
     - name: SonarQube Begin
       run: | 
           dotnet tool install --global dotnet-sonarscanner
-          dotnet sonarscanner begin /o:${{ secrets.SONAR_ORGANIZATION }} /k:${{ secrets.SONAR_PROJECT_KEY }} /d:sonar.login=${{ secrets.SONAR_TOKEN }}
+          dotnet tool update --global dotnet-reportgenerator-globaltool
+          dotnet sonarscanner begin /o:${{ secrets.SONAR_ORGANIZATION }} /k:${{ secrets.SONAR_PROJECT_KEY }} /d:sonar.login=${{ secrets.SONAR_TOKEN }} /d:sonar.coverageReportPaths=".\sonarqubecoverage\SonarQube.xml"
     
     - name: Build With .NET
       run: dotnet build --configuration $build_config --no-restore
     
     - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      run: dotnet test --no-restore --verbosity normal --collect:"XPlat Code Coverage"
+
+    - name: Collect Data
+      run: reportgenerator "-reports:*\TestResults\*\coverage.cobertura.xml" "-targetdir:sonarqubecoverage" "-reporttypes:SonarQube"
 
     - name: SonarQube End
       run: dotnet sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
