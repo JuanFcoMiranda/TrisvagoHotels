@@ -35,7 +35,7 @@ jobs:
       run: | 
           dotnet tool install --global dotnet-sonarscanner
           dotnet tool install --global dotnet-coverage
-          dotnet sonarscanner begin /o:${{ secrets.SONAR_ORGANIZATION }} /k:${{ secrets.SONAR_PROJECT_KEY }} /d:sonar.login=${{ secrets.SONAR_TOKEN }} /d:sonar.cs.vscoveragexml.reportsPaths=coverage.xml
+          dotnet sonarscanner begin /o:${{ secrets.SONAR_ORGANIZATION }} /k:${{ secrets.SONAR_PROJECT_KEY }} /d:sonar.token=${{ secrets.SONAR_TOKEN }} /d:sonar.cs.vscoveragexml.reportsPaths=coverage.xml
     
     - name: Build With .NET
       run: dotnet build --configuration $build_config --no-restore
@@ -47,7 +47,7 @@ jobs:
       run: dotnet-coverage collect "dotnet test" -f xml -o "coverage.xml"
 
     - name: SonarQube End
-      run: dotnet sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
+      run: dotnet sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   
