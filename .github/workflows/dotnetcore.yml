@@ -40,7 +40,7 @@ jobs:
       run: dotnet build --configuration $build_config --no-restore
     
     - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      run: dotnet test --no-restore --verbosity normal --settings coverlet.runsettings --logger:trx
 
     - name: SonarQube End
       run: dotnet sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
