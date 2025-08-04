@@ -47,6 +47,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       with:
+        scannerVersion: 10.3.0
         args: >
           -Dsonar.organization='${{ secrets.SONAR_ORGANIZATION }}'
           -Dsonar.projectKey='${{ secrets.SONAR_PROJECT_KEY }}'
