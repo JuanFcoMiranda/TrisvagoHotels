@@ -35,7 +35,7 @@
 	</PropertyGroup>-->
 
   <PropertyGroup Label="Hosting Abstractions">
-    <MicrosoftExtensionsHostingVersion>8.0.0</MicrosoftExtensionsHostingVersion>
+    <MicrosoftExtensionsHostingVersion>8.0.1</MicrosoftExtensionsHostingVersion>
   </PropertyGroup>
 
   <PropertyGroup Label="Health Checks">
