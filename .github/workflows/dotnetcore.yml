@@ -47,8 +47,8 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       with:
         args: >
-          -Dsonar.organization=${{ secrets.SONAR_SONAR_ORGANIZATION }}
-          -Dsonar.projectKey=${{ secrets.SONAR_PROJECT_KEY }}
+          -Dsonar.organization='${{ secrets.SONAR_SONAR_ORGANIZATION }}'
+          -Dsonar.projectKey='${{ secrets.SONAR_PROJECT_KEY }}'
 
 #  sonarcloud:
 #    runs-on: ubuntu-latest
