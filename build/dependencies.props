@@ -9,16 +9,16 @@
   </PropertyGroup>
 
   <PropertyGroup Label="Entity Framework">
-    <MicrosoftEntityFrameworkCoreVersion>8.0.11</MicrosoftEntityFrameworkCoreVersion>
+    <MicrosoftEntityFrameworkCoreVersion>9.0.8</MicrosoftEntityFrameworkCoreVersion>
     <MicrosoftEntityFrameworkCoreSqlServerVersion>8.0.11</MicrosoftEntityFrameworkCoreSqlServerVersion>
-    <MicrosoftEntityFrameworkCoreSqliteVersion>8.0.11</MicrosoftEntityFrameworkCoreSqliteVersion>
-    <MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>8.0.11</MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>
-    <MySqlEntityFrameworkCoreVersion>8.0.0</MySqlEntityFrameworkCoreVersion>
-    <PomeloEntityFrameworkCoreMySqlVersion>8.0.1</PomeloEntityFrameworkCoreMySqlVersion>
+    <MicrosoftEntityFrameworkCoreSqliteVersion>9.0.8</MicrosoftEntityFrameworkCoreSqliteVersion>
+    <MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>8.0.19</MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>
+    <MySqlEntityFrameworkCoreVersion>9.0.6</MySqlEntityFrameworkCoreVersion>
+    <PomeloEntityFrameworkCoreMySqlVersion>8.0.3</PomeloEntityFrameworkCoreMySqlVersion>
   </PropertyGroup>
 
   <PropertyGroup Label="Fluent Validation">
-    <FluentValidationAspNetCoreVersion>10.3.6</FluentValidationAspNetCoreVersion>
+    <FluentValidationAspNetCoreVersion>11.3.1</FluentValidationAspNetCoreVersion>
   </PropertyGroup>
 
   <PropertyGroup Label="Swagger">
@@ -26,7 +26,7 @@
   </PropertyGroup>
 
   <PropertyGroup Label="Mediatr">
-    <MediatRVersion>10.0.1</MediatRVersion>
+    <MediatRVersion>13.0.0</MediatRVersion>
     <MediatRExtensionsMicrosoftDependencyInjectionVersion>10.0.1</MediatRExtensionsMicrosoftDependencyInjectionVersion>
   </PropertyGroup>
 
@@ -35,21 +35,21 @@
 	</PropertyGroup>-->
 
   <PropertyGroup Label="Hosting Abstractions">
-    <MicrosoftExtensionsHostingVersion>8.0.1</MicrosoftExtensionsHostingVersion>
+    <MicrosoftExtensionsHostingVersion>9.0.8</MicrosoftExtensionsHostingVersion>
   </PropertyGroup>
 
   <PropertyGroup Label="Health Checks">
-    <AspNetCoreHealthChecksUIVersion>6.0.2</AspNetCoreHealthChecksUIVersion>
-    <AspNetCoreHealthChecksUIClientVersion>6.0.2</AspNetCoreHealthChecksUIClientVersion>
-    <AspNetCoreHealthChecksSystemVersion>6.0.1</AspNetCoreHealthChecksSystemVersion>
+    <AspNetCoreHealthChecksUIVersion>9.0.0</AspNetCoreHealthChecksUIVersion>
+    <AspNetCoreHealthChecksUIClientVersion>9.0.0</AspNetCoreHealthChecksUIClientVersion>
+    <AspNetCoreHealthChecksSystemVersion>9.0.0</AspNetCoreHealthChecksSystemVersion>
     <AspNetCoreHealthChecksRedisVersion>6.0.2</AspNetCoreHealthChecksRedisVersion>
   </PropertyGroup>
 
   <PropertyGroup Label="Health Checks Storage">
     <AspNetCoreHealthChecksUIInMemoryStorageVersion>6.0.2</AspNetCoreHealthChecksUIInMemoryStorageVersion>
-    <AspNetCoreHealthChecksSqlServerVersion>6.0.1</AspNetCoreHealthChecksSqlServerVersion>
+    <AspNetCoreHealthChecksSqlServerVersion>9.0.0</AspNetCoreHealthChecksSqlServerVersion>
     <AspNetCoreHealthChecksSQLiteVersion>6.0.2</AspNetCoreHealthChecksSQLiteVersion>
-    <AspNetCoreHealthChecksMySqlVersion>6.0.1</AspNetCoreHealthChecksMySqlVersion>
+    <AspNetCoreHealthChecksMySqlVersion>9.0.0</AspNetCoreHealthChecksMySqlVersion>
     <AspNetCoreHealthChecksUIPostgreSQLStorageVersion>6.0.2</AspNetCoreHealthChecksUIPostgreSQLStorageVersion>
   </PropertyGroup>
 
@@ -62,11 +62,11 @@
   </PropertyGroup>
 
   <PropertyGroup Label="Testing">
-    <MicrosoftNETTestSdkVersion>17.1.0</MicrosoftNETTestSdkVersion>
-    <FluentAssertionsVersion>6.3.0</FluentAssertionsVersion>
-    <MicrosoftASPNetCoreTestHostVersion>8.0.18</MicrosoftASPNetCoreTestHostVersion>
-    <XUnitVersion>2.4.2-pre.12</XUnitVersion>
-    <XUnitRunnerVisualStudioVersion>2.4.3</XUnitRunnerVisualStudioVersion>
+    <MicrosoftNETTestSdkVersion>17.14.1</MicrosoftNETTestSdkVersion>
+    <FluentAssertionsVersion>8.5.0</FluentAssertionsVersion>
+    <MicrosoftASPNetCoreTestHostVersion>8.0.19</MicrosoftASPNetCoreTestHostVersion>
+    <XUnitVersion>2.9.3</XUnitVersion>
+    <XUnitRunnerVisualStudioVersion>3.1.3</XUnitRunnerVisualStudioVersion>
     <DotnetXUnitVersion>2.4.0-beta.1.build3958</DotnetXUnitVersion>
     <!--<AcheveTestHostVersion>3.0.0</AcheveTestHostVersion>-->
   </PropertyGroup>
