@@ -52,9 +52,9 @@
   <PropertyGroup Label="Health Checks Storage">
     <AspNetCoreHealthChecksUIInMemoryStorageVersion>6.0.2</AspNetCoreHealthChecksUIInMemoryStorageVersion>
     <AspNetCoreHealthChecksSqlServerVersion>9.0.0</AspNetCoreHealthChecksSqlServerVersion>
-    <AspNetCoreHealthChecksSQLiteVersion>6.0.2</AspNetCoreHealthChecksSQLiteVersion>
+    <AspNetCoreHealthChecksSQLiteVersion>9.0.0</AspNetCoreHealthChecksSQLiteVersion>
     <AspNetCoreHealthChecksMySqlVersion>9.0.0</AspNetCoreHealthChecksMySqlVersion>
-    <AspNetCoreHealthChecksUIPostgreSQLStorageVersion>6.0.2</AspNetCoreHealthChecksUIPostgreSQLStorageVersion>
+    <AspNetCoreHealthChecksUIPostgreSQLStorageVersion>9.0.0</AspNetCoreHealthChecksUIPostgreSQLStorageVersion>
   </PropertyGroup>
 
   <PropertyGroup Label="HashIds">
