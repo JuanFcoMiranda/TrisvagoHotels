@@ -9,6 +9,7 @@
 		<PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="$(PomeloEntityFrameworkCoreMySqlVersion)" />
 		<PackageReference Include="MySql.EntityFrameworkCore" Version="$(MySqlEntityFrameworkCoreVersion)" />
 		<PackageReference Include="AspNetCore.HealthChecks.SqlServer" Version="$(AspNetCoreHealthChecksSqlServerVersion)" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="$(MicrosoftEntityFrameworkCoreSqliteVersion)" />
 		<PackageReference Include="AspNetCore.HealthChecks.MySql" Version="$(AspNetCoreHealthChecksMySqlVersion)" />
 		<PackageReference Include="AspNetCore.HealthChecks.System" Version="$(AspNetCoreHealthChecksSystemVersion)" />
 	</ItemGroup>

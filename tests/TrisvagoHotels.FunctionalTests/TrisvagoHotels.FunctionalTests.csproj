@@ -7,17 +7,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoFixture" Version="$(AutoFixtureVersion)" />
+    <PackageReference Include="AutoFixture.Xunit" Version="$(AutoFixtureVersion)" />
     <PackageReference Include="FluentAssertions" Version="$(FluentAssertionsVersion)" />
-    <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="$(MicrosoftASPNetCoreTestHostVersion)" />
+    <PackageReference Include="MediatR" Version="$(MediatRVersion)" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="$(MicrosoftNETTestSdkVersion)" />
+    <PackageReference Include="NSubstitute" Version="$(NSubstituteVersion)" />
+    <PackageReference Include="AutoFixture.AutoNSubstitute" Version="$(AutoFixtureVersion)" />
+<!--    <PackageReference Include="System.ComponentModel.TypeConverter" Version="4.3.0" />-->
     <PackageReference Include="xunit" Version="$(XUnitVersion)" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="8.0.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="$(MicrosoftEntityFrameworkCoreSqliteVersion)" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+    <PackageReference Include="xunit.runner.visualstudio" Version="$(XUnitRunnerVisualStudioVersion)">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="coverlet.collector" Version="6.0.0">
+    <PackageReference Include="coverlet.collector" Version="$(CoverletVersion)">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
@@ -30,7 +33,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\TrisvagoHotels.Api\TrisvagoHotels.Api.csproj" />
-    <ProjectReference Include="..\..\src\TrisvagoHotels.Host\TrisvagoHotels.Host.csproj" />
+    <ProjectReference Include="..\..\src\TrisvagoHotels.Model\TrisvagoHotels.Model.csproj" />
   </ItemGroup>
 
 </Project>

@@ -12,16 +12,11 @@ public static class ServiceCollectionExtensions
         return configuration["Entorno"] != "Testing"
             ? services
                 .AddDbContextPool<MyDataContext>(options =>
-                    //options.UseMySql(configuration["AppSettings:ConnectionStrings:DataAccessMySqlProvider"],
-                    //        new MySqlServerVersion(new Version(8, 0, 22)), // use MariaDbServerVersion for MariaDB
-                    //                                                       //ServerVersion.AutoDetect(configuration["AppSettings:ConnectionStrings:DataAccessMySqlProvider"]),
-                    //        _ => { })
-                    //    // Everything from this point on is optional but helps with debugging.
-                    //    .EnableSensitiveDataLogging()
-                    //    .EnableDetailedErrors());
-                    options.UseMySQL(configuration.GetConnectionString("DataAccessMySqlProvider"),
+                    options.UseMySQL(connectionString: configuration.GetConnectionString("DataAccessMySqlProvider"),
                         options => { }))
-            : services;
+            : services
+                .AddDbContext<MyDataContext>(options =>
+                    options.UseSqlite(connectionString: configuration.GetConnectionString("DefaultConnection")));
     }
 
     public static IServiceCollection AddCustomHealthChecks(this IServiceCollection services, IConfiguration configuration) =>

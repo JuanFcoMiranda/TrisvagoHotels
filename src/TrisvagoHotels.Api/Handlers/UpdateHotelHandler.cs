@@ -16,16 +16,15 @@ public class UpdateHotelHandler : IRequestHandler<UpdateHotelCommand, Hotel> {
         
     public async Task<Hotel> Handle(UpdateHotelCommand request, CancellationToken cancellationToken) {
         var myhotel = await hotelsServices.GetHotel(request.Id);
-        if (myhotel != null) {
-            myhotel.Categoria = request.Categoria;
-            myhotel.Descripcion = request.Descripcion;
-            myhotel.Nombre = request.Nombre;
-            myhotel.Destacado = request.Destacado;
-            myhotel.Localidad = request.Localidad;
-            myhotel.Caracteristicas = request.Caracteristicas;
-            await hotelsServices.UpdateHotelAsync(myhotel);
-            return myhotel;
-        }
-        return null;
+        if (myhotel is null) 
+            return null;
+        myhotel.Categoria = request.Categoria;
+        myhotel.Descripcion = request.Descripcion;
+        myhotel.Nombre = request.Nombre;
+        myhotel.Destacado = request.Destacado;
+        myhotel.Localidad = request.Localidad;
+        myhotel.Caracteristicas = request.Caracteristicas;
+        await hotelsServices.UpdateHotelAsync(myhotel);
+        return myhotel;
     }
 }
