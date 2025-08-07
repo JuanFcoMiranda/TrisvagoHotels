@@ -49,7 +49,7 @@
     <AspNetCoreHealthChecksUIInMemoryStorageVersion>6.0.2</AspNetCoreHealthChecksUIInMemoryStorageVersion>
     <AspNetCoreHealthChecksSqlServerVersion>6.0.1</AspNetCoreHealthChecksSqlServerVersion>
     <AspNetCoreHealthChecksSQLiteVersion>6.0.2</AspNetCoreHealthChecksSQLiteVersion>
-    <AspNetCoreHealthChecksMySqlVersion>6.0.1</AspNetCoreHealthChecksMySqlVersion>
+    <AspNetCoreHealthChecksMySqlVersion>9.0.0</AspNetCoreHealthChecksMySqlVersion>
     <AspNetCoreHealthChecksUIPostgreSQLStorageVersion>6.0.2</AspNetCoreHealthChecksUIPostgreSQLStorageVersion>
   </PropertyGroup>
 
