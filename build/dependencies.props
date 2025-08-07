@@ -40,7 +40,7 @@
 
   <PropertyGroup Label="Health Checks">
     <AspNetCoreHealthChecksUIVersion>6.0.2</AspNetCoreHealthChecksUIVersion>
-    <AspNetCoreHealthChecksUIClientVersion>6.0.2</AspNetCoreHealthChecksUIClientVersion>
+    <AspNetCoreHealthChecksUIClientVersion>9.0.0</AspNetCoreHealthChecksUIClientVersion>
     <AspNetCoreHealthChecksSystemVersion>6.0.1</AspNetCoreHealthChecksSystemVersion>
     <AspNetCoreHealthChecksRedisVersion>6.0.2</AspNetCoreHealthChecksRedisVersion>
   </PropertyGroup>
