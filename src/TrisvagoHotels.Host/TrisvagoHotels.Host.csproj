@@ -21,7 +21,6 @@
     <!--<PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="$(MicrosoftExtensionsConfigurationUserSecretsVersion)" />-->
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="$(MicrosoftVisualStudioAzureContainersToolsTargetsVersion)" />
     <PackageReference Include="MediatR" Version="[$(MediatRVersion)]" />
-    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="$(MediatRExtensionsMicrosoftDependencyInjectionVersion)" />
     <PackageReference Include="AspNetCore.HashIds" Version="$(AspNetCoreHashIdsVersion)" />
   </ItemGroup>
   <ItemGroup>
