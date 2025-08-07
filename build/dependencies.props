@@ -26,8 +26,7 @@
   </PropertyGroup>
 
   <PropertyGroup Label="Mediatr">
-    <MediatRVersion>10.0.1</MediatRVersion>
-    <MediatRExtensionsMicrosoftDependencyInjectionVersion>10.0.1</MediatRExtensionsMicrosoftDependencyInjectionVersion>
+    <MediatRVersion>12.5.0</MediatRVersion>
   </PropertyGroup>
 
   <!--<PropertyGroup Label="Problem Details">
