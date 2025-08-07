@@ -9,12 +9,12 @@
   </PropertyGroup>
 
   <PropertyGroup Label="Entity Framework">
-    <MicrosoftEntityFrameworkCoreVersion>8.0.11</MicrosoftEntityFrameworkCoreVersion>
-    <MicrosoftEntityFrameworkCoreSqlServerVersion>8.0.11</MicrosoftEntityFrameworkCoreSqlServerVersion>
-    <MicrosoftEntityFrameworkCoreSqliteVersion>8.0.11</MicrosoftEntityFrameworkCoreSqliteVersion>
-    <MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>8.0.11</MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>
-    <MySqlEntityFrameworkCoreVersion>8.0.0</MySqlEntityFrameworkCoreVersion>
-    <PomeloEntityFrameworkCoreMySqlVersion>8.0.1</PomeloEntityFrameworkCoreMySqlVersion>
+    <MicrosoftEntityFrameworkCoreVersion>8.0.19</MicrosoftEntityFrameworkCoreVersion>
+    <MicrosoftEntityFrameworkCoreSqlServerVersion>8.0.19</MicrosoftEntityFrameworkCoreSqlServerVersion>
+    <MicrosoftEntityFrameworkCoreSqliteVersion>8.0.19</MicrosoftEntityFrameworkCoreSqliteVersion>
+    <MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>8.0.19</MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>
+    <MySqlEntityFrameworkCoreVersion>9.0.6</MySqlEntityFrameworkCoreVersion>
+    <PomeloEntityFrameworkCoreMySqlVersion>8.0.3</PomeloEntityFrameworkCoreMySqlVersion>
   </PropertyGroup>
 
   <PropertyGroup Label="Fluent Validation">
