@@ -10,7 +10,7 @@
 		<PackageReference Include="AspNetCore.HealthChecks.UI" Version="$(AspNetCoreHealthChecksUIVersion)" />
 		<PackageReference Include="FluentValidation.AspNetCore" Version="$(FluentValidationAspNetCoreVersion)" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="$(SwashbuckleAspNetCoreVersion)" />
-		<PackageReference Include="MediatR" Version="$(MediatRVersion)" />
+		<PackageReference Include="MediatR" Version="[$(MediatRVersion)]" />
 	</ItemGroup>
 	
   <ItemGroup>

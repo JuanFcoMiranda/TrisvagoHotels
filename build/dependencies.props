@@ -18,7 +18,7 @@
   </PropertyGroup>
 
   <PropertyGroup Label="Fluent Validation">
-    <FluentValidationAspNetCoreVersion>10.3.6</FluentValidationAspNetCoreVersion>
+    <FluentValidationAspNetCoreVersion>11.3.1</FluentValidationAspNetCoreVersion>
   </PropertyGroup>
 
   <PropertyGroup Label="Swagger">
@@ -26,10 +26,14 @@
   </PropertyGroup>
 
   <PropertyGroup Label="Mediatr">
-    <MediatRVersion>10.0.1</MediatRVersion>
-    <MediatRExtensionsMicrosoftDependencyInjectionVersion>10.0.1</MediatRExtensionsMicrosoftDependencyInjectionVersion>
+    <MediatRVersion>12.5.0</MediatRVersion>
   </PropertyGroup>
 
+  <PropertyGroup Label="Mapster">
+    <MapsterVersion>7.4.0-pre05</MapsterVersion>
+    <MapsterDependencyInjectionVersion>1.0.0</MapsterDependencyInjectionVersion>
+  </PropertyGroup>
+  
   <!--<PropertyGroup Label="Problem Details">
 		<HellangMiddlewareProblemDetailsVersion>5.4.0</HellangMiddlewareProblemDetailsVersion>
 	</PropertyGroup>-->
@@ -40,16 +44,16 @@
 
   <PropertyGroup Label="Health Checks">
     <AspNetCoreHealthChecksUIVersion>6.0.2</AspNetCoreHealthChecksUIVersion>
-    <AspNetCoreHealthChecksUIClientVersion>6.0.2</AspNetCoreHealthChecksUIClientVersion>
+    <AspNetCoreHealthChecksUIClientVersion>9.0.0</AspNetCoreHealthChecksUIClientVersion>
     <AspNetCoreHealthChecksSystemVersion>9.0.0</AspNetCoreHealthChecksSystemVersion>
     <AspNetCoreHealthChecksRedisVersion>6.0.2</AspNetCoreHealthChecksRedisVersion>
   </PropertyGroup>
 
   <PropertyGroup Label="Health Checks Storage">
     <AspNetCoreHealthChecksUIInMemoryStorageVersion>6.0.2</AspNetCoreHealthChecksUIInMemoryStorageVersion>
-    <AspNetCoreHealthChecksSqlServerVersion>6.0.1</AspNetCoreHealthChecksSqlServerVersion>
+    <AspNetCoreHealthChecksSqlServerVersion>9.0.0</AspNetCoreHealthChecksSqlServerVersion>
     <AspNetCoreHealthChecksSQLiteVersion>6.0.2</AspNetCoreHealthChecksSQLiteVersion>
-    <AspNetCoreHealthChecksMySqlVersion>6.0.1</AspNetCoreHealthChecksMySqlVersion>
+    <AspNetCoreHealthChecksMySqlVersion>9.0.0</AspNetCoreHealthChecksMySqlVersion>
     <AspNetCoreHealthChecksUIPostgreSQLStorageVersion>6.0.2</AspNetCoreHealthChecksUIPostgreSQLStorageVersion>
   </PropertyGroup>
 
@@ -63,7 +67,8 @@
 
   <PropertyGroup Label="Testing">
     <MicrosoftNETTestSdkVersion>17.1.0</MicrosoftNETTestSdkVersion>
-    <FluentAssertionsVersion>6.3.0</FluentAssertionsVersion>
+    <NSubstituteVersion>5.1.0</NSubstituteVersion>
+    <FluentAssertionsVersion>7.2.0</FluentAssertionsVersion>
     <MicrosoftASPNetCoreTestHostVersion>8.0.18</MicrosoftASPNetCoreTestHostVersion>
     <XUnitVersion>2.4.2-pre.12</XUnitVersion>
     <XUnitRunnerVisualStudioVersion>2.4.3</XUnitRunnerVisualStudioVersion>

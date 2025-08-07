@@ -38,6 +38,6 @@ public static class ServiceCollectionExtensions {
 
     public static IServiceCollection AddMediatr(this IServiceCollection services) =>
         services
-            .AddMediatR(typeof(GetMyHotelsRequest).Assembly)
+            .AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(GetMyHotelsRequest).Assembly))
             .AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
 }

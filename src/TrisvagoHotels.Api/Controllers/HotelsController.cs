@@ -14,15 +14,8 @@ namespace TrisvagoHotels.Api.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class HotelsController : ControllerBase {
-    private readonly ILogger<HotelsController> logger;
-    private readonly IMediator mediator;
-
-    public HotelsController(ILogger<HotelsController> logger, IMediator mediator) {
-        this.logger = logger;
-        this.mediator = mediator;
-    }
-
+public class HotelsController(ILogger<HotelsController> logger, IMediator mediator) : ControllerBase
+{
     // GET api/hotels
     [HttpGet]
     public async Task<IActionResult> Get() {
@@ -32,12 +25,12 @@ public class HotelsController : ControllerBase {
 
     // GET api/hotels/5
     [HttpGet("{id:hashids}"), HotelResultFilter]
-    public async Task<ActionResult<Hotel>> Get([FromRoute][ModelBinder(typeof(HashidsModelBinder))]int id) {
+    public async Task<IActionResult> Get([FromRoute][ModelBinder(typeof(HashidsModelBinder))]int id) {
         var hotel = await mediator.Send(new GetHotelByIdRequest(id));
         if (hotel is null) {
             return NotFound();
         }
-        return hotel;
+        return Ok(hotel);
     }
 
     // POST api/hotels
@@ -52,15 +45,21 @@ public class HotelsController : ControllerBase {
     }
 
     // PUT api/hotels/5
-    [HttpPut("{id}")]
-    public async Task<IActionResult> Put(UpdateHotelCommand hotel) {
-        await mediator.Send(hotel);
+    [HttpPut]
+    public async Task<IActionResult> Put(UpdateHotelCommand hotelCommand)
+    {
+        var hotel = await mediator.Send(hotelCommand);
+        if (hotel is null)
+        {
+            return BadRequest();
+        }
+
         return CreatedAtAction("Get", new { id = hotel.Id }, hotel);
     }
 
     // DELETE api/hotels/5
     [HttpDelete("{id}")]
-    public async Task<IActionResult> Delete([FromRoute][ModelBinder(typeof(HashidsModelBinder))]int id) {
+    public async Task<IActionResult> Delete([FromRoute]int id) {
         var myhotel = await mediator.Send(new GetHotelByIdRequest(id));
         if (myhotel is null) {
             return NotFound();
