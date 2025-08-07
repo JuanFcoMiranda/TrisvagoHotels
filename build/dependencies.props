@@ -45,7 +45,7 @@
     <AspNetCoreHealthChecksUIVersion>9.0.0</AspNetCoreHealthChecksUIVersion>
     <AspNetCoreHealthChecksUIClientVersion>9.0.0</AspNetCoreHealthChecksUIClientVersion>
     <AspNetCoreHealthChecksSystemVersion>9.0.0</AspNetCoreHealthChecksSystemVersion>
-    <AspNetCoreHealthChecksRedisVersion>6.0.2</AspNetCoreHealthChecksRedisVersion>
+    <AspNetCoreHealthChecksRedisVersion>9.0.0</AspNetCoreHealthChecksRedisVersion>
   </PropertyGroup>
 
   <PropertyGroup Label="Health Checks Storage">
