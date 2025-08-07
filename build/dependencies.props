@@ -29,6 +29,11 @@
     <MediatRVersion>12.5.0</MediatRVersion>
   </PropertyGroup>
 
+  <PropertyGroup Label="Mapster">
+    <MapsterVersion>7.4.0-pre05</MapsterVersion>
+    <MapsterDependencyInjectionVersion>1.0.0</MapsterDependencyInjectionVersion>
+  </PropertyGroup>
+  
   <!--<PropertyGroup Label="Problem Details">
 		<HellangMiddlewareProblemDetailsVersion>5.4.0</HellangMiddlewareProblemDetailsVersion>
 	</PropertyGroup>-->
@@ -62,6 +67,7 @@
 
   <PropertyGroup Label="Testing">
     <MicrosoftNETTestSdkVersion>17.1.0</MicrosoftNETTestSdkVersion>
+    <NSubstituteVersion>5.1.0</NSubstituteVersion>
     <FluentAssertionsVersion>7.2.0</FluentAssertionsVersion>
     <MicrosoftASPNetCoreTestHostVersion>8.0.18</MicrosoftASPNetCoreTestHostVersion>
     <XUnitVersion>2.4.2-pre.12</XUnitVersion>

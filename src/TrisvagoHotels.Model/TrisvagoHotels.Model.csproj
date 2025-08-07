@@ -9,4 +9,23 @@
     <ItemGroup>
         <Folder Include="Entities\" />
     </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Mapster" Version="$(MapsterVersion)" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Generated Include="**\*.g.cs" />
+    </ItemGroup>
+    <Target Name="CleanGenerated">
+        <Delete Files="@(Generated)" />
+    </Target>
+
+    <Target Name="Mapster">
+        <Exec WorkingDirectory="$(ProjectDir)" Command="dotnet build" />
+        <Exec WorkingDirectory="$(ProjectDir)" Command="dotnet restore" />
+        <Delete Files="@(Generated)" />
+        <Exec WorkingDirectory="$(ProjectDir)" Command="dotnet mapster model -a &quot;$(TargetDir)$(ProjectName).dll&quot; -n TrisvagoHotels.Model.CodeGen -o CodeGen/Models" />
+        <Exec WorkingDirectory="$(ProjectDir)" Command="dotnet mapster extension -a &quot;$(TargetDir)$(ProjectName).dll&quot; -n TrisvagoHotels.Model.CodeGen -o CodeGen/Mappers" />
+        <Exec WorkingDirectory="$(ProjectDir)" Command="dotnet mapster mapper -a &quot;$(TargetDir)$(ProjectName).dll&quot; -n TrisvagoHotels.Model.CodeGen" />
+    </Target>
 </Project>
