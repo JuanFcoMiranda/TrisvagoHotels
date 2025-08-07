@@ -70,7 +70,7 @@
     <NSubstituteVersion>5.1.0</NSubstituteVersion>
     <FluentAssertionsVersion>7.2.0</FluentAssertionsVersion>
     <MicrosoftASPNetCoreTestHostVersion>8.0.18</MicrosoftASPNetCoreTestHostVersion>
-    <XUnitVersion>2.4.2-pre.12</XUnitVersion>
+    <XUnitVersion>2.9.3</XUnitVersion>
     <XUnitRunnerVisualStudioVersion>2.4.3</XUnitRunnerVisualStudioVersion>
     <DotnetXUnitVersion>2.4.0-beta.1.build3958</DotnetXUnitVersion>
     <!--<AcheveTestHostVersion>3.0.0</AcheveTestHostVersion>-->
