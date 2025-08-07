@@ -9,11 +9,11 @@
   </PropertyGroup>
 
   <PropertyGroup Label="Entity Framework">
-    <MicrosoftEntityFrameworkCoreVersion>8.0.11</MicrosoftEntityFrameworkCoreVersion>
+    <MicrosoftEntityFrameworkCoreVersion>8.0.17</MicrosoftEntityFrameworkCoreVersion>
     <MicrosoftEntityFrameworkCoreSqlServerVersion>8.0.11</MicrosoftEntityFrameworkCoreSqlServerVersion>
     <MicrosoftEntityFrameworkCoreSqliteVersion>8.0.11</MicrosoftEntityFrameworkCoreSqliteVersion>
     <MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>8.0.11</MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>
-    <MySqlEntityFrameworkCoreVersion>8.0.0</MySqlEntityFrameworkCoreVersion>
+    <MySqlEntityFrameworkCoreVersion>9.0.6</MySqlEntityFrameworkCoreVersion>
     <PomeloEntityFrameworkCoreMySqlVersion>8.0.1</PomeloEntityFrameworkCoreMySqlVersion>
   </PropertyGroup>
 
