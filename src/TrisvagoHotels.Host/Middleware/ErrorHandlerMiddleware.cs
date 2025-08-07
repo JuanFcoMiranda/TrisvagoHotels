@@ -1,8 +1,8 @@
 ﻿using System;
+using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
 using TrisvagoHotels.Api.HttpErrors;
 
 namespace TrisvagoHotels.Host.Middleware;
@@ -35,7 +35,7 @@ public class ErrorHandlerMiddleware {
 
         await WriteResponseAsync(
             context,
-            JsonConvert.SerializeObject(error),
+            JsonSerializer.Serialize(error),
             "application/json",
             error.Status);
     }
