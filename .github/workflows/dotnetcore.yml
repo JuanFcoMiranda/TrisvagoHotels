@@ -7,6 +7,7 @@ on:
 env:
   DOTNET_VERSION: 8.x
   SCANNER_VERSION: 10.3.0.120579
+  BUILD_CONFIG: Release
 
 jobs:
   build:
@@ -36,22 +37,22 @@ jobs:
           dotnet sonarscanner begin /o:${{ secrets.SONAR_ORGANIZATION }} /k:${{ secrets.SONAR_PROJECT_KEY }} /d:sonar.token=${{ secrets.SONAR_TOKEN }} /d:sonar.cs.vscoveragexml.reportsPaths=coverage.xml
     
     - name: Build With .NET
-      run: dotnet build --configuration $build_config --no-restore
+      run: dotnet build --configuration $BUILD_CONFIG --no-restore
     
     - name: Test
-      run: dotnet test --no-restore --verbosity normal --collect:"XPlat Code Coverage"
+      run: dotnet test --no-restore --verbosity normal --collect:"XPlat Code Coverage" -no-build
 
     - name: Collect Data
       run: dotnet-coverage collect "dotnet test" -f xml -o "coverage.xml"
 
     - name: SonarQube End
-      run: dotnet sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
+      run: dotnet sonarscanner end /d:sonar.token=${{ secrets.SONAR_TOKEN }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   
     - name: Publish Site
       working-directory: ./src/TrisvagoHotels.Host
-      run: dotnet publish -c $build_config --no-restore -o ../Publish
+      run: dotnet publish -c $BUILD_CONFIG --no-restore -o ../Publish
         
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
