@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <PropertyGroup Label="Entity Framework">
-    <MicrosoftEntityFrameworkCoreVersion>8.0.19</MicrosoftEntityFrameworkCoreVersion>
+    <MicrosoftEntityFrameworkCoreVersion>9.0.8</MicrosoftEntityFrameworkCoreVersion>
     <MicrosoftEntityFrameworkCoreSqlServerVersion>8.0.19</MicrosoftEntityFrameworkCoreSqlServerVersion>
     <MicrosoftEntityFrameworkCoreSqliteVersion>8.0.19</MicrosoftEntityFrameworkCoreSqliteVersion>
     <MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>8.0.19</MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>
