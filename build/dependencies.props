@@ -63,7 +63,7 @@
   </PropertyGroup>
 
   <PropertyGroup Label="Containers">
-    <MicrosoftVisualStudioAzureContainersToolsTargetsVersion>1.22.0</MicrosoftVisualStudioAzureContainersToolsTargetsVersion>
+    <MicrosoftVisualStudioAzureContainersToolsTargetsVersion>1.22.1</MicrosoftVisualStudioAzureContainersToolsTargetsVersion>
   </PropertyGroup>
 
   <PropertyGroup Label="Testing">
