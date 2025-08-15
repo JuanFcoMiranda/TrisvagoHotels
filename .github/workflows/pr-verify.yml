@@ -2,7 +2,7 @@ name: PR Verify
 
 on:
   pull_request:
-    branches: ["master"]
+    branches: [ master ]
 
 env:
   DOTNET_VERSION: 8.x
