@@ -18,6 +18,7 @@ jobs:
       - name: Set up .NET
         uses: actions/setup-dotnet@v4
         with:
+          global-json-file: global.json
           dotnet-version: ${{ env.DOTNET_VERSION }}
 
       - name: .NET restore
