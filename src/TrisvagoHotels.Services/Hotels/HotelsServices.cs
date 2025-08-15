@@ -8,15 +8,8 @@ using TrisvagoHotels.Model.Entities;
 
 namespace TrisvagoHotels.Services.Hotels;
 
-public class HotelsServices : IHotelsServices
+public class HotelsServices(IUow uow) : IHotelsServices
 {
-    private readonly IUow uow;
-
-    public HotelsServices(IUow uow)
-    {
-        this.uow = uow;
-    }
-
     public async Task AddHotelAsync(Hotel hotel)
     {
         await uow.Hotels.Add(hotel);
