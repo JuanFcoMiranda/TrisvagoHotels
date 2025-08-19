@@ -14,7 +14,7 @@
     <MicrosoftEntityFrameworkCoreSqliteVersion>8.0.19</MicrosoftEntityFrameworkCoreSqliteVersion>
     <MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>8.0.19</MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>
     <MySqlEntityFrameworkCoreVersion>9.0.6</MySqlEntityFrameworkCoreVersion>
-    <PomeloEntityFrameworkCoreMySqlVersion>8.0.3</PomeloEntityFrameworkCoreMySqlVersion>
+    <PomeloEntityFrameworkCoreMySqlVersion>9.0.0</PomeloEntityFrameworkCoreMySqlVersion>
   </PropertyGroup>
 
   <PropertyGroup Label="Fluent Validation">
