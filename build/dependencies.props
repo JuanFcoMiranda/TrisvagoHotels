@@ -14,7 +14,7 @@
     <MicrosoftEntityFrameworkCoreSqliteVersion>8.0.19</MicrosoftEntityFrameworkCoreSqliteVersion>
     <MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>8.0.19</MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>
     <MySqlEntityFrameworkCoreVersion>9.0.6</MySqlEntityFrameworkCoreVersion>
-    <PomeloEntityFrameworkCoreMySqlVersion>8.0.3</PomeloEntityFrameworkCoreMySqlVersion>
+    <PomeloEntityFrameworkCoreMySqlVersion>9.0.0</PomeloEntityFrameworkCoreMySqlVersion>
   </PropertyGroup>
 
   <PropertyGroup Label="Fluent Validation">
@@ -72,8 +72,7 @@
     <FluentAssertionsVersion>[7.2.0]</FluentAssertionsVersion>
     <MicrosoftASPNetCoreTestHostVersion>8.0.18</MicrosoftASPNetCoreTestHostVersion>
     <XUnitVersion>2.9.3</XUnitVersion>
-    <XUnitRunnerVisualStudioVersion>3.1.3</XUnitRunnerVisualStudioVersion>
-    <DotnetXUnitVersion>2.4.0-beta.1.build3958</DotnetXUnitVersion>
+    <XUnitRunnerVisualStudioVersion>3.1.4</XUnitRunnerVisualStudioVersion>
   </PropertyGroup>
 
 </Project>
