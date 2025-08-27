@@ -1,5 +1,5 @@
 # TrisvagoHotels
-[![Actions Status](https://github.com/Zpecter/JuanFcoMiranda/workflows/.NET%20Core/badge.svg)](https://github.com/Zpecter/JuanFcoMiranda/actions?query=workflow%3A.NET%20Core)
+[![Actions Status](https://github.com/JuanFcoMiranda/workflows/.NET%20Core/badge.svg)](https://github.com/Zpecter/JuanFcoMiranda/actions?query=workflow%3A.NET%20Core)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=JuanFcoMiranda_TrisvagoHotels&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=JuanFcoMiranda_TrisvagoHotels) 
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=JuanFcoMiranda_TrisvagoHotels&metric=coverage)](https://sonarcloud.io/summary/new_code?id=JuanFcoMiranda_TrisvagoHotels)
 <a href="https://github.com/JuanFcoMiranda/TrisvagoHotels/commits" title="Last Commit"><img src="https://img.shields.io/github/last-commit/JuanFcoMiranda/TrisvagoHotels"></a> 
