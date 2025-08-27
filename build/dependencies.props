@@ -69,7 +69,7 @@
   <PropertyGroup Label="Testing">
     <MicrosoftNETTestSdkVersion>17.11.1</MicrosoftNETTestSdkVersion>
     <NSubstituteVersion>5.1.0</NSubstituteVersion>
-    <FluentAssertionsVersion>7.2.0</FluentAssertionsVersion>
+    <FluentAssertionsVersion>[7.2.0]</FluentAssertionsVersion>
     <MicrosoftASPNetCoreTestHostVersion>8.0.18</MicrosoftASPNetCoreTestHostVersion>
     <XUnitVersion>2.9.3</XUnitVersion>
     <XUnitRunnerVisualStudioVersion>3.1.3</XUnitRunnerVisualStudioVersion>
