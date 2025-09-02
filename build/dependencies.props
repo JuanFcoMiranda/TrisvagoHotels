@@ -71,7 +71,7 @@
         <AutoFixtureVersion>4.18.1</AutoFixtureVersion>
         <AutoFixtureXUnitVersion>4.18.1</AutoFixtureXUnitVersion>
         <NSubstituteVersion>5.1.0</NSubstituteVersion>
-        <FluentAssertionsVersion>[7.2.0]</FluentAssertionsVersion>
+        <FluentAssertionsVersion>[8.6.0]</FluentAssertionsVersion>
         <MicrosoftASPNetCoreTestHostVersion>8.0.18</MicrosoftASPNetCoreTestHostVersion>
         <XUnitVersion>2.9.3</XUnitVersion>
         <XUnitRunnerVisualStudioVersion>3.1.4</XUnitRunnerVisualStudioVersion>
