@@ -8,3 +8,7 @@ updates:
     time: "02:00"
     timezone: "Europe/Madrid"
   open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: FluentAssertions/*
+    versions:
+    - ">7.2.0"
