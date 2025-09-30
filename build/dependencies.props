@@ -74,7 +74,7 @@
         <FluentAssertionsVersion>[7.2.0]</FluentAssertionsVersion>
         <MicrosoftASPNetCoreTestHostVersion>8.0.18</MicrosoftASPNetCoreTestHostVersion>
         <XUnitVersion>2.9.3</XUnitVersion>
-        <XUnitRunnerVisualStudioVersion>3.1.4</XUnitRunnerVisualStudioVersion>
+        <XUnitRunnerVisualStudioVersion>3.1.5</XUnitRunnerVisualStudioVersion>
         <CoverletVersion>6.0.4</CoverletVersion>
     </PropertyGroup>
 
