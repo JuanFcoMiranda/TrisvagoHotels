@@ -51,7 +51,7 @@
 
     <PropertyGroup Label="Health Checks Storage">
         <AspNetCoreHealthChecksUIInMemoryStorageVersion>6.0.2</AspNetCoreHealthChecksUIInMemoryStorageVersion>
-        <MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>8.0.19</MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>
+        <MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>9.0.10</MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>
         <AspNetCoreHealthChecksSqlServerVersion>9.0.0</AspNetCoreHealthChecksSqlServerVersion>
         <AspNetCoreHealthChecksSQLiteVersion>9.0.0</AspNetCoreHealthChecksSQLiteVersion>
         <AspNetCoreHealthChecksMySqlVersion>9.0.0</AspNetCoreHealthChecksMySqlVersion>
