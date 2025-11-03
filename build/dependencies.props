@@ -9,7 +9,7 @@
     </PropertyGroup>
 
     <PropertyGroup Label="Entity Framework">
-        <MicrosoftEntityFrameworkCoreVersion>9.0.9</MicrosoftEntityFrameworkCoreVersion>
+        <MicrosoftEntityFrameworkCoreVersion>9.0.10</MicrosoftEntityFrameworkCoreVersion>
         <MicrosoftEntityFrameworkCoreSqlServerVersion>9.0.8</MicrosoftEntityFrameworkCoreSqlServerVersion>
         <MicrosoftEntityFrameworkCoreSqliteVersion>9.0.9</MicrosoftEntityFrameworkCoreSqliteVersion>
         <MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>9.0.8</MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>
@@ -39,7 +39,7 @@
       </PropertyGroup>-->
 
     <PropertyGroup Label="Hosting Abstractions">
-        <MicrosoftExtensionsHostingVersion>9.0.9</MicrosoftExtensionsHostingVersion>
+        <MicrosoftExtensionsHostingVersion>9.0.10</MicrosoftExtensionsHostingVersion>
     </PropertyGroup>
 
     <PropertyGroup Label="Health Checks">
