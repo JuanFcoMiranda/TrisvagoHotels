@@ -13,7 +13,7 @@
         <MicrosoftEntityFrameworkCoreSqlServerVersion>9.0.8</MicrosoftEntityFrameworkCoreSqlServerVersion>
         <MicrosoftEntityFrameworkCoreSqliteVersion>9.0.9</MicrosoftEntityFrameworkCoreSqliteVersion>
         <MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>9.0.8</MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>
-        <MySqlEntityFrameworkCoreVersion>9.0.6</MySqlEntityFrameworkCoreVersion>
+        <MySqlEntityFrameworkCoreVersion>9.0.9</MySqlEntityFrameworkCoreVersion>
         <PomeloEntityFrameworkCoreMySqlVersion>9.0.0</PomeloEntityFrameworkCoreMySqlVersion>
     </PropertyGroup>
 
