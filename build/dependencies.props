@@ -67,7 +67,7 @@
     </PropertyGroup>
 
     <PropertyGroup Label="Testing">
-        <MicrosoftNETTestSdkVersion>18.0.0</MicrosoftNETTestSdkVersion>
+        <MicrosoftNETTestSdkVersion>18.0.1</MicrosoftNETTestSdkVersion>
         <AutoFixtureVersion>4.18.1</AutoFixtureVersion>
         <AutoFixtureXUnitVersion>4.18.1</AutoFixtureXUnitVersion>
         <NSubstituteVersion>5.3.0</NSubstituteVersion>
