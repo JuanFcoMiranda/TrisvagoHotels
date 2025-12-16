@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.OpenApi.Models;
+using Microsoft.OpenApi;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace TrisvagoHotels.Api.Filters;
@@ -15,7 +15,7 @@ public class FileUploadOperation : IOperationFilter {
                 Description = "Upload File",
                 Required = true,
                 Schema = new OpenApiSchema {
-                    Type = "File"
+                    Type = JsonSchemaType.Object
                 }
             });
             operation.Parameters.Add(new OpenApiParameter {
@@ -24,7 +24,7 @@ public class FileUploadOperation : IOperationFilter {
                 Description = "",
                 Required = true,
                 Schema = new OpenApiSchema {
-                    Type = "long"
+                    Type = JsonSchemaType.Number
                 }
             });
         }

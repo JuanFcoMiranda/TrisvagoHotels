@@ -1,6 +1,6 @@
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.OpenApi.Models;
+using Microsoft.OpenApi;
 using TrisvagoHotels.Api.HttpErrors;
 using TrisvagoHotels.Api.Requests;
 using TrisvagoHotels.Api.Validations;
