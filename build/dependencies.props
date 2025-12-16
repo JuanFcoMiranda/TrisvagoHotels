@@ -2,7 +2,7 @@
 <Project>
 
     <PropertyGroup Label="SDK Versions">
-        <DefaultTargetFramework>net9.0</DefaultTargetFramework>
+        <DefaultTargetFramework>net10.0</DefaultTargetFramework>
         <!--<AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>-->
         <LangVersion>preview</LangVersion>
         <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
