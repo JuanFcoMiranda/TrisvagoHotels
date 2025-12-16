@@ -11,7 +11,7 @@
     <PropertyGroup Label="Entity Framework">
         <MicrosoftEntityFrameworkCoreVersion>9.0.11</MicrosoftEntityFrameworkCoreVersion>
         <MicrosoftEntityFrameworkCoreSqlServerVersion>9.0.8</MicrosoftEntityFrameworkCoreSqlServerVersion>
-        <MicrosoftEntityFrameworkCoreSqliteVersion>9.0.10</MicrosoftEntityFrameworkCoreSqliteVersion>
+        <MicrosoftEntityFrameworkCoreSqliteVersion>9.0.11</MicrosoftEntityFrameworkCoreSqliteVersion>
         <MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>9.0.8</MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>
         <MySqlEntityFrameworkCoreVersion>9.0.9</MySqlEntityFrameworkCoreVersion>
         <PomeloEntityFrameworkCoreMySqlVersion>9.0.0</PomeloEntityFrameworkCoreMySqlVersion>
