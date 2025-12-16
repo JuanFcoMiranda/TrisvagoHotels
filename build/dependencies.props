@@ -2,18 +2,18 @@
 <Project>
 
     <PropertyGroup Label="SDK Versions">
-        <DefaultTargetFramework>net9.0</DefaultTargetFramework>
+        <DefaultTargetFramework>net10.0</DefaultTargetFramework>
         <!--<AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>-->
         <LangVersion>preview</LangVersion>
         <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
     </PropertyGroup>
 
     <PropertyGroup Label="Entity Framework">
-        <MicrosoftEntityFrameworkCoreVersion>9.0.11</MicrosoftEntityFrameworkCoreVersion>
-        <MicrosoftEntityFrameworkCoreSqlServerVersion>9.0.8</MicrosoftEntityFrameworkCoreSqlServerVersion>
-        <MicrosoftEntityFrameworkCoreSqliteVersion>9.0.11</MicrosoftEntityFrameworkCoreSqliteVersion>
-        <MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>9.0.8</MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>
-        <MySqlEntityFrameworkCoreVersion>9.0.9</MySqlEntityFrameworkCoreVersion>
+        <MicrosoftEntityFrameworkCoreVersion>10.0.0</MicrosoftEntityFrameworkCoreVersion>
+        <MicrosoftEntityFrameworkCoreSqlServerVersion>10.0.0</MicrosoftEntityFrameworkCoreSqlServerVersion>
+        <MicrosoftEntityFrameworkCoreSqliteVersion>10.0.0</MicrosoftEntityFrameworkCoreSqliteVersion>
+        <MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>10.0.0</MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>
+        <MySqlEntityFrameworkCoreVersion>10.0.0-rc</MySqlEntityFrameworkCoreVersion>
         <PomeloEntityFrameworkCoreMySqlVersion>9.0.0</PomeloEntityFrameworkCoreMySqlVersion>
     </PropertyGroup>
 
