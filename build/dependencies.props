@@ -50,7 +50,7 @@
     </PropertyGroup>
 
     <PropertyGroup Label="Health Checks Storage">
-        <AspNetCoreHealthChecksUIInMemoryStorageVersion>6.0.2</AspNetCoreHealthChecksUIInMemoryStorageVersion>
+        <AspNetCoreHealthChecksUIInMemoryStorageVersion>9.0.0</AspNetCoreHealthChecksUIInMemoryStorageVersion>
         <MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>9.0.10</MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>
         <AspNetCoreHealthChecksSqlServerVersion>9.0.0</AspNetCoreHealthChecksSqlServerVersion>
         <AspNetCoreHealthChecksSQLiteVersion>9.0.0</AspNetCoreHealthChecksSQLiteVersion>
