@@ -75,7 +75,7 @@
         <MicrosoftASPNetCoreTestHostVersion>8.0.18</MicrosoftASPNetCoreTestHostVersion>
         <XUnitVersion>2.9.3</XUnitVersion>
         <XUnitRunnerVisualStudioVersion>3.1.5</XUnitRunnerVisualStudioVersion>
-        <CoverletVersion>6.0.4</CoverletVersion>
+        <CoverletVersion>8.0.0</CoverletVersion>
     </PropertyGroup>
 
 </Project>
