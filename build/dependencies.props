@@ -9,11 +9,11 @@
     </PropertyGroup>
 
     <PropertyGroup Label="Entity Framework">
-        <MicrosoftEntityFrameworkCoreVersion>10.0.0</MicrosoftEntityFrameworkCoreVersion>
+        <MicrosoftEntityFrameworkCoreVersion>10.0.1</MicrosoftEntityFrameworkCoreVersion>
         <MicrosoftEntityFrameworkCoreSqlServerVersion>10.0.0</MicrosoftEntityFrameworkCoreSqlServerVersion>
         <MicrosoftEntityFrameworkCoreSqliteVersion>10.0.0</MicrosoftEntityFrameworkCoreSqliteVersion>
         <MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>10.0.0</MicrosoftExtensionsDiagnosticsHealthChecksEntityFrameworkCoreVersion>
-        <MySqlEntityFrameworkCoreVersion>10.0.0-rc</MySqlEntityFrameworkCoreVersion>
+        <MySqlEntityFrameworkCoreVersion>10.0.1</MySqlEntityFrameworkCoreVersion>
         <PomeloEntityFrameworkCoreMySqlVersion>9.0.0</PomeloEntityFrameworkCoreMySqlVersion>
     </PropertyGroup>
 
@@ -22,7 +22,7 @@
     </PropertyGroup>
 
     <PropertyGroup Label="Swagger">
-        <SwashbuckleAspNetCoreVersion>10.0.1</SwashbuckleAspNetCoreVersion>
+        <SwashbuckleAspNetCoreVersion>10.1.4</SwashbuckleAspNetCoreVersion>
     </PropertyGroup>
 
     <PropertyGroup Label="Mediatr">
@@ -67,7 +67,7 @@
     </PropertyGroup>
 
     <PropertyGroup Label="Testing">
-        <MicrosoftNETTestSdkVersion>18.0.1</MicrosoftNETTestSdkVersion>
+        <MicrosoftNETTestSdkVersion>18.3.0</MicrosoftNETTestSdkVersion>
         <AutoFixtureVersion>4.18.1</AutoFixtureVersion>
         <AutoFixtureXUnitVersion>4.18.1</AutoFixtureXUnitVersion>
         <NSubstituteVersion>5.3.0</NSubstituteVersion>
