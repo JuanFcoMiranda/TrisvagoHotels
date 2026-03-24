@@ -30,7 +30,7 @@
     </PropertyGroup>
 
     <PropertyGroup Label="Mapster">
-        <MapsterVersion>7.4.0</MapsterVersion>
+        <MapsterVersion>10.0.3</MapsterVersion>
         <MapsterDependencyInjectionVersion>1.0.0</MapsterDependencyInjectionVersion>
     </PropertyGroup>
 
